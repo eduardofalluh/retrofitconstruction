@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrofit Construction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header style="display: none;">
+        <nav class="navbar">
+            <div class="burger-bar" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-options">
+                    <a href="./aboutpage.html">about</a>
+                    <a href="#">services</a>
+                    <a href="./projects.html" id="option3">projects</a>
+                    <a href="./ressources.html">resources</a>
+                    <button class="close-button" onclick="toggleMenu()">Close</button>
+                    <a class="language">en/fr</a>
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+                    var menuOverlay = document.querySelector('.menu-overlay');
+                    if (menuOverlay.classList.contains('active')) {
+                        menuOverlay.classList.add('closing');
+                        setTimeout(function() {
+                            menuOverlay.classList.remove('active', 'closing');
+                        }, 500); // match the duration of the dropUp animation
+                    } else {
+                        menuOverlay.classList.add('active');
+                    }
+                }
+
+                window.addEventListener('DOMContentLoaded', function() {
+                    var option3Link = document.getElementById('option3');
+                    var currentPage = window.location.href;
+
+                    if (currentPage.includes('homepage.html')) {
+                        option3Link.removeAttribute('href');
+                        option3Link.style.cursor = 'default';
+                    }
+                });
+            </script>
+
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-header">
+            <img class="logo-2" src="./img/logo-2.png" alt="logo-2">
+            <div id="text-container">
+                <div class="line">
+                    <span class="letter">c</span>
+                    <span class="letter">o</span>
+                    <span class="letter">n</span>
+                    <span class="letter">s</span>
+                    <span class="letter">t</span>
+                    <span class="letter">r</span>
+                    <span class="letter">u</span>
+                    <span class="letter">c</span>
+                    <span class="letter">t</span>
+                    <span class="letter">i</span>
+                    <span class="letter">o</span>
+                    <span class="letter">n</span>
+                    <span class="letter"> </span>
+                    <span class="letter">p</span>
+                    <span class="letter">r</span>
+                    <span class="letter">o</span>
+                    <span class="letter">j</span>
+                    <span class="letter">e</span>
+                    <span class="letter">c</span>
+                    <span class="letter">t</span>
+                    <span class="letter"> </span>
+                    <span class="letter">m</span>
+                    <span class="letter">a</span>
+                    <span class="letter">n</span>
+                    <span class="letter">a</span>
+                    <span class="letter">g</span>
+                    <span class="letter">e</span>
+                    <span class="letter">m</span>
+                    <span class="letter">e</span>
+                    <span class="letter">n</span>
+                    <span class="letter">t</span>
+                </div>
+                <div class="line">
+                    <span class="letter">c</span>
+                    <span class="letter">o</span>
+                    <span class="letter">n</span>
+                    <span class="letter">s</span>
+                    <span class="letter">u</span>
+                    <span class="letter">l</span>
+                    <span class="letter">t</span>
+                    <span class="letter">a</span>
+                    <span class="letter">t</span>
+                    <span class="letter">i</span>
+                    <span class="letter">o</span>
+                    <span class="letter">n</span>
+                </div>
+                <div class="line">
+                    <span class="letter">d</span>
+                    <span class="letter">e</span>
+                    <span class="letter">e</span>
+                    <span class="letter">p</span>
+                    <span class="letter"> </span>
+                    <span class="letter">e</span>
+                    <span class="letter">n</span>
+                    <span class="letter">e</span>
+                    <span class="letter">r</span>
+                    <span class="letter">g</span>
+                    <span class="letter">y</span>
+                    <span class="letter"> </span>
+                    <span class="letter">r</span>
+                    <span class="letter">e</span>
+                    <span class="letter">t</span>
+                    <span class="letter">r</span>
+                    <span class="letter">o</span>
+                    <span class="letter">f</span>
+                    <span class="letter">i</span>
+                    <span class="letter">t</span>
+                    <span class="letter">s</span>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const letters = document.querySelectorAll('.letter');
+                let delay = 0;
+
+                letters.forEach(letter => {
+                    letter.style.animationDelay = `${delay}s`;
+                    delay += 0.05;
+                });
+
+                letters[letters.length - 1].addEventListener('animationend', () => {
+                    document.querySelector('.rest-of-page').style.display = 'block';
+                    document.querySelector('.rest-of-page').classList.add('slide-in');
+                    document.querySelector('header').style.display = 'block';
+                    document.querySelector('header').classList.add('slide-in');
+                    document.querySelector('footer').style.display = 'block';
+                    document.querySelector('footer').classList.add('slide-in');
+                });
+            });
+        </script>
+
+        <div class="rest-of-page" style="display: none;">
+            <div class="carousel">
+                <div class="carousel-container">
+                    <img class="carousel-image" src="./img/image1.jpg" alt="Image 1">
+                    <img class="carousel-image" src="./img/image2.jpg" alt="Image 2">
+                    <img class="carousel-image" src="./img/image3.jpg" alt="Image 3">
+                    <img class="carousel-image" src="./img/image4.png" alt="Image 4">
+                    <div class="carousel-controls">
+                        <div class="carousel-control previous" onclick="previousImage()">&#9664;</div>
+                        <div class="carousel-control next" onclick="nextImage()">&#9654;</div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var images = [
+                    './img/image1.jpg',
+                    './img/image2.jpg',
+                    './img/image3.jpg',
+                    './img/image4.png',
+                    './img/image5.png'
+                ];
+
+                var carouselImages = Array.from(document.querySelectorAll('.carousel-image'));
+                var currentIndex = 0;
+
+                function updateCarousel() {
+                    for (var i = 0; i < carouselImages.length; i++) {
+                        var imageIndex = (currentIndex + i) % images.length;
+                        carouselImages[i].src = images[imageIndex];
+                    }
+                    updateText(); // Update the text when the image changes
+                }
+
+                function rotateCarousel() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateCarousel();
+                }
+
+                function nextImage() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateCarousel();
+                }
+
+                function previousImage() {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    updateCarousel();
+                }
+
+                setInterval(rotateCarousel, 8000);
+
+                function updateText() {
+                    var textContainer = document.querySelector('.text-container');
+                    var text = '';
+                    var link = '';
+
+                    switch(currentIndex) {
+                        case 0:
+                            text = '[charon residence]';
+                            link = 'https://plus.lapresse.ca/screens/935953a0-3ad8-4564-b8ed-e37439a0a6c1%7C_0.html';
+                            break;
+                        case 1:
+                            text = '[projet sucrerie]';
+                            link = 'https://example.com';
+                            break;
+                        case 2:
+                            text = 'yet another project';
+                            link = 'https://example2.com';
+                            break;
+                        case 3:
+                            text = 'and another one';
+                            link = 'https://example3.com';
+                            break;
+                        case 4:
+                            text = 'and another oneeeee';
+                            link = 'https://example3.com';
+                            break;
+                    }
+
+                    textContainer.innerHTML = `<p style="margin-bottom: 3px;">${text}</p><a class="link" href="${link}" style="font-size: 13px; margin-bottom: auto;">learn more</a><br><br>`;
+                }
+
+                window.addEventListener('DOMContentLoaded', updateText);
+            </script>
+
+            <section class="text-container">
+                <p style="margin-bottom: 3px;"> charon residence</p>
+                <a class="link" href="https://plus.lapresse.ca/screens/935953a0-3ad8-4564-b8ed-e37439a0a6c1%7C_0.html" style="font-size: 13px; margin-bottom: auto;">learn more </a><br><br>
+            </section>
+
+            <div class="bottom-image">
+                <p style="margin: auto; color: red;"> Impactful renovations for a sustainable, comfortable and healthy future.</p>
+                <a class="link" style="font-size: 13px; margin-bottom: auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </a><br><br>
+            </div>
+
+            <div class="circles-container">
+                <div class="circle">
+                    <p>Text 1</p>
+                </div>
+                <div class="circle">
+                    <p>Text 2</p>
+                </div>
+                <div class="circle">
+                    <p>Text 3</p>
+                </div>
+                <div class="circle">
+                    <p>Text 4</p>
+                </div>
+            </div>
+
+            <div class="appointment-button-container">
+                <a href="./contactus.html" class="appointment-button">Contact Us</a>
+            </div>
+        </div>
+    </main>
+
+    <footer style="display: none;">
+        <div class="footer-section">
+            <p>FAQ</p>
+            <p><a style="font-size: 17px;" class="link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p>rbq 5825-8377-01</p>
+            <p>contact us</p>
+        </div>
+    </footer>
+</body>
+</html>

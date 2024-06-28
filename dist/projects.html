@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrofit Construction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/projects.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="burger-bar" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-options">
+                    <a href="./aboutpage.html">about</a>
+                    <a href="#">services</a>
+                    <a href="./projects.html" id="option3">projects</a>
+                    <a href="./ressources.html">resources</a>
+                    <button class="close-button" onclick="toggleMenu()">Close</button>
+                    <a class="language">en/fr</a>
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+                    var menuOverlay = document.querySelector('.menu-overlay');
+                    if (menuOverlay.classList.contains('active')) {
+                        menuOverlay.classList.add('closing');
+                        setTimeout(function() {
+                            menuOverlay.classList.remove('active', 'closing');
+                        }, 500);
+                    } else {
+                        menuOverlay.classList.add('active');
+                    }
+                }
+
+                window.addEventListener('DOMContentLoaded', function() {
+                    var option3Link = document.getElementById('option3');
+                    var currentPage = window.location.href;
+
+                    if (currentPage.includes('homepage.html')) {
+                        option3Link.removeAttribute('href');
+                        option3Link.style.cursor = 'default';
+                    }
+                });
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    const projectsText = document.querySelector('.projects');
+                    const text = projectsText.textContent;
+                    projectsText.textContent = '';
+
+                    for (let i = 0; i < text.length; i++) {
+                        const span = document.createElement('span');
+                        span.textContent = text[i];
+                        span.style.animationDelay = `${i * 0.05}s`;
+                        projectsText.appendChild(span);
+                    }
+                });
+
+                </script>
+
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="projects">projects</h1> <br>
+        <div class="grid-container" id="grid-container">
+            <div class="grid-item">
+                <img src="./img/image1.jpg" alt="Image 1">
+                <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+            </div>
+            <div class="grid-item">
+                <img src="./img/image2.jpg" alt="Image 2">
+                <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+            </div>
+            <div class="grid-item">
+                <img src="./img/image3.jpg" alt="Image 3">
+                <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+            </div>
+            <div class="grid-item">
+                <img src="./img/image1.jpg" alt="Image 1">
+                <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+            </div>
+            <div class="grid-item">
+                <img src="./img/image2.jpg" alt="Image 2">
+                <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+            </div>
+            <div class="grid-item">
+                <img src="./img/image3.jpg" alt="Image 3">
+                <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+            </div>
+            <div class="grid-item">
+                <img src="./img/image1.jpg" alt="Image 1">
+                <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+            </div>
+            <div class="grid-item">
+                <img src="./img/image2.jpg" alt="Image 2">
+                <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+            </div>
+            <div class="grid-item">
+                <img src="./img/image3.jpg" alt="Image 3">
+                <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+            </div>
+        </div>
+        <button id="add-image-button" style="display:none;">+</button>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <p>FAQ</p>
+            <p><a style="font-size: 17px;" class="link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p>rbq 5825-8377-01</p>
+            <p>contact us</p>
+        </div>
+    </footer>
+</body>
+</html>

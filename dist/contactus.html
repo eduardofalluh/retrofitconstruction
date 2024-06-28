@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Retrofit Construction</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/contactus.css">
+
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+            <div class="burger-bar" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-options">
+                    <a href="./aboutpage.html">about</a>
+                    <a href="#">services</a>
+                    <a href="./projects.html" id="option3">projects</a>
+                    <a href="./ressources.html">resources</a>
+                    <button class="close-button" onclick="toggleMenu()">Close</button>
+                    <a class="language">en/fr</a>
+
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+                    var menuOverlay = document.querySelector('.menu-overlay');
+                    if (menuOverlay.classList.contains('active')) {
+                        menuOverlay.classList.add('closing');
+                        setTimeout(function() {
+                            menuOverlay.classList.remove('active', 'closing');
+                        }, 500); // match the duration of the dropUp animation
+                    } else {
+                        menuOverlay.classList.add('active');
+                    }
+                }
+
+                window.addEventListener('DOMContentLoaded', function() {
+                    var option3Link = document.getElementById('option3');
+                    var currentPage = window.location.href;
+
+                    if (currentPage.includes('homepage.html')) {
+                        option3Link.removeAttribute('href');
+                        option3Link.style.cursor = 'default';
+                    }
+                });
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    const aboutText = document.querySelector('.contact-us');
+                    const text = aboutText.textContent;
+                    aboutText.textContent = '';
+
+                    for (let i = 0; i < text.length; i++) {
+                        const span = document.createElement('span');
+                        span.textContent = text[i];
+                        span.style.animationDelay = `${i * 0.05}s`;
+                        aboutText.appendChild(span);
+                    }
+                });
+            </script>
+
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+        </nav>
+	</header>
+	<main>
+        <div id="calendarContainer">
+            <h2 class="contact-us">contacts</h2>
+            <form id="eventForm">
+                <label for="summary">Title:</label>
+                <input type="text" id="summary" name="summary" required><br><br>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea><br><br>
+                <label for="start">Start Date & Time:</label>
+                <input type="datetime-local" id="start" name="start" required><br><br>
+                <label for="end">End Date & Time:</label>
+                <input type="datetime-local" id="end" name="end" required><br><br>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </div>
+    
+        <script>
+            let CLIENT_ID = 'YOUR_CLIENT_ID';  // Replace with your client ID
+            let API_KEY = 'YOUR_API_KEY';      // Replace with your API key
+            let DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
+            let SCOPES = "https://www.googleapis.com/auth/calendar.events";
+    
+            function handleClientLoad() {
+                gapi.load('client:auth2', initClient);
+            }
+    
+            function initClient() {
+                gapi.client.init({
+                    apiKey: API_KEY,
+                    clientId: CLIENT_ID,
+                    discoveryDocs: DISCOVERY_DOCS,
+                    scope: SCOPES
+                }).then(function () {
+                    // Listen for sign-in state changes.
+                    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+    
+                    // Handle the initial sign-in state.
+                    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+                });
+            }
+    
+            function updateSigninStatus(isSignedIn) {
+                if (isSignedIn) {
+                    // Form submission handler
+                    document.getElementById('eventForm').addEventListener('submit', function (event) {
+                        event.preventDefault();
+                        createEvent();
+                    });
+                } else {
+                    gapi.auth2.getAuthInstance().signIn();
+                }
+            }
+    
+            function createEvent() {
+                let event = {
+                    'summary': document.getElementById('summary').value,
+                    'description': document.getElementById('description').value,
+                    'start': {
+                        'dateTime': new Date(document.getElementById('start').value).toISOString(),
+                        'timeZone': 'America/Los_Angeles'
+                    },
+                    'end': {
+                        'dateTime': new Date(document.getElementById('end').value).toISOString(),
+                        'timeZone': 'America/Los_Angeles'
+                    }
+                };
+    
+                let request = gapi.client.calendar.events.insert({
+                    'calendarId': 'primary',
+                    'resource': event
+                });
+    
+                request.execute(function (event) {
+                    console.log('Event created: ' + event.htmlLink);
+                    alert('Event created: ' + event.htmlLink);
+                });
+            }
+    
+            document.addEventListener('DOMContentLoaded', function () {
+                handleClientLoad();
+            });
+        </script>
+
+	</main>
+	<footer>
+		<div class="footer-section">
+			<p>FAQ</p>
+            <p> <a  style="font-size: 17px;" class="link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p>rbq 5825-8377-01</p>
+            <p>contact us</p>
+		</div>
+	</footer>
+</body>
+</html>

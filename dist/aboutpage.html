@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Retrofit Construction</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/aboutpage.css">
+
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+            <div class="burger-bar" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-options">
+                    <a href="./aboutpage.html">about</a>
+                    <a href="#">services</a>
+                    <a href="./projects.html" id="option3">projects</a>
+                    <a href="./ressources.html">resources</a>
+                    <button class="close-button" onclick="toggleMenu()">Close</button>
+                    <a class="language">en/fr</a>
+
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+                    var menuOverlay = document.querySelector('.menu-overlay');
+                    if (menuOverlay.classList.contains('active')) {
+                        menuOverlay.classList.add('closing');
+                        setTimeout(function() {
+                            menuOverlay.classList.remove('active', 'closing');
+                        }, 500); // match the duration of the dropUp animation
+                    } else {
+                        menuOverlay.classList.add('active');
+                    }
+                }
+
+                window.addEventListener('DOMContentLoaded', function() {
+                    var option3Link = document.getElementById('option3');
+                    var currentPage = window.location.href;
+
+                    if (currentPage.includes('homepage.html')) {
+                        option3Link.removeAttribute('href');
+                        option3Link.style.cursor = 'default';
+                    }
+                });
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    const aboutText = document.querySelector('.about');
+                    const text = aboutText.textContent;
+                    aboutText.textContent = '';
+
+                    for (let i = 0; i < text.length; i++) {
+                        const span = document.createElement('span');
+                        span.textContent = text[i];
+                        span.style.animationDelay = `${i * 0.05}s`;
+                        aboutText.appendChild(span);
+                    }
+                });
+            </script>
+
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+        </nav>
+	</header>
+    <h1 class="about"> about</h1> <br>
+    <div class="about-div">
+        <img class="image-about" src="./img/about-img.png" alt="Image 1">
+    <p class="about-text"> Fellipe Falluh, a builder and consultant in deep energy retrofits, 
+        has dedicated his career to promoting sustainability in the built environment. 
+        With an engineering degree from McGill University, Fellipe proudly founded his 
+        business venture at just 24 years old; a company called Retrofit Construction, 
+        which he plans to expand across Quebec. At the conference, he will share his 
+        insights on his recently completed Deep Energy Retrofit of a duplex in Montreal, 
+        which is on its way to become the first Net-Zero Ready Certified building in Quebec.</p>
+    </div>
+
+	</main>
+	<footer>
+		<div class="footer-section">
+			<p>FAQ</p>
+            <p> <a  style="font-size: 17px;" class="link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p>rbq 5825-8377-01</p>
+            <p>contact us</p>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrofit Construction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/ressources.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="burger-bar" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-options">
+                    <a href="./aboutpage.html">about</a>
+                    <a href="#">services</a>
+                    <a href="./projects.html" id="option3">projects</a>
+                    <a href="./ressources.html">resources</a>
+                    <button class="close-button" onclick="toggleMenu()">Close</button>
+                    <a class="language">en/fr</a>
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+                    var menuOverlay = document.querySelector('.menu-overlay');
+                    if (menuOverlay.classList.contains('active')) {
+                        menuOverlay.classList.add('closing');
+                        setTimeout(function() {
+                            menuOverlay.classList.remove('active', 'closing');
+                        }, 500); // match the duration of the dropUp animation
+                    } else {
+                        menuOverlay.classList.add('active');
+                    }
+                }
+
+                window.addEventListener('DOMContentLoaded', function() {
+                    var option3Link = document.getElementById('option3');
+                    var currentPage = window.location.href;
+
+                    if (currentPage.includes('homepage.html')) {
+                        option3Link.removeAttribute('href');
+                        option3Link.style.cursor = 'default';
+                    }
+                });
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    const aboutText = document.querySelector('.about');
+                    const text = aboutText.textContent;
+                    aboutText.textContent = '';
+
+                    for (let i = 0; i < text.length; i++) {
+                        const span = document.createElement('span');
+                        span.textContent = text[i];
+                        span.style.animationDelay = `${i * 0.05}s`;
+                        aboutText.appendChild(span);
+                    }
+                });
+            </script>
+
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+        </nav>
+    </header>
+    <main>
+        <h1 class="about">ressources</h1> <br>
+        <div class="categories">
+            <div class="category blog">
+                <label><input type="radio" name="category" value="blog" onclick="filterCategory('blog')" checked> blog</label>
+            </div>
+            <div class="category press">
+                <label><input type="radio" name="category" value="press" onclick="filterCategory('press')"> press</label>
+            </div>
+            <div class="category podcast">
+                <label><input type="radio" name="category" value="podcast" onclick="filterCategory('podcast')"> podcasts</label>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-column blog">
+                <div class="grid-item">
+                    <img src="./img/image1.jpg" alt="Image 1">
+                    <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="./img/image1.jpg" alt="Image 1">
+                    <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+                </div>
+            </div>
+            <div class="grid-column press">
+                <div class="grid-item">
+                    <img src="./img/image2.jpg" alt="Image 2">
+                    <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+                </div>
+                <div class="grid-item">
+                    <img src="./img/image2.jpg" alt="Image 2">
+                    <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+                </div>
+            </div>
+            <div class="grid-column podcast">
+                <iframe title="Au-delà des murs" allowtransparency="true" height="315" width="100%" style="border: none; min-width: min(100%, 430px);height:600px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=46d7m-f99bec-pbblog-playlist&share=1&download=1&rtl=0&fonts=Arial&skin=1&font-color=auto&logo_link=episode_page&order=episodic&limit=10&filter=all&ss=a713390a017602015775e868a2cf26b0&btn-skin=2baf9e&size=315" loading="lazy" allowfullscreen=""></iframe>            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <p>FAQ</p>
+            <p><a style="font-size: 17px;" class="link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p>rbq 5825-8377-01</p>
+            <p>contact us</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterCategory(category) {
+            const columns = document.querySelectorAll('.grid-column');
+            columns.forEach(column => {
+                if (column.classList.contains(category)) {
+                    column.classList.remove('blur');
+                } else {
+                    column.classList.add('blur');
+                }
+            });
+        }
+
+        document.querySelector('input[name="category"][value="blog"]').checked = true;
+        filterCategory('blog');
+    </script>
+</body>
+</html>
