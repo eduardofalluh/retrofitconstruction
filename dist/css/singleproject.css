@@ -539,8 +539,8 @@ footer {
         box-sizing: content-box !important; /* Change to content-box or initial */
     }
     main{
-        margin-left: 0px !important;
-        max-width: 96.8% !important;
+        margin-left: 20px !important;
+        /* max-width: 96.8% !important; */
     }
 
     .text-container {
@@ -582,13 +582,13 @@ footer {
 
     nav{
         max-width: 84.5%;
-        margin-left: 35px;
+        margin-left: 55px;
     }
 
     footer{
         max-width: 84.5%;
 
-        margin-left: 35px;
+        margin-left: 55px;
 
     }
 
