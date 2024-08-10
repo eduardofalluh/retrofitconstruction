@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
-* {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
 body {
   touch-action: pan-y;
   overflow-x: hidden;
@@ -151,7 +146,7 @@ section img {
 }
 
 main {
-    max-width: 92%;
+    max-width: 92.5%;
     margin-left: 35px;
     padding: 15px 20px;
     display: flex;
@@ -503,7 +498,7 @@ h1.services {
     }
 
     main {
-        max-width: 84.5%;
+      max-width: 92.5%;
         padding: 15px 15px !important;
         margin-left: 20px !important;
     }
@@ -524,6 +519,10 @@ h1.services {
 }
 
 @media (max-width: 675px) {
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 
   .language-switch {
       right: 45px !important;
