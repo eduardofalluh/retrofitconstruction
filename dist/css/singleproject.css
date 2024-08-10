@@ -513,6 +513,7 @@ footer {
     }
     main{
         margin-left: 0px !important;
+        max-width: 99.5% !important;
     }
 
     .text-container {
@@ -553,13 +554,12 @@ footer {
     }
 
     nav{
-        max-width: 84.5%;
-
+        max-width: 86.5%;
         margin-left: 35px;
     }
 
     footer{
-        max-width: 84.5%;
+        max-width: 86.5%;
 
         margin-left: 35px;
 
