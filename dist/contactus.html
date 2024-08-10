@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Retrofit Construction</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/contactus.css">
-
+    <title>Retrofit Construction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/contactus.css">
 </head>
 <body>
-	<header>
-		<nav class="navbar">
+    <header style="display: none;">
+        <nav class="navbar">
             <div class="burger-bar" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -18,145 +17,80 @@
             <div class="menu-overlay">
                 <div class="menu-options">
                     <a href="./aboutpage.html">about</a>
-                    <a href="#">services</a>
+                    <a href="./servicepage.html">services</a>
                     <a href="./projects.html" id="option3">projects</a>
                     <a href="./ressources.html">resources</a>
                     <button class="close-button" onclick="toggleMenu()">Close</button>
-                    <a class="language">en/fr</a>
-
                 </div>
             </div>
-            <script>
-                function toggleMenu() {
-                    var menuOverlay = document.querySelector('.menu-overlay');
-                    if (menuOverlay.classList.contains('active')) {
-                        menuOverlay.classList.add('closing');
-                        setTimeout(function() {
-                            menuOverlay.classList.remove('active', 'closing');
-                        }, 500); // match the duration of the dropUp animation
-                    } else {
-                        menuOverlay.classList.add('active');
-                    }
-                }
-
-                window.addEventListener('DOMContentLoaded', function() {
-                    var option3Link = document.getElementById('option3');
-                    var currentPage = window.location.href;
-
-                    if (currentPage.includes('homepage.html')) {
-                        option3Link.removeAttribute('href');
-                        option3Link.style.cursor = 'default';
-                    }
-                });
-
-                document.addEventListener('DOMContentLoaded', function() {
-                    const aboutText = document.querySelector('.contact-us');
-                    const text = aboutText.textContent;
-                    aboutText.textContent = '';
-
-                    for (let i = 0; i < text.length; i++) {
-                        const span = document.createElement('span');
-                        span.textContent = text[i];
-                        span.style.animationDelay = `${i * 0.05}s`;
-                        aboutText.appendChild(span);
-                    }
-                });
-            </script>
-
             <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <div class="language-switch">
+                <a href="#" class="language-link">en/fr</a>
+            </div>
         </nav>
-	</header>
-	<main>
-        <div id="calendarContainer">
-            <h2 class="contact-us">contacts</h2>
-            <form id="eventForm">
-                <label for="summary">Title:</label>
-                <input type="text" id="summary" name="summary" required><br><br>
-                <label for="description">Description:</label>
-                <textarea id="description" name="description" required></textarea><br><br>
-                <label for="start">Start Date & Time:</label>
-                <input type="datetime-local" id="start" name="start" required><br><br>
-                <label for="end">End Date & Time:</label>
-                <input type="datetime-local" id="end" name="end" required><br><br>
-                <button type="submit">Book Appointment</button>
-            </form>
-        </div>
-    
-        <script>
-            let CLIENT_ID = 'YOUR_CLIENT_ID';  // Replace with your client ID
-            let API_KEY = 'YOUR_API_KEY';      // Replace with your API key
-            let DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
-            let SCOPES = "https://www.googleapis.com/auth/calendar.events";
-    
-            function handleClientLoad() {
-                gapi.load('client:auth2', initClient);
-            }
-    
-            function initClient() {
-                gapi.client.init({
-                    apiKey: API_KEY,
-                    clientId: CLIENT_ID,
-                    discoveryDocs: DISCOVERY_DOCS,
-                    scope: SCOPES
-                }).then(function () {
-                    // Listen for sign-in state changes.
-                    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-    
-                    // Handle the initial sign-in state.
-                    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-                });
-            }
-    
-            function updateSigninStatus(isSignedIn) {
-                if (isSignedIn) {
-                    // Form submission handler
-                    document.getElementById('eventForm').addEventListener('submit', function (event) {
-                        event.preventDefault();
-                        createEvent();
-                    });
-                } else {
-                    gapi.auth2.getAuthInstance().signIn();
-                }
-            }
-    
-            function createEvent() {
-                let event = {
-                    'summary': document.getElementById('summary').value,
-                    'description': document.getElementById('description').value,
-                    'start': {
-                        'dateTime': new Date(document.getElementById('start').value).toISOString(),
-                        'timeZone': 'America/Los_Angeles'
-                    },
-                    'end': {
-                        'dateTime': new Date(document.getElementById('end').value).toISOString(),
-                        'timeZone': 'America/Los_Angeles'
-                    }
-                };
-    
-                let request = gapi.client.calendar.events.insert({
-                    'calendarId': 'primary',
-                    'resource': event
-                });
-    
-                request.execute(function (event) {
-                    console.log('Event created: ' + event.htmlLink);
-                    alert('Event created: ' + event.htmlLink);
-                });
-            }
-    
-            document.addEventListener('DOMContentLoaded', function () {
-                handleClientLoad();
-            });
-        </script>
+    </header>
 
-	</main>
-	<footer>
-		<div class="footer-section">
-			<p>FAQ</p>
-            <p> <a  style="font-size: 17px;" class="link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
-            <p>rbq 5825-8377-01</p>
-            <p>contact us</p>
-		</div>
-	</footer>
+    <div class="contact-us-animation">
+        <h1 id="contact-us-text" class="animated-text">contacts</h1>
+    </div>
+
+    <main style="display: none;">
+        <h1 style="margin-left: 35px;">contact us</h1>
+        <div class="contact-text">
+            <a>Fellipe Falluh</a><br>
+            <a>fellipe@retrofitconstruction.ca</a>
+        </div>
+        <iframe class="iframe" src="https://buildertrend.net/leads/contactforms/ContactFormFrame.aspx?builderID=104712" scrolling="no" id="btIframe" style="background:transparent;margin-left:35px;width:100%;height:650px;    font-family: 'Lora', serif;"></iframe>
+    </main>
+
+    <footer style="display: none;">
+        <div class="footer-section">
+            <p><a href="./FAQ.html" class="footer-link">faq</a></p>
+            <p><a style="font-size: 17px;" class="footer-link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p class=" footer-link">rbq 5825-8377-01</p>
+            <p><a href="./contactus.html" class="footer-link">contact us</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menuOverlay = document.querySelector('.menu-overlay');
+            if (menuOverlay.classList.contains('active')) {
+                menuOverlay.classList.add('closing');
+                setTimeout(function() {
+                    menuOverlay.classList.remove('active', 'closing');
+                }, 500); // match the duration of the dropUp animation
+            } else {
+                menuOverlay.classList.add('active');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animationDiv = document.querySelector('.contact-us-animation');
+            const mainContent = document.querySelector('main');
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+
+            setTimeout(() => {
+                animationDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    animationDiv.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    header.style.display = 'block';
+                    footer.style.display = 'block';
+                    mainContent.classList.add('fade-in');
+                    header.classList.add('slide-in');
+                    footer.classList.add('slide-in');
+                }, 1000);
+            }, 1000); // Adjust the duration as needed
+        });
+    </script>
+
+<script>
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
+</script>
+
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
     <title>Retrofit Construction</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./css/ressources.css">
 </head>
 <body>
-    <header>
+    <header style="display: none;">
         <nav class="navbar">
             <div class="burger-bar" onclick="toggleMenu()">
                 <span></span>
@@ -17,11 +17,10 @@
             <div class="menu-overlay">
                 <div class="menu-options">
                     <a href="./aboutpage.html">about</a>
-                    <a href="#">services</a>
+                    <a href="./servicepage.html">services</a>
                     <a href="./projects.html" id="option3">projects</a>
                     <a href="./ressources.html">resources</a>
                     <button class="close-button" onclick="toggleMenu()">Close</button>
-                    <a class="language">en/fr</a>
                 </div>
             </div>
             <script>
@@ -46,68 +45,93 @@
                         option3Link.style.cursor = 'default';
                     }
                 });
-
-                document.addEventListener('DOMContentLoaded', function() {
-                    const aboutText = document.querySelector('.about');
-                    const text = aboutText.textContent;
-                    aboutText.textContent = '';
-
-                    for (let i = 0; i < text.length; i++) {
-                        const span = document.createElement('span');
-                        span.textContent = text[i];
-                        span.style.animationDelay = `${i * 0.05}s`;
-                        aboutText.appendChild(span);
-                    }
-                });
             </script>
 
             <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <div class="language-switch">
+                <a href="#" class="language-link">en/fr</a>
+            </div>
         </nav>
     </header>
-    <main>
-        <h1 class="about">ressources</h1> <br>
-        <div class="categories">
-            <div class="category blog">
-                <label><input type="radio" name="category" value="blog" onclick="filterCategory('blog')" checked> blog</label>
+
+    <div class="ressources-animation">
+        <h1 id="ressources-text"></h1>
+    </div>
+
+    <main class="fade-out" style="display: none;">
+        <h1 class="about">resources</h1> <br>
+    
+        <div class="content-section">
+            <div class="content-header">
+                <div class="line"></div>
+                <h2>story spotlignt</h2>
             </div>
-            <div class="category press">
-                <label><input type="radio" name="category" value="press" onclick="filterCategory('press')"> press</label>
-            </div>
-            <div class="category podcast">
-                <label><input type="radio" name="category" value="podcast" onclick="filterCategory('podcast')"> podcasts</label>
+            <div class="content-body">
+                <img src="./img/charon-1.JPG" alt="Vision Image">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
-        <div class="grid-container">
-            <div class="grid-column blog">
-                <div class="grid-item">
-                    <img src="./img/image1.jpg" alt="Image 1">
-                    <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+    
+        <!-- New container for the bottom part -->
+        <div class="bottom-content">
+            <div class="categories">
+                <div class="category blog">
+                    <label><input type="radio" name="category" value="blog" onclick="filterCategory('blog')" checked> blog</label>
                 </div>
-                <div class="grid-item">
-                    <img src="./img/image1.jpg" alt="Image 1">
-                    <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+                <div class="category press">
+                    <label><input type="radio" name="category" value="press" onclick="filterCategory('press')"> press</label>
                 </div>
-            </div>
-            <div class="grid-column press">
-                <div class="grid-item">
-                    <img src="./img/image2.jpg" alt="Image 2">
-                    <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="./img/image2.jpg" alt="Image 2">
-                    <p>[charon residence] <br> retrofitting and renovating of a duplex in psc (Qc), Canada, 2023.</p>
+                <div class="category podcast">
+                    <label><input type="radio" name="category" value="podcast" onclick="filterCategory('podcast')"> podcasts</label>
                 </div>
             </div>
-            <div class="grid-column podcast">
-                <iframe title="Au-delà des murs" allowtransparency="true" height="315" width="100%" style="border: none; min-width: min(100%, 430px);height:600px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=46d7m-f99bec-pbblog-playlist&share=1&download=1&rtl=0&fonts=Arial&skin=1&font-color=auto&logo_link=episode_page&order=episodic&limit=10&filter=all&ss=a713390a017602015775e868a2cf26b0&btn-skin=2baf9e&size=315" loading="lazy" allowfullscreen=""></iframe>            </div>
+            <div class="grid-container">
+                <div class="grid-column blog" id="blog-column">
+                    <!-- Blog posts will be inserted here -->
+                </div>
+                <div class="grid-column press">
+                    <div class="grid-item">
+                        <a href="https://www.lapresse.ca/maison/renovation/2022-09-28/un-duplex-centenaire-transforme-en-modele-d-efficacite-energetique.php" target="_blank">
+                            <img src="./img/image-lapresse.png" alt="Image 2">
+                            <p class="grid-text">lapresse <br> Un duplex centenaire transformé en modèle d’efficacité énergétique</p>
+                        </a>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <a href="https://www.efficiencycanada.org/career-hub/career-guide-fellipe-falluh/" target="_blank">
+                            <img src="./img/image-efficiency-canada.png" alt="Image 2">
+                            <p class="grid-text">efficiency canada <br> Rencontrez notre leader efficace: Fellipe Falluh</p>
+                        </a>
+                    </div>
+    
+                    <div class="grid-item">
+                        <a href="https://maisonsaine.ca/enkiosque?id=100384" target="_blank">
+                            <img src="./img/image-maison-21e.png" alt="Image 2">
+                            <p class="grid-text">la maison du 21e siecle <br> Rencontrez notre leader efficace: Fellipe Falluh</p>
+                        </a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="https://www.youtube.com/watch?v=26aFvmbba7I" target="_blank">
+                            <img src="./img/image-efficiency canada-2.png" alt="Image 2">
+                            <p class="grid-text">efficiency canada <br> Becoming a Retrofit Renovator, with Fellipe Falluh</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid-column podcast">
+                    <iframe title="Au-delà des murs" allowtransparency="true" height="315" width="100%" style="border: none; min-width: min(100%, 430px);height:590px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=46d7m-f99bec-pbblog-playlist&share=1&download=1&rtl=0&fonts=Arial&skin=1&font-color=auto&logo_link=episode_page&order=episodic&limit=10&filter=all&ss=a713390a017602015775e868a2cf26b0&btn-skin=2baf9e&size=315" loading="lazy" allowfullscreen=""></iframe>
+                </div>
+            </div>
         </div>
     </main>
-    <footer>
+    
+    
+    
+    <footer style="display: none;">
         <div class="footer-section">
-            <p>FAQ</p>
-            <p><a style="font-size: 17px;" class="link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
-            <p>rbq 5825-8377-01</p>
-            <p>contact us</p>
+            <p><a href="./FAQ.html" class="footer-link">faq</a></p>
+            <p><a style="font-size: 17px;" class=" footer-link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p class=" footer-link">rbq 5825-8377-01</p>
+            <p><a href="./contactus.html" class="footer-link">contact us</a></p>
         </div>
     </footer>
 
@@ -125,6 +149,73 @@
 
         document.querySelector('input[name="category"][value="blog"]').checked = true;
         filterCategory('blog');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animationDiv = document.querySelector('.ressources-animation');
+            const mainContent = document.querySelector('main');
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+
+            const text = 'ressources';
+            const textElement = document.getElementById('ressources-text');
+
+            let delay = 0;
+            for (let i = 0; i < text.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = text[i];
+                span.style.animationDelay = `${delay}s`;
+                span.classList.add('letter'); // add the 'letter' class for animation
+                textElement.appendChild(span);
+                delay += 0.1;
+            }
+
+            setTimeout(() => {
+                animationDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    animationDiv.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    header.style.display = 'block';
+                    footer.style.display = 'block';
+                    mainContent.classList.remove('fade-out');
+                    mainContent.classList.add('fade-in');
+                    header.classList.add('slide-in');
+                    footer.classList.add('slide-in');
+                }, 1000);
+            }, delay * 1000 + 1000); // Adjust the duration as needed
+        });
+
+        // Fetch and display Medium blog posts with cache busting
+        async function fetchMediumPosts() {
+            try {
+                const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@eduardofalluh&cache_bust=${new Date().getTime()}`);
+                const data = await response.json();
+                const blogColumn = document.getElementById('blog-column');
+
+                blogColumn.innerHTML = ''; // Clear previous posts
+                data.items.forEach(item => {
+                    const blogItem = document.createElement('div');
+                    blogItem.className = 'grid-item';
+                    blogItem.innerHTML = `
+                        <a href="${item.link}" target="_blank">
+                            <h2>${item.title}</h2>
+                            <p>${item.description.replace(/<[^>]*>?/gm, '').substring(0, 100)}...</p>
+                        </a>
+                    `;
+                    blogColumn.appendChild(blogItem);
+                });
+            } catch (error) {
+                console.error('Error fetching Medium posts:', error);
+            }
+        }
+
+        fetchMediumPosts();
     </script>
+
+<script>
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
+</script>
+
 </body>
 </html>

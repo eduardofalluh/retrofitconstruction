@@ -1,11 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
+/* Base styles */
 body {
-    font-family: Lora, sans-serif;
+    font-family: 'Lora', serif;
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
+}
+
+html, body {
+    background-color: rgb(245, 245, 245);
+}
+
+.footer-section{
+    background-color: rgb(245, 245, 245);
+
+}
+
+h1 {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 80px;
+    font-family: 'Lora', serif;
+}
+
+h2{
+    font-size: 25px;
+    font-family: 'Lora', serif;
+
+}
+
+
+.line {
+    border-top: 1px solid black;
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+.content-body {
+    display: flex;
+    margin-left: 35px; /* Add left margin */
+    align-items: flex-start; /* Align items to the start */
+    text-align: justify;
+}
+
+.content-body img {
+    max-width: 50%; /* Adjust as needed */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.content-body p {
+    font-size: 20px;
+    flex: 1;
+    margin-top: 0; /* Remove top margin */
+    margin-left: 0; /* Reset left margin */
+}
+
+.content-header {
+    margin-left: 35px;
+}
+
+.main-header {
+    margin-left: 35px;
+}
+
+.content-section {
+    margin-bottom: 50px;
 }
 
 header {
@@ -26,33 +90,98 @@ nav {
     border-bottom: 1px solid black;
     width: 96%;
     margin: 0 auto;
+    margin-left: 50px;
+
 }
 
 nav img {
-    height: 30px;
+    height: 25px;
     margin-bottom: 30px;
+    margin-top: 18px;
 }
 
+nav{
+    max-width: 92.5%;
+  }
+  
+  footer{
+    max-width: 92.5%;
+  }
+
+  @media (max-width: 600px) {
+
+    .line{
+        max-width: 75% !important;
+    }
+    footer{
+        max-width: 85% !important;
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    nav{
+        max-width: 85.5%;
+        margin: 0 auto;
+  
+    }
+
+    .bottom-content{
+        max-width: 85% !important;
+    }
+    .content-body{
+        margin-left: 30px !important;
+
+    }
+
+    .content-header{
+        margin-left: 30px !important;
+    }
+
+    .about{
+        margin-left: 30px !important;
+    }
+  
+    footer{
+        max-width: 82% !important;
+        margin-left: 40px !important;
+    }
+  
+    .bottom-image{
+        margin-left: 20px !important;
+    }
+    .text-container{
+        margin-left: 20px !important;
+  
+    }
+  
+    .category::before{
+        margin-left: 5px !important;
+    }
+  
+  }
+
 .link {
-    color: inherit;
-    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: auto;
+    display: inline-block;
+}
+
+.footer-link {
+    line-height: 1.5;
     font-family: 'Lora', serif;
+    text-decoration: none;
+    color: inherit; /* Ensures the text color is inherited */
 }
 
 main {
-    max-width: 960px;
-    margin: 0 auto;
     padding: 40px 20px;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     flex: 1;
-}
-
-h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
-    font-family: 'Lora', serif;
+    max-width: 95%;
+    /* margin: 0 auto; */
 }
 
 .main-image {
@@ -85,20 +214,45 @@ h1 {
     margin: 0 10px;
 }
 
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 99%;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px; /* Adjust as needed */
+    margin-left: 35px;
+}
+
 .grid-container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around; /* You can use space-between or space-around */
+    width: 100%; /* Ensure it takes the full width */
+    padding: 0 10px; /* Adjust padding as needed */
+    margin-left: 35px;
 }
 
 .grid-column {
-    width: 30%;
-    margin: 0 10px;
-    transition: filter 0.3s ease;
+    flex: 1;
+    margin: 10px; /* Adjust margin to control spacing between columns */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    height: 600px; /* Set a fixed height for each column */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+.grid-column.podcast {
+    overflow-y: hidden; /* Disable vertical scrolling */
 }
 
 .grid-item {
     margin-bottom: 20px;
+    width: 100%; /* Ensure it takes the full width of the column */
 }
 
 .grid-item img {
@@ -107,10 +261,28 @@ h1 {
     display: block;
 }
 
+.grid-item a {
+    text-decoration: none;
+    color: inherit; /* Ensures the text color is inherited */
+    display: block;
+    text-align: justify;
+}
+
+.grid-item a img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.grid-text {
+    margin: 10px 0 0 0;
+    text-align: left;
+}
+
 .grid-item p {
-    font-size: 14px;
-    font-family: 'Lora', serif;
-    margin-top: 10px;
+    margin: 10px 0 0 0;
+    color: inherit; /* Ensures the text color is inherited and not the link color */
+    text-align: left;
 }
 
 footer {
@@ -118,8 +290,8 @@ footer {
     width: 96%;
     text-align: center;
     background-color: #fff;
-    left: 2%;
-    margin-left: 2%;
+    margin-left: 55px;
+
 }
 
 .footer p {
@@ -134,7 +306,6 @@ footer {
 }
 
 .footer-p {
-    font-size: 15px;
     line-height: 1.5;
     font-family: 'Lora', serif;
 }
@@ -176,8 +347,7 @@ footer {
     font-size: 30px;
     line-height: 1.5;
     font-family: 'Lora', serif;
-    margin-left: 50px;
-    margin-top: 60px;
+    margin-left: 35px;
 }
 
 .image-about {
@@ -227,9 +397,10 @@ footer {
 .menu-options a {
     color: #fff;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 35px;
     margin: 10px 0;
     font-family: 'Lora', serif;
+    position: relative;
 }
 
 .menu-options a:hover {
@@ -318,7 +489,6 @@ footer {
     animation: fadeInLetter 0.5s forwards;
 }
 
-
 .categories {
     display: flex;
     justify-content: space-around;
@@ -341,7 +511,6 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-
     margin-left: 10px;
 }
 
@@ -378,3 +547,182 @@ label {
     pointer-events: none;
 }
 
+.ressources-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.ressources-animation h1 {
+    font-size: 50px;
+    font-family: 'Lora', serif;
+    animation: fadeInOut 2s ease-in-out forwards;
+}
+
+
+
+
+.grid-column-content {
+    display: block;
+}
+
+/* Ensure spacing on the right side when the screen width is smaller */
+@media (max-width: 768px) {
+
+    main{
+        padding: 40px 0px;
+        margin: 0 auto;
+
+    }
+    .ressources-animation h1{
+        font-size: 35px !important;
+
+    }
+    .grid-container {
+        flex-direction: column; /* Stack columns vertically */
+        padding-right: 35px; /* Add right padding to prevent content from being smushed */
+    }
+
+    .grid-column {
+        max-height: 590px; /* Set the desired height */
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    .grid-column {
+        width: 100%;
+        margin-bottom: 20px; /* Add bottom margin between stacked columns */
+        /* padding-right: 35px; Add padding inside columns */
+    }
+
+
+    .grid-item img {
+        height: auto; /* Allow images to adjust height naturally */
+    }
+    
+
+    .bottom-content{
+        max-width: 91%;
+        margin-left: 15px !important;
+    }
+
+    .content-body{
+        display: block;
+    }
+
+    .content-body img{
+        max-width: 93%;
+    }
+
+    .content-body p{
+        max-width: 93%;
+    }
+}
+
+
+
+
+
+/* Add this to your CSS file */
+
+/* For the fade-in and fade-out animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1s forwards;
+}
+
+.fade-out {
+    animation: fade-out 1s forwards;
+}
+
+/* For the black and white hover effect */
+.grid-item img {
+    transition: filter 0.5s ease;
+}
+
+.grid-item img:hover {
+    filter: grayscale(100%);
+}
+
+.grid-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media (max-width: 545px) {
+    nav {
+        max-width: 83%;
+      }
+
+      footer {
+        max-width: 84%;
+      }
+}
+
+@media (max-width: 675px) {
+
+    .language-switch {
+        right: 40px !important;
+    }
+  
+  
+  }
+  
+  @media (max-width: 545px) {
+    nav {
+        max-width: 82%;
+      }
+  
+    .language-switch {
+        right: 40px !important;
+    }
+  }
+  
+  
+  .language-switch {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+  }
+  
+  .language-link {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    color: black; /* Adjust as needed */
+    text-decoration: none;
+  }
+  
+  .language-link:hover {
+    color: red; /* Adjust as needed */
+  }
+  
+  @media (max-width: 768px) {
+  
+    .language-switch{
+        right: 55px;
+    }
+  }

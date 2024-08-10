@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+/* Adjust the line and content positioning */
+.line {
+    border-top: 1px solid black;
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+.content-body {
+    display: flex;
+    margin-left: 35px; /* Add left margin */
+    align-items: flex-start; /* Align items to the start */
+    text-align: justify;
+    width: 95%;
+}
+
+h2{
+    font-size: 25px;
+    font-family: 'Lora', serif;
+}
+
+.content-body img {
+    max-width: 50%; /* Adjust as needed */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.content-body p {
+    flex: 1;
+    margin-top: 0; /* Remove top margin */
+    margin-left:0; /* Reset left margin */
+}
+
+.content-header{
+    margin-left: 35px;
+}
+
+.main-header{
+    margin-left: 35px;
+}
+
+.content-section{
+    margin-bottom: 50px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.initial-text h1{
+    font-family: 'Lora', serif;
+    font-size: 50px;
+    color: #3d4e3a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    text-align: center;
+    animation: fadeOut 1.0s ease-in-out forwards;
+    animation-delay: 1.0s;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(245, 245, 245);
+}
+
+.footer-section{
+    background-color: rgb(245, 245, 245);
+
+}
+
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    color: #fff;
+    position: relative;
+    margin-top: 15px;
+}
+
+.language {
+    top: 165px;
+}
+
+.logo-2 {
+    height: 20px;
+    width: 25px;
+}
+
+.box {
+    border: 2px solid black;
+    position: absolute;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 96%;
+    margin: 0 auto;
+    max-width: 92.5%;
+    margin-left: 55px;
+}
+
+nav img {
+    height: 25px;
+    margin-bottom: 30px;
+    margin-top: 18px;
+}
+
+.link {
+    font-size: 13px;
+    margin-bottom: auto;
+    display: inline-block;
+    max-width: 97.5%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-link {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    color: inherit; /* Ensures the text color is inherited */
+}
+
+section img {
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 97%;
+    margin-left: 22px;
+    margin-top: 30px;
+}
+
+section {
+    margin-bottom: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.pictures {
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 100px;
+    font-family: 'Lora', serif;
+}
+
+p {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+}
+
+text {
+    font-family: 'Lora', serif;
+    margin-top: 10px;
+}
+
+.centered-section {
+    text-align: center;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.bottom-image {
+    position: relative;
+    left: 35px;
+}
+
+footer {
+    border-top: 1px solid black;
+    width: 96%;
+    text-align: center;
+    background-color: #fff;
+    left: 2%;
+    margin-left: 55px;
+    max-width: 92.5%;
+}
+
+.footer p {
+    flex: 1;
+    margin: 0;
+}
+
+.footer-section {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-p {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* --------BURGER BAR--------------- */
+.burger-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 55px;
+}
+
+.burger-bar span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #000000;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+/* New dropdown menu CSS */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    animation: dropDown 0.5s forwards;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.menu-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    margin: 10px 0;
+    font-family: 'Lora', serif;
+}
+
+.menu-options a:hover {
+    color: red;
+}
+
+.menu-options a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-options a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.menu-options a {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dropDown {
+    from {
+        top: -100%;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes dropUp {
+    from {
+        top: 0;
+    }
+    to {
+        top: -100%;
+    }
+}
+
+.menu-overlay.closing {
+    animation: dropUp 0.5s forwards;
+}
+
+.menu-overlay.active {
+    top: 0;
+}
+
+.close-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+/* Circles */
+.circles-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+.circle p {
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
+/* Appointment Button */
+.appointment-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.appointment-button {
+    background-color: #3d4e3a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Carousel */
+.carousel {
+    margin-top: 15px;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+.carousel-image, .carousel-video {
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 20px auto;
+    transition: transform 0.5s ease-in-out;
+    margin-left: 35px;
+}
+
+.carousel-controls {
+    display: flex;
+    position: absolute;
+    right: 52px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.carousel-control {
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    width: 15px;
+    margin: 15px;
+}
+
+.carousel-control:hover {
+    cursor: pointer;
+}
+
+.text-container {
+    text-align: left;
+    margin-top: 0;
+    position: relative;
+    bottom: 10px;
+    left: 35px;
+    font-family: 'Lora', serif;
+}
+
+@media (max-width: 768px) {
+    main{
+        margin-left: 0px !important;
+    }
+
+    .text-container {
+        bottom: 115px !important;
+    }
+
+    .carousel-control{
+        bottom: 120px !important;
+  position: relative !important;
+    }
+
+    .carousel-controls{
+        right: 5px !important;
+        /* bottom: 100px; */
+    }
+
+    .initial-text h1{
+        font-size: 35px !important;
+
+    }
+    .carousel-control {
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+
+    .content-body img{
+        max-width: 94%;
+
+    }
+
+    .content-body{
+        display: block;
+    }
+
+    .content-body p{
+        max-width: 94%;
+    }
+
+    nav{
+        max-width: 84.5%;
+
+        margin-left: 35px;
+    }
+
+    footer{
+        max-width: 84.5%;
+
+        margin-left: 35px;
+
+    }
+
+    .carousel-image {
+        max-width: 87% !important;
+        max-height: 75% !important;
+    }
+    .carousel-video{
+        max-width: 87% !important;
+        max-height: 75% !important;
+
+    }
+
+    .content-section{
+        max-width: 97%;
+    }
+
+    .carousel {
+    max-height: 630px;
+    }
+}
+
+/* Collapsable see more */
+.text-container {
+    max-height: 300px; /* Set to match the height of the image */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    position: relative;
+}
+
+.text-container.expanded {
+    max-height: none; /* Allow full expansion when clicked */
+}
+
+#see-more-btn {
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#see-more-btn:hover {
+    background-color: #555;
+}
+
+
+
+@media (max-width: 675px) {
+    .burger-bar{
+        left: 35px !important;
+    }
+
+    .language-switch {
+        right: 45px !important;
+    }
+  
+  
+  }
+  
+  @media (max-width: 545px) {
+  
+    .language-switch {
+        right: 30px !important;
+    }
+  }
+  
+  
+  .language-switch {
+    position: absolute;
+    top: 20px;
+    right: 57px;
+  }
+  
+  .language-link {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    color: black; /* Adjust as needed */
+    text-decoration: none;
+  }
+  
+  .language-link:hover {
+    color: red; /* Adjust as needed */
+  }
+  
+  @media (max-width: 768px) {
+  
+    .language-switch{
+        right: 60px;
+    }
+  }
+  

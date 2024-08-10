@@ -3,8 +3,9 @@
 <head>
     <title>Retrofit Construction</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 </head>
 <body>
     <header style="display: none;">
@@ -17,11 +18,10 @@
             <div class="menu-overlay">
                 <div class="menu-options">
                     <a href="./aboutpage.html">about</a>
-                    <a href="#">services</a>
+                    <a href="./servicepage.html">services</a>
                     <a href="./projects.html" id="option3">projects</a>
                     <a href="./ressources.html">resources</a>
                     <button class="close-button" onclick="toggleMenu()">Close</button>
-                    <a class="language">en/fr</a>
                 </div>
             </div>
             <script>
@@ -49,203 +49,178 @@
             </script>
 
             <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <div class="language-switch">
+                <a href="#" class="language-link">en/fr</a>
+            </div>
         </nav>
     </header>
 
     <main>
-        <div class="main-header">
-            <img class="logo-2" src="./img/logo-2.png" alt="logo-2">
-            <div id="text-container">
-                <div class="line">
-                    <span class="letter">c</span>
-                    <span class="letter">o</span>
-                    <span class="letter">n</span>
-                    <span class="letter">s</span>
-                    <span class="letter">t</span>
-                    <span class="letter">r</span>
-                    <span class="letter">u</span>
-                    <span class="letter">c</span>
-                    <span class="letter">t</span>
-                    <span class="letter">i</span>
-                    <span class="letter">o</span>
-                    <span class="letter">n</span>
-                    <span class="letter"> </span>
-                    <span class="letter">p</span>
-                    <span class="letter">r</span>
-                    <span class="letter">o</span>
-                    <span class="letter">j</span>
-                    <span class="letter">e</span>
-                    <span class="letter">c</span>
-                    <span class="letter">t</span>
-                    <span class="letter"> </span>
-                    <span class="letter">m</span>
-                    <span class="letter">a</span>
-                    <span class="letter">n</span>
-                    <span class="letter">a</span>
-                    <span class="letter">g</span>
-                    <span class="letter">e</span>
-                    <span class="letter">m</span>
-                    <span class="letter">e</span>
-                    <span class="letter">n</span>
-                    <span class="letter">t</span>
-                </div>
-                <div class="line">
-                    <span class="letter">c</span>
-                    <span class="letter">o</span>
-                    <span class="letter">n</span>
-                    <span class="letter">s</span>
-                    <span class="letter">u</span>
-                    <span class="letter">l</span>
-                    <span class="letter">t</span>
-                    <span class="letter">a</span>
-                    <span class="letter">t</span>
-                    <span class="letter">i</span>
-                    <span class="letter">o</span>
-                    <span class="letter">n</span>
-                </div>
-                <div class="line">
-                    <span class="letter">d</span>
-                    <span class="letter">e</span>
-                    <span class="letter">e</span>
-                    <span class="letter">p</span>
-                    <span class="letter"> </span>
-                    <span class="letter">e</span>
-                    <span class="letter">n</span>
-                    <span class="letter">e</span>
-                    <span class="letter">r</span>
-                    <span class="letter">g</span>
-                    <span class="letter">y</span>
-                    <span class="letter"> </span>
-                    <span class="letter">r</span>
-                    <span class="letter">e</span>
-                    <span class="letter">t</span>
-                    <span class="letter">r</span>
-                    <span class="letter">o</span>
-                    <span class="letter">f</span>
-                    <span class="letter">i</span>
-                    <span class="letter">t</span>
-                    <span class="letter">s</span>
-                </div>
-            </div>
+        <div class="initial-text">
+            <div>deep energy retrofits</div>
+            <div>developments</div>
+            <div>consultation</div>
+            <div>envelope sealing specialist</div>
         </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const letters = document.querySelectorAll('.letter');
-                let delay = 0;
-
-                letters.forEach(letter => {
-                    letter.style.animationDelay = `${delay}s`;
-                    delay += 0.05;
-                });
-
-                letters[letters.length - 1].addEventListener('animationend', () => {
-                    document.querySelector('.rest-of-page').style.display = 'block';
-                    document.querySelector('.rest-of-page').classList.add('slide-in');
-                    document.querySelector('header').style.display = 'block';
-                    document.querySelector('header').classList.add('slide-in');
-                    document.querySelector('footer').style.display = 'block';
-                    document.querySelector('footer').classList.add('slide-in');
-                });
-            });
-        </script>
 
         <div class="rest-of-page" style="display: none;">
             <div class="carousel">
                 <div class="carousel-container">
-                    <img class="carousel-image" src="./img/image1.jpg" alt="Image 1">
-                    <img class="carousel-image" src="./img/image2.jpg" alt="Image 2">
-                    <img class="carousel-image" src="./img/image3.jpg" alt="Image 3">
-                    <img class="carousel-image" src="./img/image4.png" alt="Image 4">
-                    <div class="carousel-controls">
-                        <div class="carousel-control previous" onclick="previousImage()">&#9664;</div>
-                        <div class="carousel-control next" onclick="nextImage()">&#9654;</div>
-                    </div>
+                    <a class="carousel-item active" href="./charon.html">
+                        <video class="carousel-video" autoplay muted loop>
+                            <source src="./img/sucrerie-video-1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </a>
+                    <a class="carousel-item" href="./charon.html">
+                        <img class="carousel-image" src="./img/sucrerie-image-1.JPG" alt="Image 2">
+                    </a>
+                    <a class="carousel-item" href="./charon.html">
+                        <img class="carousel-image" src="./img/charon-1.JPG" alt="Image 4">
+                    </a>
                 </div>
+
+                <div class="carousel-controls">
+                    <img class="carousel-control previous" onclick="previousItem()" src="./img/left-arrow.png" alt="Previous">
+                    <img class="carousel-control next" onclick="nextItem()" src="./img/right-arrow.png" alt="Next">
+                </div>
+                
+                <section class="text-container">
+                    <p style="margin-bottom: 3px;"> charon residence</p>
+                    <p class="link" href="https://plus.lapresse.ca/screens/935953a0-3ad8-4564-b8ed-e37439a0a6c1%7C_0.html" style="font-size: 11px; margin-bottom: auto;">learn more </p><br><br>
+                </section>
+
+                <section class="text-container">
+                    <div class="tagline"> Impactful renovations for a sustainable, comfortable and healthy future.</div>
+                </section>
             </div>
 
             <script>
-                var images = [
-                    './img/image1.jpg',
-                    './img/image2.jpg',
-                    './img/image3.jpg',
-                    './img/image4.png',
-                    './img/image5.png'
-                ];
-
-                var carouselImages = Array.from(document.querySelectorAll('.carousel-image'));
+                var items = Array.from(document.querySelectorAll('.carousel-item'));
                 var currentIndex = 0;
+                var carouselInterval;
 
                 function updateCarousel() {
-                    for (var i = 0; i < carouselImages.length; i++) {
-                        var imageIndex = (currentIndex + i) % images.length;
-                        carouselImages[i].src = images[imageIndex];
+                    items.forEach((item, index) => {
+                        item.classList.toggle('active', index === currentIndex);
+                    });
+
+                    // Replay video if it is the current item
+                    const currentActiveItem = items[currentIndex];
+                    if (currentActiveItem.querySelector('video')) {
+                        currentActiveItem.querySelector('video').currentTime = 0;
                     }
+
                     updateText(); // Update the text when the image changes
                 }
 
                 function rotateCarousel() {
-                    currentIndex = (currentIndex + 1) % images.length;
+                    currentIndex = (currentIndex + 1) % items.length;
                     updateCarousel();
                 }
 
-                function nextImage() {
-                    currentIndex = (currentIndex + 1) % images.length;
+                function nextItem() {
+                    currentIndex = (currentIndex + 1) % items.length;
                     updateCarousel();
+                    resetCarouselTimer();
                 }
 
-                function previousImage() {
-                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                function previousItem() {
+                    currentIndex = (currentIndex - 1 + items.length) % items.length;
                     updateCarousel();
+                    resetCarouselTimer();
                 }
 
-                setInterval(rotateCarousel, 8000);
+                function resetCarouselTimer() {
+                    clearInterval(carouselInterval);
+                    carouselInterval = setInterval(rotateCarousel, intervalTime);
+                }
+
+                // Delay time in milliseconds (e.g., 5000 milliseconds for a 5-second delay)
+                const initialDelay = 5000;
+
+                // Interval time in milliseconds (e.g., 10000 milliseconds for a 10-second interval)
+                const intervalTime = 20000;
+
+                // Start the interval after the initial delay
+                setTimeout(() => {
+                    carouselInterval = setInterval(rotateCarousel, intervalTime);
+                }, initialDelay);
 
                 function updateText() {
                     var textContainer = document.querySelector('.text-container');
                     var text = '';
-                    var link = '';
+                    var location = '';
 
                     switch(currentIndex) {
                         case 0:
-                            text = '[charon residence]';
-                            link = 'https://plus.lapresse.ca/screens/935953a0-3ad8-4564-b8ed-e37439a0a6c1%7C_0.html';
+                            text = '[projet sucrerie (en cours de developpement)]';
+                            location = 'Impasse de la sucrerie, Saint-Agath'
                             break;
                         case 1:
-                            text = '[projet sucrerie]';
-                            link = 'https://example.com';
+                            text = '[projet sucrerie (en cours de developpement)]';
+                            location = 'Impasse de la sucrerie, Saint-Agath'
                             break;
                         case 2:
-                            text = 'yet another project';
-                            link = 'https://example2.com';
+                            text = 'charon residence';
+                            location = 'Impasse de la sucrerie, Saint-Agath'
                             break;
                         case 3:
-                            text = 'and another one';
-                            link = 'https://example3.com';
-                            break;
-                        case 4:
-                            text = 'and another oneeeee';
-                            link = 'https://example3.com';
+                            text = 'charon residence';
+                            location = 'Impasse de la sucrerie, Saint-Agath'
                             break;
                     }
 
-                    textContainer.innerHTML = `<p style="margin-bottom: 3px;">${text}</p><a class="link" href="${link}" style="font-size: 13px; margin-bottom: auto;">learn more</a><br><br>`;
+                    textContainer.innerHTML = `<p style="margin-bottom: 3px;">${text}</p><p class="link" style="font-size: 12px; margin-bottom: auto;">${location}</p><br><br>`;
                 }
 
                 window.addEventListener('DOMContentLoaded', updateText);
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    setTimeout(() => {
+                        document.querySelector('.rest-of-page').style.display = 'block';
+                        document.querySelector('.rest-of-page').classList.add('fade-in');
+                        document.querySelector('header').style.display = 'block';
+                        document.querySelector('header').classList.add('fade-in');
+                        document.querySelector('footer').style.display = 'block';
+                        document.querySelector('footer').classList.add('fade-in');
+                    }, 3000); // Display rest of the page after 3 seconds
+                });
+
+                // Add mousemove event to show custom cursor
+                document.querySelectorAll('.carousel-item').forEach(item => {
+                    item.addEventListener('mousemove', function(e) {
+                        const customCursor = document.querySelector('.custom-cursor');
+                        customCursor.style.left = `${e.clientX}px`;
+                        customCursor.style.top = `${e.clientY}px`;
+                        customCursor.style.opacity = 1;
+                    });
+
+                    item.addEventListener('mouseleave', function() {
+                        const customCursor = document.querySelector('.custom-cursor');
+                        customCursor.style.opacity = 0;
+                    });
+                });
+
+                // Initialize Hammer.js for carousel swipe functionality
+                const carouselContainer = document.querySelector('.carousel-container');
+                const hammer = new Hammer(carouselContainer);
+
+                hammer.on('swipeleft', function() {
+                    nextItem();
+                });
+
+                hammer.on('swiperight', function() {
+                    previousItem();
+                });
             </script>
 
-            <section class="text-container">
-                <p style="margin-bottom: 3px;"> charon residence</p>
-                <a class="link" href="https://plus.lapresse.ca/screens/935953a0-3ad8-4564-b8ed-e37439a0a6c1%7C_0.html" style="font-size: 13px; margin-bottom: auto;">learn more </a><br><br>
-            </section>
-
-            <div class="bottom-image">
-                <p style="margin: auto; color: red;"> Impactful renovations for a sustainable, comfortable and healthy future.</p>
-                <a class="link" style="font-size: 13px; margin-bottom: auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </a><br><br>
+            <div class="bottom-image slide-in">
+                <div class="subtitle" style="margin: auto; color: red;     font-family: 'Lora', serif; font-size: 20px;"> Our services</div>
+                <div class="link" style="font-size: 16px; margin-bottom: auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div><br><br>
             </div>
 
-            <div class="circles-container">
+            <div class="circles-container slide-in">
                 <div class="circle">
                     <p>Text 1</p>
                 </div>
@@ -260,19 +235,69 @@
                 </div>
             </div>
 
-            <div class="appointment-button-container">
-                <a href="./contactus.html" class="appointment-button">Contact Us</a>
+            <div class="bottom-image slide-in">
+                <div class="subtitle" style="margin: auto; color: red; font-family: 'Lora', serif; font-size: 20px;"> Our partners</div>
+                <div class="link" style="font-size: 16px; margin-bottom: auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div><br><br>
+            </div>
+
+            <div class="circles-container slide-in">
+                <div class="circle">
+                    <p>Text 1</p>
+                </div>
+                <div class="circle">
+                    <p>Text 2</p>
+                </div>
+                <div class="circle">
+                    <p>Text 3</p>
+                </div>
+                <div class="circle">
+                    <p>Text 4</p>
+                </div>
+            </div>
+
+            <div class="horizontal-align">
+                <div class="centered-text">
+                    Your Partner for Deep Energy Retrofits, Consultation, and Construction Management.
+                </div>
+                <div class="button-container">
+                    <a href="./contactus.html" class="appointment-button">Book a consultation</a>
+                </div>
             </div>
         </div>
     </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slideInElements = document.querySelectorAll('.slide-in');
+
+            function handleScroll() {
+                slideInElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial check
+        });
+
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
 
     <footer style="display: none;">
         <div class="footer-section">
-            <p>FAQ</p>
-            <p><a style="font-size: 17px;" class="link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
-            <p>rbq 5825-8377-01</p>
-            <p>contact us</p>
+            <p><a href="./FAQ.html" class="footer-link">FAQ</a></p>
+            <p><a style="font-size: 17px;" class=" footer-link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p class=" footer-link">rbq 5825-8377-01</p>
+            <p><a href="./contactus.html" class="footer-link">contact us</a></p>
         </div>
     </footer>
+
+    <!-- Custom cursor -->
+    <div class="custom-cursor">Learn more</div>
 </body>
 </html>

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Retrofit Construction</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/aboutpage.css">
-
+    <title>Retrofit Construction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/aboutpage.css">
 </head>
 <body>
-	<header>
-		<nav class="navbar">
+    <header style="display: none;">
+        <nav class="navbar">
             <div class="burger-bar" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -18,12 +17,10 @@
             <div class="menu-overlay">
                 <div class="menu-options">
                     <a href="./aboutpage.html">about</a>
-                    <a href="#">services</a>
+                    <a href="./servicepage.html">services</a>
                     <a href="./projects.html" id="option3">projects</a>
                     <a href="./ressources.html">resources</a>
                     <button class="close-button" onclick="toggleMenu()">Close</button>
-                    <a class="language">en/fr</a>
-
                 </div>
             </div>
             <script>
@@ -48,44 +45,86 @@
                         option3Link.style.cursor = 'default';
                     }
                 });
-
-                document.addEventListener('DOMContentLoaded', function() {
-                    const aboutText = document.querySelector('.about');
-                    const text = aboutText.textContent;
-                    aboutText.textContent = '';
-
-                    for (let i = 0; i < text.length; i++) {
-                        const span = document.createElement('span');
-                        span.textContent = text[i];
-                        span.style.animationDelay = `${i * 0.05}s`;
-                        aboutText.appendChild(span);
-                    }
-                });
             </script>
 
             <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <div class="language-switch">
+                <a href="#" class="language-link">en/fr</a>
+            </div>
         </nav>
-	</header>
-    <h1 class="about"> about</h1> <br>
-    <div class="about-div">
-        <img class="image-about" src="./img/about-img.png" alt="Image 1">
-    <p class="about-text"> Fellipe Falluh, a builder and consultant in deep energy retrofits, 
-        has dedicated his career to promoting sustainability in the built environment. 
-        With an engineering degree from McGill University, Fellipe proudly founded his 
-        business venture at just 24 years old; a company called Retrofit Construction, 
-        which he plans to expand across Quebec. At the conference, he will share his 
-        insights on his recently completed Deep Energy Retrofit of a duplex in Montreal, 
-        which is on its way to become the first Net-Zero Ready Certified building in Quebec.</p>
+    </header>
+
+    <div class="about-animation">
+        <h1 id="about-text">about</h1>
     </div>
 
-	</main>
-	<footer>
-		<div class="footer-section">
-			<p>FAQ</p>
-            <p> <a  style="font-size: 17px;" class="link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
-            <p>rbq 5825-8377-01</p>
-            <p>contact us</p>
-		</div>
-	</footer>
+    <main style="display: none;">
+        <h1 class="main-title">about</h1>
+        <h1 class="about">our vision</h1>
+        <div class="about-div">
+            <p class="about-text"> At retrofit construction we recognize the impact construction and buildings have on our environments and we want to be part of the solution and not the problem.
+                While the construction industry in general is getting better at building more sustainable buildings we strive to improve the buildings of the past. Craftsmanship was very prominent in the past but energy efficiency wasn't for lack of interest and understanding of building sciences. 
+                We believe that the most sustainable building is the one that is already built and we help our clients make their buildings more sustainable, durable, comfortable and healthy. 
+                After all we spend most of our time indoors and as the great Winston Churchill said:
+                "We shape our buildings; thereafter they shape us."</p>
+        </div>
+        <h1 class="about">our offer</h1>
+        <div class="about-div">
+            <p class="about-text"> Retrofit Construction is a general contractor and consulting firm specialized in deep energy retrofits. We are committed to creating and building sustainable, durable, comfortable, and healthy environments. We give existing commercial, and residential buildings a new life through well-planned energy efficient upgrades.
+                We are located in Montreal, Quebec and service the greater Montreal area for our construction mandates. Our team of experts is experienced in conducting comprehensive energy audits, analyzing the building envelope, and recommending the most effective solutions to optimize energy performance. From building envelope upgrades such as added insulation and air sealing to HVAC and lighting upgrades, we offer a wide range of retrofitting services tailored to each client's needs. Our goal is to help our clients save energy, create a more comfortable and healthy environment, and contribute to a more sustainable future.
+                </p>
+        </div>
+        <h1 class="about">our founder</h1>
+        <div class="about-div">
+            <div class="founder-content">
+                <img class="image-about" src="./img/about-img.png" alt="Image 1">
+                <p class="about-text"> Fellipe Falluh, a builder and consultant in deep energy retrofits, 
+                has dedicated his career to promoting sustainability in the built environment. 
+                With an engineering degree from McGill University, Fellipe proudly founded his 
+                business venture at just 24 years old; a company called Retrofit Construction, 
+                which he plans to expand across Quebec. At the conference, he will share his 
+                insights on his recently completed Deep Energy Retrofit of a duplex in Montreal, 
+                which is on its way to become the first Net-Zero Ready Certified building in Quebec.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="display: none;">
+        <div class="footer-section">
+            <p><a href="./FAQ.html" class="footer-link">faq</a></p>
+            <p><a style="font-size: 17px;" class=" footer-link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p class=" footer-link">rbq 5825-8377-01</p>
+            <p><a href="./contactus.html" class="footer-link">contact us</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animationDiv = document.querySelector('.about-animation');
+            const mainContent = document.querySelector('main');
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+
+            setTimeout(() => {
+                animationDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    animationDiv.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    header.style.display = 'block';
+                    footer.style.display = 'block';
+                    mainContent.classList.add('fade-in');
+                    header.classList.add('fade-in');
+                    footer.classList.add('fade-in');
+                }, 1000);
+            }, 1000); // Display the rest of the page after 2 seconds
+        });
+    </script>
+
+<script>
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
+</script>
+
 </body>
 </html>

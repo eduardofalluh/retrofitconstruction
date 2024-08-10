@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrofit Construction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/servicepage.css">
+</head>
+<body>
+    <header style="display: none;">
+        <nav class="navbar">
+            <div class="burger-bar" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-options">
+                    <a href="./aboutpage.html">about</a>
+                    <a href="./servicepage.html">services</a>
+                    <a href="./projects.html" id="option3">projects</a>
+                    <a href="./ressources.html">resources</a>
+                    <button class="close-button" onclick="toggleMenu()">Close</button>
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+                    var menuOverlay = document.querySelector('.menu-overlay');
+                    if (menuOverlay.classList.contains('active')) {
+                        menuOverlay.classList.add('closing');
+                        setTimeout(function() {
+                            menuOverlay.classList.remove('active', 'closing');
+                        }, 500); // match the duration of the dropUp animation
+                    } else {
+                        menuOverlay.classList.add('active');
+                    }
+                }
+
+                window.addEventListener('DOMContentLoaded', function() {
+                    var option3Link = document.getElementById('option3');
+                    var currentPage = window.location.href;
+
+                    if (currentPage.includes('homepage.html')) {
+                        option3Link.removeAttribute('href');
+                        option3Link.style.cursor = 'default';
+                    }
+                });
+            </script>
+
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <div class="language-switch">
+                <a href="#" class="language-link">en/fr</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="service-animation">
+        <h1 id="service-text"></h1>
+    </div>
+
+    <main style="display: none;">
+        <h1 class="main-title">services</h1>
+        <div class="services-container">
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title">construction project management</h2>
+                    <img src="./img/image-efficiency-canada.png" alt="Construction Project Management Image" class="service-image">
+                </div>
+                
+                <p class="service-description">Construction project management involves planning, coordinating, and overseeing all aspects of a construction project from inception to completion. It encompasses tasks such as budgeting, scheduling, resource allocation, and communication to ensure projects are executed efficiently, on time, and within budget while maintaining quality and safety standards.</p>
+            </div>
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title">deep energy retrofits and extensions</h2>
+                    <img src="./img/image-efficiency-canada.png" alt="Deep Energy Retrofits and Extensions Image" class="service-image">
+                </div>
+                <p class="service-description">Deep energy retrofits involve comprehensive and transformative upgrades to existing buildings, focusing on substantial energy savings and sustainability. They often include building envelope upgrades such as improved airtightness, enhanced insulation, high performance windows and doors, efficient HVAC systems and renewable energy integration. These measures significantly reduce energy consumption, enhance comfort and health for the occupant, and minimize environmental impact while maximizing a building's potential.</p>
+            </div>
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title">consultation</h2>
+                    <img src="./img/image-efficiency-canada.png" alt="Consultation Image" class="service-image">
+                </div>
+                <p class="service-description">No matter what stage of the project, we offer consultancy services to contractors or homeowners. In the project development phase we help with assessing the retrofit potential of the project. In the design phase, we help with incorporating high performance details and material choices. In the construction phase we make sure things are getting properly executed and test for airtightness.
+                    At every project juncture, we provide tailored consultancy services for both contractors and homeowners. During project development, we evaluate retrofit potential. In the design phase, we seamlessly integrate high-performance details and material selections. Throughout construction, we meticulously oversee execution, ensuring precision and conducting airtightness testing for optimal outcomes.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer style="display: none;">
+        <div class="footer-section">
+            <p><a href="./FAQ.html" class="footer-link">faq</a></p>
+            <p><a style="font-size: 17px;" class=" footer-link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p class=" footer-link">rbq 5825-8377-01</p>
+            <p><a href="./contactus.html" class="footer-link">contact us</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animationDiv = document.querySelector('.service-animation');
+            const mainContent = document.querySelector('main');
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+
+            const text = 'services';
+            const textElement = document.getElementById('service-text');
+
+            textElement.textContent = text;
+
+            setTimeout(() => {
+                animationDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    animationDiv.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    header.style.display = 'block';
+                    footer.style.display = 'block';
+                    mainContent.classList.add('fade-in');
+                    header.classList.add('fade-in');
+                    footer.classList.add('fade-in');
+                }, 1000);
+            }, 1000); // Adjust the duration as needed
+        });
+    </script>
+
+<script>
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
+</script>
+
+</body>
+</html>
