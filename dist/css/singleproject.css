@@ -94,6 +94,7 @@ html, body {
     padding: 0;
     height: 100%;
     background-color: rgb(245, 245, 245);
+    max-width: 100vw; /* Ensure the body does not exceed the viewport width */
 }
 
 .footer-section{
