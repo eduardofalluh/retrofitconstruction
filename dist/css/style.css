@@ -148,12 +148,15 @@ footer{
 }
 
 @media (max-width: 768px) {
+    *{
+        box-sizing: content-box !important; /* Change to content-box or initial */
+    }
     .circle{
         width: 24% !important;
         height: 95px !important;
     }
     .horizontal-align{
-        width: 98% !important;
+        width: 88% !important;
       margin-left: 5px !important;
     }
     .initial-text{

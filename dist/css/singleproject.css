@@ -2,10 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 /* Adjust the line and content positioning */
 .line {
     border-top: 1px solid black;
-    width: 350px;
+    width: 48.5%;
     margin-bottom: 10px;
 }
 
@@ -500,6 +505,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .line{
+        width: 75% !important;
+    }
+
+    * {
+        box-sizing: content-box !important;
+    }
     main{
         margin-left: 0px !important;
     }
@@ -511,10 +524,11 @@ footer {
     .carousel-control{
         bottom: 120px !important;
   position: relative !important;
+  margin-right: 15px;
     }
 
     .carousel-controls{
-        right: 5px !important;
+        right: 8px !important;
         /* bottom: 100px; */
     }
 
