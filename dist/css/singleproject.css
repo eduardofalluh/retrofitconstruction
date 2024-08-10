@@ -2,16 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 
-* {
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-body {
-    touch-action: pan-y;
-    overflow-x: hidden;
-}
-
 /* Adjust the line and content positioning */
 .line {
     border-top: 1px solid black;
