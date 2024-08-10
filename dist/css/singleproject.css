@@ -2,11 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 
-* {
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
 /* Adjust the line and content positioning */
 .line {
     border-top: 1px solid black;
@@ -145,7 +140,6 @@ nav {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid black;
-    width: 96%;
     margin: 0 auto;
     max-width: 92.5%;
     margin-left: 55px;
@@ -233,7 +227,6 @@ text {
 
 footer {
     border-top: 1px solid black;
-    width: 96%;
     text-align: center;
     background-color: #fff;
     left: 2%;
