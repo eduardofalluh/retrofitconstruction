@@ -52,6 +52,7 @@ html, body {
     padding: 0;
     height: 100%;
     background-color: rgb(245, 245, 245);
+    max-width: 100%;
 }
 
 .footer-section{
@@ -69,7 +70,7 @@ body {
     flex-direction: column;
     font-family: Arial, sans-serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-
+    -webkit-text-size-adjust: none;
 }
 
 header {
@@ -152,8 +153,8 @@ footer{
         height: 95px !important;
     }
     .horizontal-align{
-        width: 88.5% !important;
-  margin-left: 5px !important;
+        width: 98% !important;
+      margin-left: 5px !important;
     }
     .initial-text{
         font-size: 30px;
@@ -288,6 +289,16 @@ footer {
 .button:hover {
     background-color: #555;
 }
+
+
+
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
 
 /* -------------------CAROUSEL---------------- */
 
@@ -689,7 +700,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 92.1%;
+    width: 94.8%;
     margin-left: 30px;
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
