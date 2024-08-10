@@ -497,14 +497,19 @@ footer {
     font-family: 'Lora', serif;
 }
 
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 @media (max-width: 768px) {
 
     .line{
         width: 75% !important;
     }
 
-    * {
-        box-sizing: content-box !important;
+    *{
+        box-sizing: content-box !important; /* Change to content-box or initial */
     }
     main{
         margin-left: 0px !important;
