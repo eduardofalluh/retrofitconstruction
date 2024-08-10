@@ -505,6 +505,32 @@ footer {
 
 @media (max-width: 768px) {
 
+    .main-content, 
+    .carousel-container, 
+    nav, 
+    footer {
+        max-width: 100vw;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /* Remove any extra padding or margins */
+    .main-content {
+        padding: 0;
+    }
+
+    /* Ensure images and videos are responsive and don't overflow */
+    .carousel-image, 
+    .carousel-video {
+        width: 100%;
+        /* height: auto; */
+    }
+
+    /* Adjust other elements if necessary */
+    .text-container {
+        margin-left: 0 !important;
+    }
+
     .line{
         width: 75% !important;
     }
