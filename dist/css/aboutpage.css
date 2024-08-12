@@ -180,7 +180,6 @@ h1 {
     font-size: 30px;
 	margin-bottom: 80px;
     font-family: 'Lora', serif;
-    margin-left: 35px;
 }
 
 p {
@@ -324,6 +323,10 @@ h1.about::before {
   height: 1px;
   width: 400px;
   background-color: black;
+}
+
+.main-title{
+  margin-left: 35px;
 }
 
 h1.main-title::before {
@@ -507,8 +510,15 @@ h1.main-title::before {
 }
 
 .about-animation h1 {
-  font-size: 50px;
   font-family: 'Lora', serif;
+    font-size: 50px;
+    color: #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    text-align: center;
   animation: fadeInOut 2s ease-in-out forwards;
 }
 @keyframes fadeIn {

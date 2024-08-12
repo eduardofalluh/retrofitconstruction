@@ -772,6 +772,10 @@ footer {
 }
 
 @media (max-width: 675px) {
+    .text-container{
+        margin-top: 0px !important;
+
+    }
     .burger-bar{
         left: 30px !important;
     }
