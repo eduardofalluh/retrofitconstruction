@@ -406,6 +406,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .iframe{
+        max-width: 84% !important;
+    }
     main{
         padding: 40px 0px !important;
     }

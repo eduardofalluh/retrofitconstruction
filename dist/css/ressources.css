@@ -584,6 +584,10 @@ label {
 /* Ensure spacing on the right side when the screen width is smaller */
 @media (max-width: 768px) {
 
+    .burger-bar{
+        left: 38px !important;
+    }
+
     main{
         padding: 40px 0px;
         margin: 0 auto;

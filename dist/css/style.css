@@ -199,12 +199,6 @@ footer{
         margin: 20px 3px !important;
     }
 
-    
-
-    .burger-bar{
-        left: 40px !important;
-    }
-
 }
 
 
@@ -776,24 +770,16 @@ footer {
         margin-top: 0px !important;
 
     }
-    .burger-bar{
-        left: 30px !important;
-    }
-
-    .language-switch {
-        right: 30px !important;
-    }
-
 
 }
 
 @media (max-width: 520px) {
     .burger-bar{
-        left: 25px !important;
+        left: 22px !important;
     }
 
     .language-switch {
-        right: 25px !important;
+        right: 20px !important;
     }
 }
 
@@ -813,13 +799,6 @@ footer {
 
 .language-link:hover {
     color: red; /* Adjust as needed */
-}
-
-@media (max-width: 768px) {
-
-    .language-switch{
-        right: 30px !important;
-    }
 }
 
 
