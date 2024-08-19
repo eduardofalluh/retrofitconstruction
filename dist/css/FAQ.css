@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
+.menu-options a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 35px;
+  margin: 10px 0;
+  font-family: 'Lora', serif;
+  position: relative;
+  transition: color 0.3s ease;
+}
 
+.menu-options a:hover {
+  color: #485a43;
+}
 * {
   max-width: 100%;
   box-sizing: border-box;

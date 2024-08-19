@@ -390,6 +390,20 @@ footer {
     animation: slideIn 1s ease-in-out;
 }
 
+.menu-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    margin: 10px 0;
+    font-family: 'Lora', serif;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-options a:hover {
+    color: #485a43;
+  }
+
 .contact-us-animation h1 {
     font-size: 50px;
     text-align: center;

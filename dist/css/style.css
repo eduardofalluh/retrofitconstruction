@@ -22,7 +22,7 @@
 }
 
 .initial-text {
-    font-family: 'Lora', serif;
+    font-family: 'Lora';
     font-size: 50px;
     color: #3d4e3a;
     position: absolute;
@@ -34,6 +34,14 @@
     animation: fadeOut 1.0s ease-in-out forwards;
     animation-delay: 2.0s;
     width: 1000.5px;
+    font-weight: 400;
+}
+
+.initial-text h1{
+    font-size: 50px;
+    color: #3d4e3a;
+    font-weight: 400;
+
 }
 
 @keyframes fadeOut {
@@ -159,7 +167,7 @@ footer{
         width: 88% !important;
       margin-left: 5px !important;
     }
-    .initial-text{
+    .initial-text h1{
         font-size: 30px;
 
     }
@@ -371,6 +379,8 @@ footer {
     font-size: 35px;
     margin: 10px 0;
     font-family: 'Lora', serif;
+    font-weight: 400;
+
 }
 /* Menu options hover effect */
 .menu-options a {
@@ -383,7 +393,7 @@ footer {
 }
 
 .menu-options a:hover {
-    color: red;
+    color: #485a43;
 }
 
 .menu-options a::before {
@@ -393,7 +403,7 @@ footer {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: red;
+    background-color: #485a43;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -652,7 +662,7 @@ footer {
   .tagline{
     font-size: 20px;
     font-family: 'Lora', serif;
-    color: red;
+    color: #485a43;
   }
 
 
@@ -693,14 +703,33 @@ footer {
     text-align: center;
 }
 
+.service-btn{
+  color: #485a43;
+  padding: 10px 20px;
+  /* text-decoration: none; */
+  border-radius: 10px;
+  font-family: 'Lora', serif;
+  font-size: 18px;
+    /* display: block; */
+    margin: 0 auto;
+    cursor: pointer;
+text-align: center;
+border: solid 1px #485a43;
+width: 230px;
+}
+
+.button-container{
+    text-align: center;
+}
+
 .horizontal-align {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 94.8%;
     margin-left: 30px;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
+    border: 1px solid #000000;
+    border-radius: 15px;
     padding: 20px;
     font-family: 'Lora', serif;
     font-size: 20px;
@@ -711,7 +740,7 @@ footer {
 .centered-text {
     font-family: 'Lora', serif;
     font-size: 20px;
-    color: red;
+    color: #485a43;
 }
 
 .button-container {
@@ -720,7 +749,7 @@ footer {
 }
 
 .appointment-button {
-    background-color: red;
+    background-color: #485a43;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -730,9 +759,6 @@ footer {
     text-align: center;
 }
 
-.appointment-button:hover {
-    background-color: #555;
-}
 
 /* SEE MORE FUNCTION */
 
@@ -744,11 +770,14 @@ footer {
 /* Style the custom cursor */
 .custom-cursor {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    background-color: #485a43;
+    background-image: url('../img/logo-2.png'); /* Update with the correct path */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image within the circle */
     color: #fff;
-    border-radius: 50%;
+    border-radius: 50%;     
     display: flex;
     align-items: center;
     justify-content: center;
@@ -759,6 +788,7 @@ footer {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 
 .carousel-item:hover .custom-cursor {
     opacity: 1;
@@ -798,7 +828,7 @@ footer {
 }
 
 .language-link:hover {
-    color: red; /* Adjust as needed */
+    color: #485a43; /* Adjust as needed */
 }
 
 

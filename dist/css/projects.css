@@ -33,6 +33,7 @@ h1 {
     margin-top: 20px;
     font-size: 24px;
     margin-left: 55px;
+    font-weight: 400;
 }
 
 .grid-container {
@@ -69,7 +70,7 @@ h1 {
     font-family: 'Lora', serif;
     margin-top: 10px;
     font-size: 15px;
-    color: #3d4e3a;
+    color: #485a43;
 }
 
 /* Responsive styles */
@@ -189,9 +190,23 @@ section {
     text-align: center;
 }
 
+.menu-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    margin: 10px 0;
+    font-family: 'Lora', serif;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-options a:hover {
+    color: #485a43;
+  }
+
 h1 {
-    font-size: 30px;
-    margin-bottom: 100px;
+    font-size: 40px;
+    margin-bottom: 80px;
     font-family: 'Lora', serif;
 }
 
@@ -332,7 +347,7 @@ footer {
 }
 
 .menu-options a:hover {
-    color: red;
+    color: #485a43;
 }
 
 .menu-options a::before {
@@ -342,7 +357,7 @@ footer {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: red;
+    background-color: #485a43;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -442,6 +457,7 @@ footer {
     text-align: center;
     animation: fadeOut 1.0s ease-in-out forwards;
     animation-delay: 1.0s;
+    font-weight: 400;
 }
 
 @keyframes fadeOut {
@@ -522,7 +538,7 @@ footer {
   }
   
   .language-link:hover {
-    color: red; /* Adjust as needed */
+    color: #485a43; /* Adjust as needed */
   }
   
   @media (max-width: 768px) {

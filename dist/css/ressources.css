@@ -581,6 +581,21 @@ label {
     display: block;
 }
 
+
+.menu-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    margin: 10px 0;
+    font-family: 'Lora', serif;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-options a:hover {
+    color: #485a43;
+  }
+
 /* Ensure spacing on the right side when the screen width is smaller */
 @media (max-width: 768px) {
 

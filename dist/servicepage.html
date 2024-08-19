@@ -62,7 +62,7 @@
     <main style="display: none;">
         <h1 class="main-title">services</h1>
         <div class="services-container">
-            <div class="service">
+            <div class="service slide-in">
                 <div class="flexbox">
                     <div class="service-line"></div>
                     <h2 class="service-title">construction project management</h2>
@@ -71,7 +71,7 @@
                 
                 <p class="service-description">Construction project management involves planning, coordinating, and overseeing all aspects of a construction project from inception to completion. It encompasses tasks such as budgeting, scheduling, resource allocation, and communication to ensure projects are executed efficiently, on time, and within budget while maintaining quality and safety standards.</p>
             </div>
-            <div class="service">
+            <div class="service slide-in-2">
                 <div class="flexbox">
                     <div class="service-line"></div>
                     <h2 class="service-title">deep energy retrofits and extensions</h2>
@@ -79,7 +79,7 @@
                 </div>
                 <p class="service-description">Deep energy retrofits involve comprehensive and transformative upgrades to existing buildings, focusing on substantial energy savings and sustainability. They often include building envelope upgrades such as improved airtightness, enhanced insulation, high performance windows and doors, efficient HVAC systems and renewable energy integration. These measures significantly reduce energy consumption, enhance comfort and health for the occupant, and minimize environmental impact while maximizing a building's potential.</p>
             </div>
-            <div class="service">
+            <div class="service slide-in-2">
                 <div class="flexbox">
                     <div class="service-line"></div>
                     <h2 class="service-title">consultation</h2>
@@ -91,6 +91,48 @@
             </div>
         </div>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slideInElements = document.querySelectorAll('.slide-in-2');
+
+            function handleScroll() {
+                slideInElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial check
+        });
+
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+        const slideInElements = document.querySelectorAll('.slide-in');
+
+        // Function to add the 'visible' class immediately after the page loads
+        function activateSlideIn() {
+            slideInElements.forEach((el) => {
+                el.classList.add('visible');
+            });
+        }
+
+        activateSlideIn(); // Activate slide-in animations directly on page load
+    });
+
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
+
+    </script>
 
     <footer style="display: none;">
         <div class="footer-section">

@@ -163,9 +163,54 @@ section {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 80px;
     font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+.menu-options a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 35px;
+  margin: 10px 0;
+  font-family: 'Lora', serif;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  opacity: 0;
+}
+
+.slide-in.visible {
+  animation: slideInFromLeft 1s forwards;
+  opacity: 1;
+}
+
+.slide-in-2 {
+  opacity: 0;
+}
+
+.slide-in-2.visible {
+  animation: slideInFromLeft 1s forwards;
+  opacity: 1;
+}
+
+.menu-options a:hover {
+  color: #485a43;
 }
 
 p {
@@ -310,7 +355,7 @@ footer {
 }
 
 .menu-options a:hover {
-    color: red;
+    color: #485a43;
 }
 
 .menu-options a::before {
@@ -320,7 +365,7 @@ footer {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: red;
+    background-color: #485a43;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -420,6 +465,7 @@ h1.services {
     flex-shrink: 0;
     width: 450px;
     font-family: 'Lora', serif;
+    font-weight: 400;
 }
 
 .service-description {
@@ -449,6 +495,7 @@ h1.services {
   font-size: 50px;
   font-family: 'Lora', serif;
     animation: fadeInOut 2s ease-in-out forwards;
+    font-weight: 400;
 }
 
 @keyframes fadeOut {
@@ -556,7 +603,7 @@ h1.services {
 }
 
 .language-link:hover {
-  color: red; /* Adjust as needed */
+  color: #485a43; /* Adjust as needed */
 }
 
 @media (max-width: 768px) {
