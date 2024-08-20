@@ -2,7 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 
-
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 body {
     touch-action: pan-y;
     overflow-x: hidden;
@@ -137,8 +141,17 @@ html, body {
     font-size: 18px;
     text-align: center;
     position: absolute;
-    right: 55px;
+    right: 75px;
     cursor: pointer;
+}
+@media (min-width: 1600px) {
+    .learn-more{
+        right: 95px !important;
+    }
+
+    .language-switch{
+        right:70 !important;
+    }
 }
 
 /* Ensure responsiveness for mobile */
@@ -924,9 +937,17 @@ label {
     transition: filter 0.5s ease;
 }
 
-.grid-item img:hover {
+/* Make images black and white by default */
+.grid-item img {
     filter: grayscale(100%);
+    transition: filter 0.5s ease;
 }
+
+/* On hover, revert to the original color */
+.grid-item img:hover {
+    filter: grayscale(0%);
+}
+
 
 .grid-link {
     text-decoration: none;

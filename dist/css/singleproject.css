@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
-
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 .menu-options a {
     color: #fff;
     text-decoration: none;
@@ -522,9 +526,20 @@ footer {
 .carousel-controls {
     display: flex;
     position: absolute;
-    right: 52px;
+    right: 65px;
     pointer-events: none;
     z-index: 2;
+}
+@media (min-width: 1600px) {
+    .carousel-controls {
+        
+        right: 75px !important;
+        
+    }
+
+    .language-switch{
+        right:65px !important;
+    }
 }
 
 .carousel-control {
