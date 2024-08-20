@@ -26,6 +26,217 @@ html, body {
     background-color: rgb(245, 245, 245);
 
 }
+/* Update the category class to include background color transition */
+.category-2 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    background-color: transparent; /* Initial background color */
+    transition: background-color 0.3s ease;
+}
+
+.arrow {
+    margin-right: 10px; /* space between arrow and text */
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(-45deg); /* Default down arrow */
+    transition: transform 0.3s ease;
+}
+
+.arrow-up {
+    transform: rotate(135deg); /* Up arrow */
+}
+
+.category {
+    font-size: 18px; /* Adjust the font size as needed */
+    transition: color 0.3s ease;
+}
+
+/* Active state for the category background */
+.category-2.active {
+    background-color: #485a43; /* Change this to the desired active background color */
+}
+
+
+
+
+
+
+
+
+
+/* General category styling */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-left: 25px; /* Keep consistent margin on the left */
+    margin-right: 35px; /* Keep consistent margin on the right */
+    max-width: 97.4%;
+}
+
+/* .category {
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    flex: 1;
+    box-sizing: border-box;
+} */
+
+.category-2 {
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+}
+
+
+/* Grid container styling */
+.grid-container {
+    display: none;
+    padding: 10px;
+    width: 100%; /* Make sure it takes full width of its respective category */
+    box-sizing: border-box;
+}
+
+.grid-container.active {
+    display: block;
+    margin-top: 10px;
+}
+
+.grid-item {
+    margin-bottom: 15px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Ensure responsiveness for mobile */
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+        margin-left: 25px !important;
+        max-width: 88%;
+    }
+
+    .category {
+        margin-bottom: 10px;
+    }
+
+    .grid-container {
+        padding: 15px;
+        width: 95% !important; /* Use full width on mobile */
+        margin-left: 20px !important;
+    }
+
+    .grid-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Ensure proper spacing for desktop */
+@media (min-width: 769px) {
+    .grid{
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    .grid-item {
+        margin-bottom: 25px;
+    }
+
+    .grid-item a{
+        margin: 13px !important;
+    }
+
+    .grid-container{
+        margin-left: 10px !important;
+    }
+}
+
+/* General category styling */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    cursor: pointer;
+}
+
+
+
+.category:last-child {
+    border-right: none;
+}
+
+
+.category-2:hover{
+    background-color: #485a43;
+
+}
+
+.grid-container {
+    display: none;
+    width: 100%; /* Ensure the grid container aligns with the category width */
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Space between content and next section */
+}
+
+.grid-item {
+    margin-bottom: 15px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Ensure responsiveness for mobile */
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+    }
+
+    .category {
+        margin-bottom: 10px;
+    }
+
+    .grid-container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .grid-item {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
 
 h1 {
     text-align: left;
@@ -33,18 +244,20 @@ h1 {
     font-size: 30px;
     margin-bottom: 80px;
     font-family: 'Lora', serif;
+    font-weight: 400;
 }
 
 h2{
     font-size: 25px;
     font-family: 'Lora', serif;
+    font-weight: 400;
 
 }
 
 
 .line {
     border-top: 1px solid black;
-    width: 350px;
+    width: 50%;
     margin-bottom: 10px;
 }
 
@@ -243,7 +456,7 @@ main {
     justify-content: space-around; /* You can use space-between or space-around */
     width: 100%; /* Ensure it takes the full width */
     padding: 0 10px; /* Adjust padding as needed */
-    margin-left: 35px;
+    margin-left: 25px;
 }
 
 .grid-column {
@@ -260,7 +473,7 @@ main {
 
 .grid-item {
     margin-bottom: 20px;
-    width: 100%; /* Ensure it takes the full width of the column */
+    width: 104%; /* Ensure it takes the full width of the column */
 }
 
 .grid-item img {
@@ -352,7 +565,7 @@ footer {
 }
 
 .about {
-    font-size: 30px;
+    font-size: 40px;
     line-height: 1.5;
     font-family: 'Lora', serif;
     margin-left: 35px;
@@ -511,16 +724,7 @@ footer {
     width: 100%;
 }
 
-.category::before {
-    content: "";
-    width: 95%;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: 10px;
-}
+
 
 label {
     padding-top: 10px;
@@ -572,6 +776,7 @@ label {
     font-size: 50px;
     font-family: 'Lora', serif;
     animation: fadeInOut 2s ease-in-out forwards;
+    font-weight: 400;
 }
 
 

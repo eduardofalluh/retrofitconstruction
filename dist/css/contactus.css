@@ -159,9 +159,10 @@ section {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 20px;
     font-family: 'Lora', serif;
+    font-weight: 400;
 }
 
 p {
@@ -303,7 +304,7 @@ footer {
 }
 
 .menu-options a:hover {
-    color: red;
+    color: #485a43;
 }
 
 .menu-options a::before {
@@ -313,7 +314,7 @@ footer {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: red;
+    background-color: #485a43;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -487,7 +488,7 @@ footer {
   }
   
   .language-link:hover {
-    color: red; /* Adjust as needed */
+    color: #485a43; /* Adjust as needed */
   }
   
   @media (max-width: 768px) {
