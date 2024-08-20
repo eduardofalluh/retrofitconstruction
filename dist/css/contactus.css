@@ -497,3 +497,9 @@ footer {
         right: 60px;
     }
   }
+
+  .text-rights-reserved{
+    background-color: rgb(245, 245, 245);
+    font-size: 10px;
+
+}

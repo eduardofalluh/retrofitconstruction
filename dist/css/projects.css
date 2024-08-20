@@ -189,7 +189,11 @@ section {
 .pictures {
     text-align: center;
 }
+.text-rights-reserved{
+    background-color: rgb(245, 245, 245);
+    font-size: 10px;
 
+}
 .menu-options a {
     color: #fff;
     text-decoration: none;

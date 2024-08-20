@@ -57,7 +57,12 @@
             </div>
             <div class="content-body">
                 <img src="./img/charon-1.JPG" alt="Vision Image">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="btn">
+                        <button class="learn-more" onclick="window.open('https://www.instagram.com/retrofitconstruction/', '_blank');">learn-more</button>
+                    </div>
+                </div>
             </div>
         </div>
     
@@ -128,6 +133,8 @@
             <p class="footer-link">rbq 5825-8377-01</p>
             <p><a href="./contactus.html" class="footer-link">contact us</a></p>
         </div>
+        <div class="text-rights-reserved">© 2024 All Rights Reserved</div>
+
     </footer>
 
     <script>
@@ -234,12 +241,13 @@ function toggleDropdown(category, categoryDiv) {
         const blogGrid = document.querySelector('#blog .grid');
 
         blogGrid.innerHTML = ''; // Clear previous posts
+
         data.items.forEach(item => {
             const blogItem = document.createElement('div');
             blogItem.className = 'grid-item';
             blogItem.innerHTML = `
                 <a href="${item.link}" target="_blank">
-                    <img src="${item.thumbnail}" alt="${item.title}">
+                    <img src="${item.thumbnail}" alt="${item.title}" onerror="this.style.display='none'">
                     <h2>${item.title}</h2>
                     <p>${item.description.replace(/<[^>]*>?/gm, '').substring(0, 100)}...</p>
                 </a>
@@ -250,7 +258,9 @@ function toggleDropdown(category, categoryDiv) {
         console.error('Error fetching Medium posts:', error);
     }
 }
-fetchMediumPosts();
+
+
+
     </script>
 
 </body>

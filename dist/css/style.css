@@ -31,8 +31,8 @@
     transform: translate(-50%, -50%);
     opacity: 1;
     text-align: center;
-    animation: fadeOut 1.0s ease-in-out forwards;
-    animation-delay: 2.0s;
+    animation: fadeOut 2.0s ease-in-out forwards;
+    animation-delay: 6.0s;
     width: 1000.5px;
     font-weight: 400;
 }
@@ -96,6 +96,11 @@ header {
     width: 25px;
 }
 
+.text-rights-reserved{
+    background-color: rgb(245, 245, 245);
+    font-size: 10px;
+
+}
 
 
 .box {
@@ -160,8 +165,12 @@ footer{
         box-sizing: content-box !important; /* Change to content-box or initial */
     }
     .circle{
-        width: 24% !important;
+        width: 95px !important;
         height: 95px !important;
+    }
+    .circles-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Ensures at least 2 columns on small screens */
     }
     .horizontal-align{
         width: 88% !important;
@@ -179,7 +188,7 @@ footer{
 
     .carousel-controls{
         right: 10px !important;
-        bottom: 90px;
+        top: 595px;
     }
 
     footer{

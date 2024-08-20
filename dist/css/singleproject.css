@@ -30,6 +30,12 @@
     width: 95%;
 }
 
+.text-rights-reserved{
+    background-color: rgb(245, 245, 245);
+    font-size: 10px;
+
+}
+
 .content-body{
     max-width: 50%;
 }

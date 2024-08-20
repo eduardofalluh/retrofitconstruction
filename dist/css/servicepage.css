@@ -204,6 +204,12 @@ h1 {
   opacity: 0;
 }
 
+.text-rights-reserved{
+  background-color: rgb(245, 245, 245);
+  font-size: 10px;
+
+}
+
 .slide-in-2.visible {
   animation: slideInFromLeft 1s forwards;
   opacity: 1;
