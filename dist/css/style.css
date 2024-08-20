@@ -11,11 +11,13 @@
         opacity: 1;
     }
 }
-.container {
-    max-width: 1650px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+@media (min-width: 1600px) {
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
 
 @media (min-width: 1600px) {
     .burger-bar{

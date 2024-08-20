@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
-
-.container {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
+@media (min-width: 1600px) {
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
 body {
     touch-action: pan-y;
     overflow-x: hidden;
