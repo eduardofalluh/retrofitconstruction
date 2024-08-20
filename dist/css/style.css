@@ -564,6 +564,8 @@ footer {
 .circle p {
     margin: 0;
     font-family: 'Lora', serif;
+    bottom: 0;
+  position: absolute;
 }
 
 /* Appointment Button */
@@ -743,6 +745,7 @@ footer {
 text-align: center;
 border: solid 1px #485a43;
 width: 230px;
+margin-top: 20px;
 }
 
 .button-container{
