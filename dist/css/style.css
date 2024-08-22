@@ -179,6 +179,10 @@ footer{
 }
 
 @media (max-width: 768px) {
+    .circle p{
+        position: relative !important;
+    bottom: -75px !important;
+    }
     *{
         box-sizing: content-box !important; /* Change to content-box or initial */
     }
@@ -548,6 +552,8 @@ footer {
     justify-content: center;
     margin-top: 20px;
     flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .circle {
@@ -732,6 +738,11 @@ footer {
     text-align: center;
 }
 
+.btn{
+    color: #485a43;
+
+}
+
 .service-btn{
   color: #485a43;
   padding: 10px 20px;
@@ -747,7 +758,6 @@ border: solid 1px #485a43;
 width: 230px;
 margin-top: 20px;
 margin-bottom: 30px;
-
 }
 
 .button-container{
