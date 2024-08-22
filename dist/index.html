@@ -97,11 +97,28 @@
                 </section>
 
                 <section class="text-container">
-                    <div class="tagline"> deep energy retrofits for a carbon-neutral future</div>
+                    <div class="tagline"><span id="typed-text"></span><span class="cursor">|</span></div>
                 </section>
+                
             </div>
 
             <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const text = "deep energy retrofits for a carbon-neutral future";
+                    const speed = 100; // Adjust typing speed (lower number = faster)
+                    let index = 0;
+
+                    function typeText() {
+                        if (index < text.length) {
+                            document.getElementById('typed-text').textContent += text.charAt(index);
+                            index++;
+                            setTimeout(typeText, speed);
+                        }
+                    }
+
+                    setTimeout(typeText, 6000); // Start typing effect after a 6-second delay
+                });
+
                 var items = Array.from(document.querySelectorAll('.carousel-item'));
                 var currentIndex = 0;
                 var carouselInterval;

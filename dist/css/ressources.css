@@ -53,7 +53,7 @@ html, body {
 }
 
 .arrow-up {
-    transform: rotate(135deg); /* Up arrow */
+    transform: rotate(-135deg); /* Up arrow */
 }
 
 .category {
