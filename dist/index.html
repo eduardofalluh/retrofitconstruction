@@ -1,17 +1,15 @@
-<div class="container">
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Retrofit Construction</title>
     <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrofit Construction</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/favicon.png" type="image/png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 </head>
-    
+
 <body>
     <header style="display: none;">
         <nav class="navbar">
@@ -34,15 +32,15 @@
                     var menuOverlay = document.querySelector('.menu-overlay');
                     if (menuOverlay.classList.contains('active')) {
                         menuOverlay.classList.add('closing');
-                        setTimeout(function() {
+                        setTimeout(function () {
                             menuOverlay.classList.remove('active', 'closing');
-                        }, 500); // match the duration of the dropUp animation
+                        }, 500);
                     } else {
                         menuOverlay.classList.add('active');
                     }
                 }
 
-                window.addEventListener('DOMContentLoaded', function() {
+                window.addEventListener('DOMContentLoaded', function () {
                     var option3Link = document.getElementById('option3');
                     var currentPage = window.location.href;
 
@@ -90,16 +88,16 @@
                     <img class="carousel-control previous" onclick="previousItem()" src="./img/left-arrow.png" alt="Previous">
                     <img class="carousel-control next" onclick="nextItem()" src="./img/right-arrow.png" alt="Next">
                 </div>
-                
+
                 <section class="text-container">
-                    <p style="margin-bottom: 3px;"> charon residence</p>
+                    <p style="margin-bottom: 3px;">charon residence</p>
                     <p class="link" href="https://plus.lapresse.ca/screens/935953a0-3ad8-4564-b8ed-e37439a0a6c1%7C_0.html" style="font-size: 11px; margin-bottom: auto;">learn more </p><br><br>
                 </section>
 
                 <section class="text-container">
                     <div class="tagline"><span id="typed-text"></span><span class="cursor">|</span></div>
                 </section>
-                
+
             </div>
 
             <script>
@@ -159,13 +157,9 @@
                     carouselInterval = setInterval(rotateCarousel, intervalTime);
                 }
 
-                // Delay time in milliseconds (e.g., 5000 milliseconds for a 5-second delay)
                 const initialDelay = 5000;
-
-                // Interval time in milliseconds (e.g., 10000 milliseconds for a 10-second interval)
                 const intervalTime = 20000;
 
-                // Start the interval after the initial delay
                 setTimeout(() => {
                     carouselInterval = setInterval(rotateCarousel, intervalTime);
                 }, initialDelay);
@@ -175,7 +169,7 @@
                     var text = '';
                     var location = '';
 
-                    switch(currentIndex) {
+                    switch (currentIndex) {
                         case 0:
                             text = 'projet sucrerie (en cours de developpement)';
                             location = 'Impasse de la sucrerie, Saint-Agath'
@@ -207,19 +201,19 @@
                         document.querySelector('header').classList.add('fade-in');
                         document.querySelector('footer').style.display = 'block';
                         document.querySelector('footer').classList.add('fade-in');
-                    }, 6000); // Display rest of the page after 3 seconds
+                    }, 6000); // Display rest of the page after 6 seconds
                 });
 
                 // Add mousemove event to show custom cursor
                 document.querySelectorAll('.carousel-item').forEach(item => {
-                    item.addEventListener('mousemove', function(e) {
+                    item.addEventListener('mousemove', function (e) {
                         const customCursor = document.querySelector('.custom-cursor');
                         customCursor.style.left = `${e.clientX}px`;
                         customCursor.style.top = `${e.clientY}px`;
                         customCursor.style.opacity = 1;
                     });
 
-                    item.addEventListener('mouseleave', function() {
+                    item.addEventListener('mouseleave', function () {
                         const customCursor = document.querySelector('.custom-cursor');
                         customCursor.style.opacity = 0;
                     });
@@ -229,17 +223,17 @@
                 const carouselContainer = document.querySelector('.carousel-container');
                 const hammer = new Hammer(carouselContainer);
 
-                hammer.on('swipeleft', function() {
+                hammer.on('swipeleft', function () {
                     nextItem();
                 });
 
-                hammer.on('swiperight', function() {
+                hammer.on('swiperight', function () {
                     previousItem();
                 });
             </script>
 
             <div class="bottom-image slide-in">
-                <div class="subtitle" style="margin: auto; color: red;     font-family: 'Lora', serif; font-size: 20px;"> our services</div>
+                <div class="subtitle" style="margin: auto; color: red; font-family: 'Lora', serif; font-size: 20px;">our services</div>
                 <div class="link" style="font-size: 16px; margin-bottom: auto;">Recognizing that every building is unique, we offer a complete suite of services—from deep energy retrofits and innovative developments to expert consultancy and precise envelope sealing—ensuring tailored solutions for every successful project.
                 </div><br><br>
             </div>
@@ -258,15 +252,13 @@
                     <p>Text 4</p>
                 </div>
             </div>
-                <div class="service-btn slide-in">
-                    <a class='btn' href="./servicepage.html"> discover our services</a>
-
-                </div>
+            <div class="service-btn slide-in">
+                <a class='btn' href="./servicepage.html">discover our services</a>
+            </div>
 
             <div class="bottom-image slide-in">
-                <div class="subtitle" style="margin: auto; color: red; font-family: 'Lora', serif; font-size: 20px;"> our partners</div>
+                <div class="subtitle" style="margin: auto; color: red; font-family: 'Lora', serif; font-size: 20px;">our partners</div>
                 <div class="link" style="font-size: 16px; margin-bottom: auto;">Our trusted partners include leading organizations in sustainability and construction. Through our affiliations, we offer industry-recognized certifications that align with our commitment to excellence.
-
                 </div><br><br>
             </div>
 
@@ -275,8 +267,7 @@
                     <p>APCHQ</p>
                 </div>
                 <div class="circle">
-                    <p>CHBA NET ZERO
-                    </p>
+                    <p>CHBA NET ZERO</p>
                 </div>
                 <div class="circle">
                     <p>BPQ</p>
@@ -296,7 +287,7 @@
             </div>
         </div>
     </main>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const slideInElements = document.querySelectorAll('.slide-in');
@@ -314,7 +305,7 @@
             handleScroll(); // Initial check
         });
 
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             window.scrollTo(0, 0);
         });
     </script>
@@ -322,16 +313,15 @@
     <footer style="display: none;">
         <div class="footer-section">
             <p><a href="./FAQ.html" class="footer-link">faq</a></p>
-            <p><a style="font-size: 17px;" class=" footer-link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
-            <p class=" footer-link">rbq 5825-8377-01</p>
+            <p><a style="font-size: 17px;" class="footer-link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p class="footer-link">rbq 5825-8377-01</p>
             <p><a href="./contactus.html" class="footer-link">contact us</a></p>
         </div>
         <div class="text-rights-reserved">© 2024 All Rights Reserved</div>
-
     </footer>
 
     <!-- Custom cursor -->
     <div class="custom-cursor"></div>
 </body>
+
 </html>
-</div>

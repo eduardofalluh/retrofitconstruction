@@ -501,7 +501,6 @@ footer {
 .carousel-item {
     width: 100%;
     height: 100%;
-    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -528,14 +527,14 @@ footer {
 .carousel-controls {
     display: flex;
     position: absolute;
-    right: 65px;
+    right: 50px;
     pointer-events: none;
     z-index: 2;
 }
 @media (min-width: 1600px) {
     .carousel-controls {
         
-        right: 75px !important;
+        right: 65px !important;
         
     }
 
@@ -764,3 +763,31 @@ footer {
     }
   }
   
+
+
+
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+/* Carousel Items */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+/* Active Carousel Item */
+.carousel-item.active {
+    opacity: 1;
+}

@@ -723,22 +723,84 @@ footer {
     }
 }
 
-/* 
+
+
+
+
+/* Add this to your CSS file (./css/style.css) */
 .carousel-item {
-    opacity: 0;
-    transition: opacity 1s ease-in-out; 
     position: absolute;
-    top: 0;
-    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    top: 0;
+    left: 0;
 }
 
 .carousel-item.active {
     opacity: 1;
-    z-index: 1;
-} */
+    position: relative; /* To ensure the active item stays in the flow of the document */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure the carousel container has relative positioning */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden; /* Ensure the carousel items stay within the container */
+}
+
+/* Ensure the carousel items take up the correct space */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust height to fit the container */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-container a {
+    display: block;
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translate(-50%, -50%);
+}
+
 
 
 
