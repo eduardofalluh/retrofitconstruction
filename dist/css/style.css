@@ -803,17 +803,7 @@ footer {
     display: block;
 }
 
-.custom-cursor {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    transform: translate(-50%, -50%);
-}
+
 
 
 
@@ -930,8 +920,8 @@ margin-bottom: 30px;
 /* Style the custom cursor */
 .custom-cursor {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background-color: #485a43;
     background-image: url('../img/favicon.png'); /* Update with the correct path */
     background-size: cover; /* Ensure the image covers the entire area */

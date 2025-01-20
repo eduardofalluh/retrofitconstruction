@@ -281,7 +281,6 @@ footer {
     font-size: 25px;
 	line-height: 1.5;
     font-family: 'Lora', serif;
-    margin-left: 35px;
     /* margin-top: 60px; */
   }
 
@@ -298,7 +297,7 @@ footer {
 .image-about {
     width: 300px;
     height: auto; /* Adjust height as needed or use 'auto' to maintain aspect ratio */
-    margin-left: 35px;
+    text-align: center;
 }
 
 .image-service{
@@ -329,7 +328,7 @@ h1.about::before {
   top: 0;
   left: 0;
   height: 1px;
-  width: 400px;
+  width: 200px;
   background-color: black;
 }
 
@@ -604,7 +603,6 @@ h1.main-title::before {
 @media (max-width: 768px) {
   .image-about{
     display: block;
-            margin-left: 36px;
             margin-right: auto;
             width: 93%;
             margin-bottom: 80px;
@@ -666,4 +664,37 @@ h1.main-title::before {
   .language-switch{
       right: 55px;
   }
+}
+
+
+@media (max-width: 768px) {
+  .about-sections {
+      display: flex; /* Enable flexbox */
+      flex-direction: column; /* Stack sections vertically */
+      gap: 40px; /* Increase spacing between sections */
+      align-items: center; /* Center the sections horizontally */
+      justify-content: center; /* Center the sections vertically (if container has height) */
+      width: 100%; /* Ensure the container takes full width */
+      margin: 0 auto; /* Center the container horizontally */
+      padding: 20px; /* Add padding for spacing */
+  }
+}
+
+.about-sections {
+  display: flex; /* Enable flexbox */
+  justify-content: space-between; /* Add space between sections */
+  gap: 20px; /* Add space between sections */
+  max-width: 1200px; /* Set a maximum width */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add padding around the container */
+  text-align: justify;
+}
+
+.about-section {
+  flex: 1; /* Make all sections equal width */
+  min-width: 300px; /* Ensure sections don't shrink too much */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
