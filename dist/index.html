@@ -24,7 +24,9 @@
                     <a href="./servicepage.html">services</a>
                     <a href="./projects.html" id="option3">projects</a>
                     <a href="./ressources.html">resources</a>
-                    <button class="close-button" onclick="toggleMenu()">X</button>
+                    <button class="close-button" onclick="toggleMenu()">
+                        <img src="./img/x-logo-white-icon.png" alt="Close Menu" class="close-icon">
+                    </button>
                 </div>
             </div>
             <script>
@@ -100,6 +102,10 @@
 
             </div>
 
+            <div class="button-container">
+                <a href="./contactus.html" class="appointment-button">Book a consultation</a>
+            </div>
+
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
                     const text = "deep energy retrofits for a carbon-neutral future";
@@ -114,7 +120,7 @@
                         }
                     }
 
-                    setTimeout(typeText, 6000); // Start typing effect after a 6-second delay
+                    setTimeout(typeText, 4000); // Start typing effect after a 6-second delay
                 });
 
                 var items = Array.from(document.querySelectorAll('.carousel-item'));
@@ -201,7 +207,7 @@
                         document.querySelector('header').classList.add('fade-in');
                         document.querySelector('footer').style.display = 'block';
                         document.querySelector('footer').classList.add('fade-in');
-                    }, 6000); // Display rest of the page after 6 seconds
+                    }, 4000); // Display rest of the page after 6 seconds
                 });
 
                 // Add mousemove event to show custom cursor
@@ -281,9 +287,9 @@
                 <div class="centered-text">
                     your trusted partner in deep retrofits and sustainable building solutions.
                 </div>
-                <div class="button-container">
+                <!-- <div class="button-container">
                     <a href="./contactus.html" class="appointment-button">Book a consultation</a>
-                </div>
+                </div> -->
             </div>
         </div>
     </main>

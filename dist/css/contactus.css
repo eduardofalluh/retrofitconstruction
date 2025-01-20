@@ -126,7 +126,7 @@ nav {
 }
 
 nav img {
-    height: 25px;
+    height: 20px;
     margin-bottom: 30px;
     margin-top: 18px;
 }
@@ -273,7 +273,7 @@ footer {
 .burger-bar span {
     display: block;
     width: 30px;
-    height: 4px;
+    height: 2px;
     background-color: #000000;
     margin-bottom: 5px;
     transition: transform 0.3s ease-in-out;
@@ -493,7 +493,7 @@ footer {
   
   .language-link {
     font-family: 'Lora', serif;
-    font-size: 20px;
+    font-size: 18px;
     color: black; /* Adjust as needed */
     text-decoration: none;
   }
