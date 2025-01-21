@@ -320,7 +320,7 @@ function toggleDropdown(category, categoryDiv) {
         // Fetch and display Medium blog posts with images
         async function fetchMediumPosts() {
     try {
-        const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@eduardofalluh&cache_bust=${new Date().getTime()}`);
+        const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@fellipe_52552&cache_bust=${new Date().getTime()}`);
         const data = await response.json();
         const blogGrid = document.querySelector('#blog .grid');
 
