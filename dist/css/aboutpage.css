@@ -698,3 +698,16 @@ h1.main-title::before {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+
+
+.close-icon {
+  width: 24px; /* Taille de l'image */
+  height: 24px; /* Ajustez selon vos besoins */
+  cursor: pointer; /* Ajoute un curseur clic */
+  transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.close-icon:hover {
+  transform: scale(1.2); /* Agrandit légèrement au survol */
+}

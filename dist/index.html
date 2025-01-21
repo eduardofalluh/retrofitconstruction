@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/favicon.png" type="image/png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
@@ -55,10 +67,58 @@
 
             <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
             <div class="language-switch">
-                <a href="#" class="language-link">en/fr</a>
+                <a href="#" id="lang-en" class="language-link" onclick="translateLanguage('en')">en</a> /
+                <a href="#" id="lang-fr" class="language-link" onclick="translateLanguage('fr')">fr</a>
             </div>
+            <div id="google_translate_element" style="display: none;"></div>?\
         </nav>
     </header>
+    
+    <script>
+        function translateLanguage(lang) {
+            // Store the selected language in localStorage
+            localStorage.setItem('lang', lang);
+
+            // Check if the Google Translate dropdown is present
+            const googleTranslateContainer = document.querySelector('.goog-te-combo');
+
+            if (googleTranslateContainer) {
+                // Temporarily hide elements with the 'notranslate' class
+                const noTranslateElements = document.querySelectorAll('.notranslate');
+                noTranslateElements.forEach(el => {
+                    el.setAttribute('data-original-display', el.style.display);
+                    el.style.display = 'none';
+                });
+
+                // Set the selected language in Google Translate
+                googleTranslateContainer.value = lang;
+                googleTranslateContainer.dispatchEvent(new Event('change'));
+
+                // Wait for the translation to complete, then restore hidden elements
+                setTimeout(() => {
+                    noTranslateElements.forEach(el => {
+                        el.style.display = el.getAttribute('data-original-display') || '';
+                        el.removeAttribute('data-original-display');
+                    });
+                }, 500);
+            } else {
+                console.error('Google Translate dropdown not found. Make sure the Google Translate script is loaded.');
+            }
+        }
+
+        // Set the language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('lang') || 'en'; // Default to English
+            const googleTranslateInterval = setInterval(() => {
+                const googleTranslateContainer = document.querySelector('.goog-te-combo');
+                if (googleTranslateContainer) {
+                    clearInterval(googleTranslateInterval);
+                    translateLanguage(savedLang);
+                }
+            }, 100); // Check every 100ms until the dropdown is available
+        });
+    </script>
+
 
     <main>
         <div class="initial-text">
@@ -177,11 +237,11 @@
 
                     switch (currentIndex) {
                         case 0:
-                            text = 'projet sucrerie (en cours de developpement)';
+                            text = 'projet sucrerie';
                             location = 'Impasse de la sucrerie, Saint-Agath'
                             break;
                         case 1:
-                            text = 'projet sucrerie (en cours de developpement)';
+                            text = 'projet sucrerie';
                             location = 'Impasse de la sucrerie, Saint-Agath'
                             break;
                         case 2:

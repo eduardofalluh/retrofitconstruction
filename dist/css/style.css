@@ -939,6 +939,10 @@ margin-bottom: 30px;
     transition: opacity 0.3s;
 }
 
+.language-link.active {
+    text-decoration: underline;
+}
+
 
 .carousel-item:hover .custom-cursor {
     opacity: 1;

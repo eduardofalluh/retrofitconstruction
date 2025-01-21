@@ -618,6 +618,18 @@ h1.services {
 }
 
 
+.close-icon {
+    width: 24px; /* Taille de l'image */
+    height: 24px; /* Ajustez selon vos besoins */
+    cursor: pointer; /* Ajoute un curseur clic */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.close-icon:hover {
+    transform: scale(1.2); /* Agrandit légèrement au survol */
+}
+
+
 .language-switch {
   position: absolute;
   top: 20px;
