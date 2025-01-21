@@ -270,20 +270,7 @@
                     }, 4000); // Display rest of the page after 6 seconds
                 });
 
-                // Add mousemove event to show custom cursor
-                document.querySelectorAll('.carousel-item').forEach(item => {
-                    item.addEventListener('mousemove', function (e) {
-                        const customCursor = document.querySelector('.custom-cursor');
-                        customCursor.style.left = `${e.clientX}px`;
-                        customCursor.style.top = `${e.clientY}px`;
-                        customCursor.style.opacity = 1;
-                    });
-
-                    item.addEventListener('mouseleave', function () {
-                        const customCursor = document.querySelector('.custom-cursor');
-                        customCursor.style.opacity = 0;
-                    });
-                });
+              
 
                 // Initialize Hammer.js for carousel swipe functionality
                 const carouselContainer = document.querySelector('.carousel-container');
@@ -386,8 +373,6 @@
         <div class="text-rights-reserved">© 2024 All Rights Reserved</div>
     </footer>
 
-    <!-- Custom cursor -->
-    <div class="custom-cursor"></div>
 </body>
 
 </html>
