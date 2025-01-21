@@ -764,6 +764,31 @@ footer {
   }
 
 
+  /* NEW PAGE FOR SMALLER TEXTE ==============*/
+  .content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Add space between the image and the text */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.content-body {
+    flex: 0 0 auto; /* Prevent resizing of the image */
+    width: 50%; /* Adjust the width of the image */
+}
+
+.text-section {
+    flex: 1; /* Make the text take up remaining space */
+}
+
+.project-numbers {
+    margin-top: 20px; /* Add space below the descriptive text */
+    clear: both; /* Ensure it stays below everything */
+}
+
+
+
+
 
 
   
