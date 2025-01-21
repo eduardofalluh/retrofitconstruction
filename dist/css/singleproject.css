@@ -42,9 +42,7 @@
 
 }
 
-.content-body{
-    max-width: 50%;
-}
+
 
 .text-below-image h2{
     font-size: 25px;
@@ -583,6 +581,7 @@ footer {
 
     .content-body{
         max-width: 100% !important;
+        width: 100% !important;
     }
 
     .main-content, 
@@ -654,7 +653,7 @@ footer {
     }
 
     .content{
-        display: block;
+        display: block !important;
     }
 
     .content p{

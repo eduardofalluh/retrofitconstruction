@@ -498,3 +498,42 @@ footer {
 .close-icon:hover {
     transform: scale(1.2); /* Agrandit légèrement au survol */
 }
+
+
+
+@media (min-width: 1600px) {
+
+    .language-switch{
+        right:65px !important;
+    }
+}
+
+@media (max-width: 675px) {
+
+
+    .language-switch {
+        right: 45px !important;
+    }
+}
+
+@media (max-width: 545px) {
+  
+    .language-switch {
+        right: 30px !important;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+  
+    .language-switch{
+        right: 60px;
+    }
+  }
+
+    
+  .language-switch {
+    position: absolute;
+    top: 20px;
+    right: 57px;
+  }
