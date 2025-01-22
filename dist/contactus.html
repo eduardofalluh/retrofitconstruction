@@ -98,12 +98,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
         <script>
-            emailjs.init('qKYgMRIeyCUiAPs6Z'); // Initialize EmailJS with your public key
+            emailjs.init('aySPFGQysz1iNU_06'); // Initialize EmailJS with your public key
 
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent the default form submission behavior
 
-                emailjs.sendForm('service_vyzrc2p', 'template_6alffoa', this, 'qKYgMRIeyCUiAPs6Z')
+                emailjs.sendForm('service_fkf8e9d', 'template_ouap18b', this, 'aySPFGQysz1iNU_06')
                     .then(function() {
                         alert('Message sent successfully!');
                         document.getElementById('contact-form').reset(); // Clear the form after submission

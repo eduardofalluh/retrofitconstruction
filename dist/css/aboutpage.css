@@ -675,28 +675,34 @@ h1.main-title::before {
       align-items: center; /* Center the sections horizontally */
       justify-content: center; /* Center the sections vertically (if container has height) */
       width: 100%; /* Ensure the container takes full width */
-      margin: 0 auto; /* Center the container horizontally */
+      margin: 0 auto !important; /* Center the container horizontally */
       padding: 20px; /* Add padding for spacing */
   }
+
+    .about-section{
+      min-width: 300px !important;
+      padding: 12px !important;
+    }
+    .main-title{
+      margin-left: 30px !important;
+    }
 }
+
 
 .about-sections {
   display: flex; /* Enable flexbox */
   justify-content: space-between; /* Add space between sections */
   gap: 20px; /* Add space between sections */
   max-width: 1200px; /* Set a maximum width */
-  margin: 0 auto; /* Center the container */
+  margin-left: 0px;
   padding: 20px; /* Add padding around the container */
   text-align: justify;
 }
 
 .about-section {
-  flex: 1; /* Make all sections equal width */
-  min-width: 300px; /* Ensure sections don't shrink too much */
+  flex: 1;
+  min-width: 420px;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
