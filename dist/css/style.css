@@ -63,7 +63,7 @@
     opacity: 1;
     text-align: center;
     animation: fadeOut 2.0s ease-in-out forwards;
-    animation-delay: 4.0s;
+    animation-delay: 3.0s;
     width: 1000.5px;
     font-weight: 400;
 }
@@ -73,8 +73,16 @@
     color: #3d4e3a;
     font-weight: 400;
 
+
 }
 
+
+
+
+.language-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 @keyframes fadeOut {
     to {
         opacity: 0;

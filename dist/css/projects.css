@@ -569,3 +569,10 @@ footer {
 .close-icon:hover {
     transform: scale(1.2); /* Agrandit légèrement au survol */
 }
+
+
+
+.language-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }

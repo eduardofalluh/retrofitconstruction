@@ -541,6 +541,13 @@ footer {
     }
 }
 
+
+
+.language-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
 .carousel-control {
     border: none;
     cursor: pointer;

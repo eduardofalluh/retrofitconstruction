@@ -1022,3 +1022,12 @@ label {
         right: 55px;
     }
   }
+
+
+
+
+
+.language-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }

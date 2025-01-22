@@ -618,6 +618,12 @@ h1.services {
 }
 
 
+
+.language-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
 .close-icon {
     width: 24px; /* Taille de l'image */
     height: 24px; /* Ajustez selon vos besoins */

@@ -537,3 +537,9 @@ footer {
     top: 20px;
     right: 57px;
   }
+
+
+.language-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
