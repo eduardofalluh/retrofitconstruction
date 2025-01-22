@@ -918,6 +918,7 @@ margin-bottom: 30px;
 .button-container {
     justify-content: flex-end;
     margin-bottom: 60px;
+    margin-top: 70px;
 }
 
 .appointment-button {
