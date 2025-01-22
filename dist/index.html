@@ -67,10 +67,10 @@
 
     <main>
         <div class="initial-text">
-            <h1>deep energy retrofits</h1>
-            <h1>developments</h1>
-            <h1>consultation</h1>
-            <h1>envelope sealing specialist</h1>
+            <h1 data-fr="rénovations énergétiques profondes" data-en="deep energy retrofits">deep energy retrofits</h1>
+            <h1 data-fr="développements" data-en="developments">developments</h1>
+            <h1 data-fr="consultation" data-en="consultation">consultation</h1>
+            <h1 data-fr="spécialiste du scellage d'enveloppes" data-en="envelope sealing specialist">envelope sealing specialist</h1>
         </div>
 
         <div class="rest-of-page" style="display: none;">
@@ -101,33 +101,67 @@
                     <p class="link" href="https://plus.lapresse.ca/screens/935953a0-3ad8-4564-b8ed-e37439a0a6c1%7C_0.html" style="font-size: 11px; margin-bottom: auto;">learn more </p><br><br>
                 </section>
 
-                <section class="text-container">
-                    <div class="tagline"><span id="typed-text"></span><span class="cursor">|</span></div>
-                </section>
+                <div class="tagline">
+                    <span id="typed-text" 
+                          data-en="Where Sustainability Meets Well-Being and the Past Meets the Future" 
+                          data-fr="Là où la durabilité rencontre le bien-être et où le passé rencontre l’avenir">
+                    </span>
+                    <span class="cursor">|</span>
+                </div>
 
             </div>
 
             <div class="button-container">
-                <a href="./contactus.html" class="appointment-button">Book a consultation</a>
+                <a href="./contactus.html" class="appointment-button" data-fr="Réservez une consultation" data-en="Book a consultation">Book a consultation</a>
             </div>
 
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
-                    const text = "deep energy retrofits for a carbon-neutral future";
-                    const speed = 100; // Adjust typing speed (lower number = faster)
-                    let index = 0;
+                const speed = 100; // Typing speed
+                let index = 0;
+                let hasAnimated = false; // Flag to track if the animation has already been done
 
-                    function typeText() {
-                        if (index < text.length) {
-                            document.getElementById('typed-text').textContent += text.charAt(index);
-                            index++;
-                            setTimeout(typeText, speed);
-                        }
+                function typeText(text) {
+                    if (index < text.length) {
+                        document.getElementById('typed-text').textContent += text.charAt(index);
+                        index++;
+                        setTimeout(() => typeText(text), speed);
                     }
+                }
 
-                    setTimeout(typeText, 3000); // Start typing effect after a 6-second delay
+                function updateText(replaceOnly = false) {
+                    const currentLang = localStorage.getItem('lang') || 'en'; // Default to 'en' if no language is set
+                    const element = document.getElementById('typed-text');
+                    const text = element.getAttribute(`data-${currentLang}`); // Get text for current language
+
+                    if (replaceOnly || hasAnimated) {
+                        // Replace text instantly if animation has already happened
+                        element.textContent = text;
+                    } else {
+                        // Perform the typing animation for the first load
+                        element.textContent = ""; // Clear existing text
+                        index = 0; // Reset typing index
+                        hasAnimated = true; // Mark animation as done
+                        typeText(text);
+                    }
+                }
+
+                // Listen for language switch
+                document.querySelectorAll('.language-link').forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const selectedLang = this.getAttribute('data-lang'); // Get selected language
+                        localStorage.setItem('lang', selectedLang); // Save selected language
+                        updateText(true); // Replace text instantly without animation
+                    });
                 });
 
+                // Initialize text on page load
+                setTimeout(() => updateText(), 3000); // Delay animation on first load
+            });
+
+
+// ===================================================
                 var items = Array.from(document.querySelectorAll('.carousel-item'));
                 var currentIndex = 0;
                 var carouselInterval;
@@ -176,31 +210,51 @@
                 }, initialDelay);
 
                 function updateText() {
-                    var textContainer = document.querySelector('.text-container');
-                    var text = '';
-                    var location = '';
+                const textContainer = document.querySelector('.text-container');
+                const currentLang = localStorage.getItem('lang') || 'en'; // Retrieve current language
 
-                    switch (currentIndex) {
-                        case 0:
-                            text = 'sucrerie project';
-                            location = 'Impasse de la sucrerie, Saint-Agath'
-                            break;
-                        case 1:
-                            text = 'sucrerie project';
-                            location = 'Impasse de la sucrerie, Saint-Agath'
-                            break;
-                        case 2:
-                            text = 'charon residence';
-                            location = 'Impasse de la sucrerie, Saint-Agath'
-                            break;
-                        case 3:
-                            text = 'charon residence';
-                            location = 'Impasse de la sucrerie, Saint-Agath'
-                            break;
-                    }
+                let text = '';
+                let location = '';
 
-                    textContainer.innerHTML = `<p style="margin-bottom: 3px;">${text}</p><p class="link" style="font-size: 12px; margin-bottom: auto;">${location}</p><br><br>`;
+                switch (currentIndex) {
+                    case 0:
+                        text = currentLang === 'en' ? 'sucrerie project' : 'projet sucrerie';
+                        location = currentLang === 'en' 
+                            ? 'Impasse de la sucrerie, Saint-Agath' 
+                            : 'Impasse de la sucrerie, Saint-Agath'; // Translate if needed
+                        break;
+                    case 1:
+                        text = currentLang === 'en' ? 'sucrerie project' : 'projet sucrerie';
+                        location = currentLang === 'en' 
+                            ? 'Impasse de la sucrerie, Saint-Agath' 
+                            : 'Impasse de la sucrerie, Saint-Agath'; // Translate if needed
+                        break;
+                    case 2:
+                        text = currentLang === 'en' ? 'charon residence' : 'résidence charon';
+                        location = currentLang === 'en' 
+                            ? 'Charon Street, Montreal' 
+                            : 'Rue Charon, Montréal'; // Example translation
+                        break;
+                    case 3:
+                        text = currentLang === 'en' ? 'charon residence' : 'résidence charon';
+                        location = currentLang === 'en' 
+                            ? 'Charon Street, Montreal' 
+                            : 'Rue Charon, Montréal'; // Example translation
+                        break;
+                    default:
+                        text = currentLang === 'en' ? 'default project' : 'projet par défaut';
+                        location = currentLang === 'en' 
+                            ? 'Default Location' 
+                            : 'Emplacement par défaut';
+                        break;
                 }
+
+                textContainer.innerHTML = `
+                    <p style="margin-bottom: 3px;">${text}</p>
+                    <p class="link" style="font-size: 12px; margin-bottom: auto;">${location}</p>
+                    <br><br>
+                `;
+            }
 
                 window.addEventListener('DOMContentLoaded', updateText);
 
@@ -275,8 +329,8 @@
             </script>
 
             <div class="bottom-image slide-in">
-                <div class="subtitle" style="margin: auto; color: red; font-family: 'Lora', serif; font-size: 20px;">our services</div>
-                <div class="link" style="font-size: 16px; margin-bottom: auto;">Recognizing that every building is unique, we offer a complete suite of services—from deep energy retrofits and innovative developments to expert consultancy and precise envelope sealing—ensuring tailored solutions for every successful project.
+                <div class="subtitle" style="margin: auto; color: red; font-family: 'Lora', serif; font-size: 20px;" data-fr="nos services" data-en="our services">our services</div>
+                <div class="link" style="font-size: 16px; margin-bottom: auto;" data-fr="Chaque bâtiment est unique, et les rétrofits nécessitent une approche adaptée. Nous nous spécialisons dans les projets résidentiels et multi-résidentiels, en proposant des solutions conçues pour répondre aux besoins spécifiques de chaque projet." data-en="Every building is unique, and retrofits require a tailored approach. We specialize in residential and multi-unit projects, providing solutions designed to meet the specific needs of each project.">Every building is unique, and retrofits require a tailored approach. We specialize in residential and multi-unit projects, providing solutions designed to meet the specific needs of each project.
                 </div><br><br>
             </div>
 
@@ -295,12 +349,12 @@
                 </div>
             </div>
             <div class="service-btn slide-in">
-                <a class='btn' href="./servicepage.html">discover our services</a>
+                <a class='btn' href="./servicepage.html" data-fr="découvrez nos services" data-en="discover our services">discover our services</a>
             </div>
 
             <div class="bottom-image slide-in">
-                <div class="subtitle" style="margin: auto; color: red; font-family: 'Lora', serif; font-size: 20px;">our partners</div>
-                <div class="link" style="font-size: 16px; margin-bottom: auto;">Our trusted partners include leading organizations in sustainability and construction. Through our affiliations, we offer industry-recognized certifications that align with our commitment to excellence.
+                <div class="subtitle" style="margin: auto; color: red; font-family: 'Lora', serif; font-size: 20px;" data-fr="nos partenaires" data-en="our partners">our partners</div>
+                <div class="link" style="font-size: 16px; margin-bottom: auto;" data-en="Our trusted partners are key organizations in sustainability and construction. Through these affiliations, we provide certifications that reflect our commitment to the efficiency and sustainability of buildings." data-fr="Nos partenaires de confiance sont des organisations clés en durabilité et en construction. Grâce à ces affiliations, nous offrons des certifications qui reflètent notre engagement envers l’efficacité et la durabilité des bâtiments.">Our trusted partners are key organizations in sustainability and construction. Through these affiliations, we provide certifications that reflect our commitment to the efficiency and sustainability of buildings.
                 </div><br><br>
             </div>
 
@@ -320,7 +374,10 @@
             </div>
 
             <div class="horizontal-align">
-                <div class="centered-text">
+                <div class="centered-text" data-fr="votre partenaire de confiance en matière de rénovations en profondeur et de solutions de construction durables." 
+                data-en="                    your trusted partner in deep retrofits and sustainable building solutions.
+                "
+                >
                     your trusted partner in deep retrofits and sustainable building solutions.
                 </div>
                 <!-- <div class="button-container">
