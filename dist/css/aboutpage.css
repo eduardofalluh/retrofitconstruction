@@ -540,14 +540,14 @@ a {
 
 /* Active (Fade-In) */
 .menu-overlay.active {
-  animation: fadeIn 0.5s forwards; /* 0.5s duration */
+  animation: fade-in 0.5s forwards; /* 0.5s duration */
   opacity: 1;
   display: block; /* Ensure the menu is visible */
 }
 
 /* Closing (Fade-Out) */
 .menu-overlay.closing {
-  animation: fadeOut 0.5s forwards !important; /* 0.5s duration */
+  animation: fade-out 0.5s forwards !important; /* 0.5s duration */
   opacity: 0;
 }
 
