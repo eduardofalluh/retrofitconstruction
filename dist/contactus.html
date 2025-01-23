@@ -20,14 +20,25 @@
                 <span></span>
             </div>
             <div class="menu-overlay">
-                <div class="menu-options">
-                    <a href="./aboutpage.html" data-fr="à propos" data-en="about">about</a>
-                    <a href="./servicepage.html">services</a>
-                    <a href="./projects.html" id="option3" data-fr="projets" data-en="projects">projects</a>
-                    <a href="./ressources.html" data-fr="ressources" data-en="resources">resources</a>
-                    <button class="close-button" onclick="toggleMenu()">
-                        <img src="./img/x-logo-white-icon.png" alt="Close Menu" class="close-icon">
-                    </button>
+                <div class="menu-content">
+                    <!-- Top Links (Header) -->
+                    <div class="top-links">
+                        <a href="./aboutpage.html" data-fr="à propos" data-en="about">à propos</a>
+                        <a href="./servicepage.html" data-fr="services" data-en="services">services</a>
+                        <a href="./projects.html" data-fr="projets" data-en="projects">projets</a>
+                        <a href="./ressources.html" data-fr="ressources" data-en="resources">ressources</a>
+                        <a href="./index.html" data-fr="page d'accueil" data-en="home">home</a>
+
+                    </div>
+                    <!-- Separators -->
+                    
+                    <!-- Bottom Links (Footer) -->
+                    <div class="bottom-links">
+                        <a href="./FAQ.html" data-fr="faq" data-en="faq">faq</a>
+                        <a href="https://www.instagram.com/retrofitconstruction/" target="_blank" data-fr="instagram" data-en="instagram">instagram</a>
+                        <span data-fr="rbq 5825-8377-01" data-en="rbq 5825-8377-01">rbq 5825-8377-01</span>
+                        <a href="./contactus.html" data-fr="contactez-nous" data-en="contact us">contactez-nous</a>
+                    </div>
                 </div>
             </div>
             <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
@@ -126,14 +137,25 @@
     </footer>
     <script>
         function toggleMenu() {
-            var menuOverlay = document.querySelector('.menu-overlay');
+            const menuOverlay = document.querySelector('.menu-overlay');
+            const burgerBar = document.querySelector('.burger-bar');
+            const body = document.body; // Select the body element
+
             if (menuOverlay.classList.contains('active')) {
+                // Trigger fade-out animation
                 menuOverlay.classList.add('closing');
-                setTimeout(function() {
+                burgerBar.classList.remove('active');
+                body.classList.remove('no-scroll'); // Enable scrolling
+
+                // Wait for fade-out animation to finish before hiding
+                setTimeout(() => {
                     menuOverlay.classList.remove('active', 'closing');
-                }, 500); // match the duration of the dropUp animation
+                }, 500); // Match the fade-out duration
             } else {
+                // Show menu with fade-in animation
                 menuOverlay.classList.add('active');
+                burgerBar.classList.add('active');
+                body.classList.add('no-scroll'); // Disable scrolling
             }
         }
 

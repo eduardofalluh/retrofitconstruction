@@ -70,6 +70,8 @@ html, body {
 
 a {
     font-family: 'Lora', serif;
+    text-decoration: none; /* Removes the underline */
+    color: inherit;
 }
 
 .contact-text {
@@ -195,12 +197,6 @@ text {
     text-align: center;
 }
 
-.line {
-    border-top: 1px solid black;
-    padding: 10px;
-    width: 40%;
-    margin: 0 auto;
-}
 
 .button {
     background-color: #333;
@@ -272,6 +268,16 @@ footer {
     top: 20px;
     left: 55px;
     z-index: 1001;
+
+}
+
+.line {
+    border-top: 1px solid black;
+    padding: 10px;
+    width: 40%;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+
 }
 
 .burger-bar span {
@@ -284,6 +290,21 @@ footer {
     border-radius: 2px;
 }
 
+
+/* Transform Burger Bar to X */
+.burger-bar.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-bar.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+}
+
+.burger-bar.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menu Overlay Styling */
 .menu-overlay {
     display: none;
     position: fixed;
@@ -291,79 +312,130 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #435B41;
     z-index: 1000;
-    animation: dropDown 0.5s forwards;
+    opacity: 0;
+    animation: none;
 }
 
 .menu-overlay.active {
     display: block;
+    animation: fade-in 0.5s forwards;
 }
 
-.menu-options {
+/* .menu-overlay.closing {
+    animation: fade-out 0.5s forwards;
+} */
+
+.menu-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+    flex-direction: column; /* Stack children vertically */
+    height: 100%; /* Full height of the overlay */
+    justify-content: space-between; /* Space between top and bottom links */
+    padding: 20px; /* Add some padding */
 }
 
-.menu-options a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 35px;
-    margin: 10px 0;
-    font-family: 'Lora', serif;
-    position: relative;
-    transition: color 0.3s ease;
+.top-links {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    gap: 19.3%; /* Space between the links */
+    font-size: 14px;
+    color: white;
+    margin-top: 50px; /* Add space above the top links */
+    padding-top: 10px; /* Spacing inside the border */
+    border-top: 1px solid rgb(255, 255, 255);
+    width: 95%;
+    margin-left: auto; /* Center horizontally in parent */
+    margin-right: auto; /* Center horizontally in parent */
 }
 
-.menu-options a:hover {
-    color: #485a43;
+.no-scroll {
+    overflow: hidden; /* Disable scrolling */
+    height: 100%; /* Prevent content from moving */
 }
 
-.menu-options a::before {
-    content: "";
+.bottom-links {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    gap: 26.2%; /* Space between the links */
+    font-size: 14px;
+    color: white;
+    margin-bottom: 50px; /* Add space below the bottom links */
+    padding-top: 10px; /* Spacing inside the border */
+    border-top: 1px solid rgb(255, 255, 255);
+    width: 95%;
+    margin-left: auto; /* Center horizontally in parent */
+    margin-right: auto; /* Center horizontally in parent */
+}
+
+.menu-separator {
+    width: 80%;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 20px auto; /* Centered horizontally */
+}
+
+.divider {
+    color: white;
+}
+
+.close-button {
     position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #485a43;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
-.menu-options a:hover::before {
-    visibility: visible;
-    width: 100%;
+.close-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+
 }
 
-.menu-options a {
-    animation: fadeIn 0.3s ease-in-out;
+.close-icon:hover {
+    transform: scale(1.2);
 }
 
-@keyframes dropDown {
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .menu-content {
+        padding: 30px 15px;
+    }
+
+    .top-links,
+    .bottom-links {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+}
+
+@keyframes fade-in {
     from {
-        top: -100%;
+        opacity: 0;
     }
     to {
-        top: 0;
+        opacity: 1;
     }
 }
 
-@keyframes dropUp {
+@keyframes fade-out {
     from {
-        top: 0;
+        opacity: 1;
     }
     to {
-        top: -100%;
+        opacity: 0;
     }
 }
 
 .menu-overlay.closing {
-    animation: dropUp 0.5s forwards;
+    animation: fade-out 0.5s forwards;
 }
+
 
 .menu-overlay.active {
     top: 0;
@@ -374,8 +446,10 @@ footer {
     border: none;
     color: white;
     font-size: 24px;
-    margin-top: 50px;
     cursor: pointer;
+
+    margin-right: 2.2%;
+    margin-bottom: 2%;
 }
 
 @keyframes fadeIn {
