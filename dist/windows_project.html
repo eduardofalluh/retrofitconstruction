@@ -38,12 +38,18 @@
     </header>
 
     <div class="initial-text">
-        <h1>window installation</h1>
+        <h1
+        data-fr="installation de fenêtre"
+        data-en="window installation"
+        >window installation</h1>
     </div>
 
     <main style="display: none;">
         <div class="main-header">
-            <h1>window installation</h1>
+            <h1
+            data-fr="installation de fenêtre"
+        data-en="window installation"
+            >window installation</h1>
         </div>
 
         <div class="content-section">
@@ -55,7 +61,18 @@
                     <img src="./img/sucrerie-image-1.JPG" alt="Vision Image">
                 </div>
                 <div class="text-section">
-                    <p>
+                    <p
+                    data-fr="Les fenêtres à triple vitrage représentent l’une des plus grandes interruptions dans l’enveloppe d’un bâtiment, rendant leur installation essentielle pour assurer l’étanchéité à l’air et l’efficacité énergétique. Nous utilisons des rubans expansibles ainsi que des membranes intérieures et extérieures pour maximiser la durabilité et les performances. Le poids supplémentaire des fenêtres à triple vitrage—50 % plus lourd que celui des fenêtres à double vitrage—nécessite une précision accrue, en particulier pour les grandes installations.<br><br>
+                    En plus des fenêtres, nous nous spécialisons dans l’étanchéité complète de l’enveloppe. Qu’il s’agisse d’améliorer l’isolation ou de gérer les pénétrations mécaniques comme les conduits et les évents, nous veillons à ce que chaque composant contribue aux performances globales du bâtiment.<br><br>
+                    En collaborant avec les équipes sur le terrain, nous nous assurons que tous les détails essentiels de l’enveloppe sont réalisés avec soin. Ces éléments fondamentaux contribuent à créer des bâtiments résilients, efficaces et confortables, que ce soit pour des projets de rétrofit ou de nouvelles constructions.<br><br>
+                    "
+                    data-en=" Triple-pane windows are one of the largest breaches in a building’s envelope, making proper installation essential for airtightness and energy efficiency. Using expanding tape and interior and exterior membranes, we ensure durability and maximize performance. The added weight of triple-pane windows—50% heavier than double-pane models—requires precise handling, especially for larger installations.<br><br>
+
+                    In addition to windows, we specialize in comprehensive envelope sealing. From insulation upgrades to mechanical penetrations like ducts and vents, we address every element that contributes to a building’s energy performance.<br><br>
+
+                    By focusing on precision and collaboration, we create resilient, efficient, and comfortable spaces for both retrofit projects and new construction.<br><br>
+                    "
+                    >
                         Triple-pane windows are one of the largest breaches in a building’s envelope, making proper installation essential for airtightness and energy efficiency. Using expanding tape and interior and exterior membranes, we ensure durability and maximize performance. The added weight of triple-pane windows—50% heavier than double-pane models—requires precise handling, especially for larger installations.<br><br>
 
                         In addition to windows, we specialize in comprehensive envelope sealing. From insulation upgrades to mechanical penetrations like ducts and vents, we address every element that contributes to a building’s energy performance.<br><br>
@@ -176,20 +193,25 @@
 
             function updateText() {
                 const textContainer = document.querySelector('.text-container');
+                const currentLang = localStorage.getItem('lang') || 'en'; // Retrieve current language
+
                 let text = '';
 
                 switch (currentIndex) {
                     case 0:
-                        text = 'window installation';
+                        text = currentLang === 'en' ? 'window installation' : 'installation de fenêtres';
                         break;
                     case 1:
-                        text = 'window installation';
+                        text = currentLang === 'en' ? 'window installation' : 'installation de fenêtres';
                         break;
                     case 2:
-                        text = 'window installation';
+                        text = currentLang === 'en' ? 'window installation' : 'installation de fenêtres';
                         break;
                     case 3:
-                        text = 'window installation';
+                        text = currentLang === 'en' ? 'window installation' : 'installation de fenêtres';
+                        break;
+                    default:
+                        text = currentLang === 'en' ? 'window installation' : 'installation de fenêtres';
                         break;
                 }
 
@@ -278,7 +300,7 @@
 <footer style="display: none;">
     <div class="footer-section">
         <p><a href="./FAQ.html" class="footer-link">faq</a></p>
-        <p><a style="font-size: 17px;" class=" footer-link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+        <p><a style="font-size: 17px;" class=" footer-link" onclick="window.open('https://www.instagram.com/retrofitconstruction/', '_blank');">instagram</a></p>
         <p class=" footer-link">rbq 5825-8377-01</p>
         <p><a href="./contactus.html" class="footer-link" data-fr="contactez-nous" data-en="contact us">contact us</a></p>
     </div>

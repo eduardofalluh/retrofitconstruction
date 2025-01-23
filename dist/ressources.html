@@ -51,21 +51,25 @@
     </header>
 
     <div class="ressources-animation">
-        <h1 id="ressources-text"></h1>
+        <h1 id="ressources-text" data-en="resources" data-fr="ressources"></h1>
     </div>
 
     <main class="fade-out" style="display: none;">
-        <h1 class="about">resources</h1> <br>
+        <h1 class="about" data-fr="ressources" data-en="resources">resources</h1> <br>
     
         <div class="content-section">
             <div class="content-header">
                 <div class="line"></div>
-                <h2>story spotlight</h2>
+                <h2 data-fr="à la une"
+                data-en="story spotlight"
+                >story spotlight</h2>
             </div>
             <div class="content-body">
                 <img src="./img/RADIO_CANADA.webp" alt="Vision Image">
                 <div class="text">
-                    <p>In 2024, we understand the importance of improving the energy performance of new buildings by increasing building code requirements, but this alone won’t be enough to achieve a carbon-neutral future by 2050. The existing building stock holds immense potential for the future of energy in Quebec. The best solution lies in energy-efficient renovations, modernizing the existing built environment—commonly referred to in the industry as “retrofitting.” Engineer Fellipe Falluh is the founder of Retrofit Construction, a general contractor and retrofit consultant.</p>
+                    <p data-en="In 2024, we understand the importance of improving the energy performance of new buildings by increasing building code requirements, but this alone won’t be enough to achieve a carbon-neutral future by 2050. The existing building stock holds immense potential for the future of energy in Quebec. The best solution lies in energy-efficient renovations, modernizing the existing built environment—commonly referred to in the industry as “retrofitting.” Engineer Fellipe Falluh is the founder of Retrofit Construction, a general contractor and retrofit consultant."
+                    data-fr="En 2024, nous comprenons l’importance d’améliorer la performance énergétique des nouveaux bâtiments en augmentant les exigences du code du bâtiment, mais cela ne suffira pas à lui seul à atteindre un avenir neutre en carbone d’ici 2050. Le parc immobilier existant recèle un immense potentiel pour l’avenir énergétique du Québec. La meilleure solution réside dans les rénovations écoénergétiques, c’est-à-dire la modernisation de l’environnement bâti existant, ce que l’on appelle communément dans l’industrie la « modernisation ». L’ingénieur Fellipe Falluh est le fondateur de Retrofit Construction, entrepreneur général et consultant en rénovation."
+                    >In 2024, we understand the importance of improving the energy performance of new buildings by increasing building code requirements, but this alone won’t be enough to achieve a carbon-neutral future by 2050. The existing building stock holds immense potential for the future of energy in Quebec. The best solution lies in energy-efficient renovations, modernizing the existing built environment—commonly referred to in the industry as “retrofitting.” Engineer Fellipe Falluh is the founder of Retrofit Construction, a general contractor and retrofit consultant.</p>
                     <div class="btn">
                         <button class="learn-more" onclick="window.open('https://ici.radio-canada.ca/ohdio/premiere/emissions/boreale-138/segments/chronique/475861/chronique-efficacite-energetique-renovation-retrofitting-felippe-falluh', '_blank');">learn-more</button>
                     </div>
@@ -77,15 +81,15 @@
         <div class="categories">
             <div class="category-2" onclick="toggleDropdown('blog', this)">
                 <span id="blog-arrow" class="arrow arrow-up"></span>
-                <div class="category">blog</div>
+                <div class="category" data-en="blog" data-fr="blogue">blog</div>
             </div>
             <div class="category-2" onclick="toggleDropdown('press', this)">
                 <span id="press-arrow" class="arrow arrow-up"></span>
-                <div class="category">press</div>
+                <div class="category" data-en="press" data-fr="presse">press</div>
             </div>
             <div class="category-2" onclick="toggleDropdown('podcasts', this)">
                 <span id="podcasts-arrow" class="arrow arrow-up"></span>
-                <div class="category">podcasts</div>
+                <div class="category" data-en="podcasts" data-fr="podcasts">podcasts</div>
             </div>
         </div>
         
@@ -104,103 +108,150 @@
                 <div class="grid-item">
                     <a href="https://www.lapresse.ca/maison/renovation/2022-09-28/un-duplex-centenaire-transforme-en-modele-d-efficacite-energetique.php" target="_blank">
                         <img src="./img/image-lapresse.png" alt="Image 2">
-                        <p class="grid-text">lapresse <br> Un duplex centenaire transformé en modèle d’efficacité énergétique</p>
+                        <p class="grid-text" data-fr="lapresse <br> Un duplex centenaire transformé en modèle d’efficacité énergétique" data-en="lapresse <br>A century-old duplex transformed into a model of energy efficiency">lapresse <br>A century-old duplex transformed into a model of energy efficiency</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.efficiencycanada.org/career-hub/career-guide-fellipe-falluh/" target="_blank">
                         <img src="./img/image-efficiency-canada.png" alt="Image 2">
-                        <p class="grid-text">efficiency canada <br> Rencontrez notre leader efficace: Fellipe Falluh</p>
+                        <p class="grid-text" data-fr="efficiency canada <br> Rencontrez notre leader efficace: Fellipe Falluh" data-en="efficiency canada <br> Meet our efficiency leader: Fellipe Falluh">efficiency canada <br> Meet our efficiency leader: Fellipe Falluh</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://maisonsaine.ca/enkiosque?id=100384" target="_blank">
                         <img src="./img/image-maison-21e.png" alt="Image 2">
-                        <p class="grid-text">la maison du 21e siècle <br> Un duplex centenaire transformé en modèle d’efficacité énergétique</p>
+                        <p class="grid-text"
+                        data-en="the house of the 21st century<br>A century-old duplex transformed into a model of energy efficiency"
+                        data-fr="la maison du 21e siècle<br> Un duplex centenaire transformé en modèle d’efficacité énergétique"
+                        >the house of the 21st century<br>A century-old duplex transformed into a model of energy efficiency</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.youtube.com/watch?v=26aFvmbba7I" target="_blank">
                         <img src="./img/image-efficiency canada-2.png" alt="Image 2">
-                        <p class="grid-text">efficiency canada <br> Becoming a Retrofit Renovator, with Fellipe Falluh</p>
+                        <p class="grid-text"
+                        data-en="efficiency canada <br> Becoming a Retrofit Renovator, with Fellipe Falluh"
+                        data-fr="efficiency canada <br> Devenir un rénovateur en rénovation, avec Fellipe Falluh"
+                        >efficiency canada <br> Becoming a Retrofit Renovator, with Fellipe Falluh</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://buildingdiversity.ca/2024-recipient/retrofit-construction/" target="_blank">
                         <img src="./img/BDA.png" alt="Image 2">
-                        <p class="grid-text">building diversity awards <br> 2024 award recepients</p>
+                        <p class="grid-text"
+                        data-fr="building diversity awards <br> Lauréats des prix 2024"
+                        data-en="building diversity awards <br> 2024 award recepients"
+                        >building diversity awards <br> 2024 award recepients</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://ici.radio-canada.ca/ohdio/premiere/emissions/boreale-138/segments/chronique/475861/chronique-efficacite-energetique-renovation-retrofitting-felippe-falluh" target="_blank">
-                        <img src="./img/RADIO_CANADA.webp" alt="Image 2">
-                        <p class="grid-text">radio-canada <br> Chronique Efficacité énergétique : rénovation & « rétrofitting »</p>
+                        <img src="./img/RADIO_CANADA.webp" alt="Image 2"
+                        data-en="radio-canada <br> Chronicle Energy efficiency: renovation & “retrofitting”"
+                        data-fr="radio-canada <br> Chronique Efficacité énergétique : rénovation & « rétrofitting »"
+                        >
+                        <p class="grid-text">radio-canada <br> Chronicle Energy efficiency: renovation & “retrofitting”</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.youtube.com/watch?v=MdsYZLzQxn4" target="_blank">
                         <img src="./img/BS&BEER.jpg" alt="Image 2">
-                        <p class="grid-text">bs&beer canada <br> Fellipe Falluh of Retrofit Construction shows us a deep dive into the process he recently completed doing a deep energy retrofit on his own property</p>
+                        <p class="grid-text"
+                        data-en="bs&beer canada <br> Fellipe Falluh of Retrofit Construction shows us a deep dive into the process he recently completed doing a deep energy retrofit on his own property"
+                        data-fr="bs&beer canada <br> Fellipe Falluh de Retrofit Construction nous montre une plongée en profondeur dans le processus qu'il a récemment achevé en effectuant une rénovation énergétique en profondeur sur sa propre propriété"
+                        >bs&beer canada <br> Fellipe Falluh of Retrofit Construction shows us a deep dive into the process he recently completed doing a deep energy retrofit on his own property</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.youtube.com/watch?v=YD_4vLE1XAA" target="_blank">
                         <img src="./img/logo-radio-canada-pizza-rouge-archives.avif" alt="Image 2">
-                        <p class="grid-text">radio-canada info <br>Rendre le parc immobilier québécois plus écoénergétique </p>
+                        <p class="grid-text"
+                        data-en="radio-canada info <br>Making Quebec's real estate portfolio more energy efficient"
+
+                        data-fr="radio-canada info <br>Rendre le parc immobilier québécois plus écoénergétique "
+                        >radio-canada info <br>Making Quebec's real estate portfolio more energy efficient</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.youtube.com/watch?v=fgS4DQbfjSU" target="_blank">
-                        <img src="./img/image-maison-21e.png" alt="Image 2">
-                        <p class="grid-text">la maison du 21e siècle <br> 4 Stratégies de rénovations profondes </p>
+                        <img src="./img/image-maison-21e.png" alt="Image 2"
+                        data-en="the 21st century house <br> 4 Strategies for deep renovations"
+                        data-fr="la maison du 21e siècle <br> 4 Stratégies de rénovations profondes"
+                        >
+                        <p class="grid-text">data-en="the 21st century house <br> 4 Strategies for deep renovations"</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.youtube.com/watch?v=pjFwvoS-gBc" target="_blank">
                         <img src="./img/day_in_a_life.png" alt="Image 2">
-                        <p class="grid-text">efficiency canada <br>  A Day In the Life of a Retrofitter: Fellipe Falluh </p>
+                        <p class="grid-text"
+                        data-en="efficiency canada <br>  A Day In the Life of a Retrofitter: Fellipe Falluh"
+                        data-fr="efficiency Canada <br> Une journée dans la vie d'un rénovateur : Fellipe Falluh"
+                        >efficiency canada <br>  A Day In the Life of a Retrofitter: Fellipe Falluh </p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.youtube.com/watch?v=uh1ZMtE2SpM" target="_blank">
                         <img src="./img/image-efficiency canada-2.png" alt="Image 2">
-                        <p class="grid-text">efficiency canada <br>  DiscoverEE: Day in the Life of a Retrofitter </p>
+                        <p class="grid-text"
+                        data-en="efficiency canada <br>  DiscoverEE: Day in the Life of a Retrofitter"
+                        data-fr="efficiency canada <br> DiscoverEE : une journée dans la vie d'un rénovateur"
+                        >efficiency canada <br>  DiscoverEE: Day in the Life of a Retrofitter</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.youtube.com/watch?v=sO2nbgEIJc8" target="_blank">
                         <img src="./img/HPTHPB.png" alt="Image 2">
-                        <p class="grid-text">efficiency canada <br>  DeConstruct Highlights: High Performance Teams for High Performance Buildings  </p>
+                        <p class="grid-text"
+                        data-en="efficiency canada <br>  DeConstruct Highlights: High Performance Teams for High Performance Buildings"
+                        data-fr="efficiency canada <br> Faits saillants de DeConstruct : des équipes à haute performance pour des bâtiments à haute performance"
+                        >efficiency canada <br>  DeConstruct Highlights: High Performance Teams for High Performance Buildings</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.youtube.com/watch?v=eWx7ES54Rdw" target="_blank">
                         <img src="./img/Logo_Ecosphere.jpg" alt="Image 2">
-                        <p class="grid-text">foire écosphère <br>  Conférence : La réno prête pour la consommation nette zéro - FTV 2023 (23/04)  </p>
+                        <p class="grid-text"
+                        data-en="ecosphere fair <br> Conference: Renovation ready for net zero consumption - FTV 2023 (04/23)"
+                        data-fr="foire écosphère <br>  Conférence : La réno prête pour la consommation nette zéro - FTV 2023 (23/04)"
+                        >ecosphere fair <br> Conference: Renovation ready for net zero consumption - FTV 2023 (04/23)</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.youtube.com/watch?v=oAebMb4rl9Q" target="_blank">
                         <img src="./img/image-maison-21e.png" alt="Image 2">
-                        <p class="grid-text">la maison du 21e siècle <br>  Une rénovation exemplaire à Montréal  </p>
+                        <p class="grid-text"
+                        data-en="the 21st century house <br> An exemplary renovation in Montreal"
+                        data-fr="la maison du 21e siècle <br>  Une rénovation exemplaire à Montréal"
+                        >
+                        the 21st century house <br> An exemplary renovation in Montreal</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://reporter.mcgill.ca/30under30_2024/" target="_blank">
                         <img src="./img/mcgill_repoter.png" alt="Image 2">
-                        <p class="grid-text">mcgill reporter <br>For the youngest ‘30 Under 30’ sustainability leader, change is ‘never impossible’  </p>
+                        <p class="grid-text"
+                        data-en="mcgill reporter <br>For the youngest ‘30 Under 30’ sustainability leader, change is ‘never impossible’"
+                        data-fr="journaliste de McGill <br>Pour le plus jeune leader du développement durable « 30 Under 30 », le changement n'est « jamais impossible »"
+                        >mcgill reporter <br>For the youngest ‘30 Under 30’ sustainability leader, change is ‘never impossible’</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://www.corporateknights.com/issues/2024-11-education-and-youth-issue/2024-30-under-30-leading-green-youthquake/" target="_blank">
                         <img src="./img/corporate_knights.png" alt="Image 2">
-                        <p class="grid-text">corporate knights <br>These 30 under 30 are leading a green youthquake </p>
+                        <p class="grid-text"
+                        data-en="corporate knights <br>These 30 under 30 are leading a green youthquake"
+                        data-fr="chevaliers d'entreprise <br>Ces 30 jeunes de moins de 30 ans mènent un séisme vert pour la jeunesse"
+                        >corporate knights <br>These 30 under 30 are leading a green youthquake</p>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a href="https://batimentpassifquebec.com/article/invitation-visite-realisation-dun-chantier-retrofit-net-zero/" target="_blank">
                         <img src="./img/batiment_passif_quebec.png" alt="Image 2">
-                        <p class="grid-text">bâtiment passif québec <br>Visite de chantier – Projet de rénovation Net-Zéro – Retrofit Construction</p>
+                        <p class="grid-text"
+                        data-en="bâtiment passif québec <br>Site visit – Net-Zero renovation project – Retrofit Construction"
+                        data-fr="bâtiment passif québec <br>Visite de chantier – Projet de rénovation Net-Zéro – Retrofit Construction"
+                        >bâtiment passif québec <br>Site visit – Net-Zero renovation project – Retrofit Construction</p>
                     </a>
                 </div>
             </div>
@@ -214,7 +265,7 @@
     <footer style="display: none;">
         <div class="footer-section">
             <p><a href="./FAQ.html" class="footer-link">faq</a></p>
-            <p><a style="font-size: 17px;" class=" footer-link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+            <p><a style="font-size: 17px;" class=" footer-link" onclick="window.open('https://www.instagram.com/retrofitconstruction/', '_blank');">instagram</a></p>
             <p class=" footer-link">rbq 5825-8377-01</p>
             <p><a href="./contactus.html" class="footer-link" data-fr="contactez-nous" data-en="contact us">contact us</a></p>
         </div>

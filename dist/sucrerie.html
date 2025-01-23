@@ -38,12 +38,18 @@
     </header>
 
     <div class="initial-text">
-        <h1>sucrerie retrofit</h1>
+        <h1
+        data-en="sucrerie retrofit"
+        data-fr="retrofit sucrerie"
+        >sucrerie retrofit</h1>
     </div>
 
     <main style="display: none;">
         <div class="main-header">
-            <h1>sucrerie retrofit</h1>
+            <h1
+            data-en="sucrerie retrofit"
+            data-fr="retrofit sucrerie"
+            >sucrerie retrofit</h1>
         </div>
 
         <div class="content-section">
@@ -54,8 +60,25 @@
                 <div class="content-body">
                     <img src="./img/sucrerie-image-1.JPG" alt="Vision Image">
                     <div class="text-below-image">
-                        <h2>project in numbers</h2>
-                        <p>- Project Type: Residential, Deep Energy Retrofit, Development</br>
+                        <h2 data-fr="le projet en chiffres" data-en="project in numbers">project in numbers</h2>
+                        <p
+                        data-fr="- Type de projet : Résidentiel, rétrofit énergétique profond, développement
+                        - Superficie totale : 2 850 pi²
+                        - Réduction de la consommation énergétique : 75 %
+                        - Durée des travaux : 1 an
+                        - Année d’achèvement : 2024
+                        - Coût total : 700 000 $
+                        - Coût supplémentaire pour une performance élevée : 70 000 $
+                        - Certification : En attente, Certifié Net Zero"
+                        data-en="- Project Type: Residential, Deep Energy Retrofit, Development</br>
+                        - Square Footage: 2,850 sq. ft.</br>
+                        - Energy Reduction: 75%</br>
+                        - Timeline: 1 year</br>
+                        - Completed In: 2024</br>
+                        - Total Cost: $700,000</br>
+                        - Additional Cost for High Performance: $70,000</br>
+                        - Certification: Pending, Net Zero Certified</br>"
+                        >- Project Type: Residential, Deep Energy Retrofit, Development</br>
                             - Square Footage: 2,850 sq. ft.</br>
                             - Energy Reduction: 75%</br>
                             - Timeline: 1 year</br>
@@ -66,7 +89,24 @@
                         </p>
                     </div>
                 </div>
-                <p>The Sucrerie Retrofit transformed a former barn, converted into a home in 1965, into a sustainable, Net Zero energy residence. Designed with the owners’ retirement in mind, this project brought their vision of an environmentally conscious and comfortable living space to life.</br></br>
+                <p
+                data-fr="Le Sucrerie Retrofit a transformé une ancienne grange, convertie en maison en 1965, en une résidence durable et autonome en énergie Net Zero. Conçue pour la retraite des propriétaires, cette rénovation reflète leur vision d’un espace de vie confortable, efficace et respectueux de l’environnement.</br></br>
+
+                Atteindre le statut Net Zero a nécessité des approches innovantes, comme l’utilisation des techniques Larsen Truss et Chainsaw Retrofit. Le projet a mis l’accent sur la durabilité écologique en évitant les isolants en mousse et en privilégiant des matériaux carbo-neutres. L’enveloppe du bâtiment a été renforcée avec l’ajout de 8,5 pouces d’isolation en cellulose sur les murs et 15 pouces sur le toit, en complément de l’isolation existante. Des fenêtres européennes à triple vitrage haute performance et un toit restructuré pour accueillir des panneaux solaires ont permis d’atteindre une efficacité énergétique exceptionnelle.</br></br>
+                
+                Les systèmes mécaniques ont également été optimisés : une thermopompe adaptée aux climats froids, un ventilateur récupérateur d’énergie (ERV) et un chauffe-eau à thermopompe Sanden SANCO2 ont été intégrés pour réduire la consommation énergétique tout en assurant un confort optimal.</br></br>
+                
+                Une fois certifié, le Sucrerie Retrofit deviendra le premier retrofit entièrement Net Zero au Québec, établissant une nouvelle norme pour les rénovations écologiques. Ce projet illustre comment des techniques innovantes et un engagement écologique peuvent concrétiser une vision durable.</br></br>
+                "
+                data-en="The Sucrerie Retrofit transformed a former barn, converted into a home in 1965, into a sustainable, Net Zero energy residence. Designed with the owners’ retirement in mind, this project brought their vision of an environmentally conscious and comfortable living space to life.</br></br>
+
+                Achieving Net Zero energy required innovative approaches, including Larsen Truss and Chainsaw Retrofit techniques. The project prioritized ecological sustainability by avoiding foam insulation and using only carbon-neutral materials. The building envelope was upgraded with 8.5 inches of cellulose insulation on the walls and 15 inches on the roof, layered over existing insulation. High-performance European triple-glazed windows and a restructured roof for photovoltaic panels ensured exceptional energy efficiency.</br></br>
+                
+                Optimized mechanical systems, including a cold-climate heat pump, an energy recovery ventilator (ERV), and a Sanden SANCO2 heat pump water heater, further reduced energy use while enhancing comfort.</br></br>
+                
+                Upon certification, the Sucrerie Retrofit will proudly stand as Quebec’s first fully Net Zero Retrofit, paving the way for future ecological renovations. This project exemplifies how innovative techniques and ecological responsibility can transform sustainable renovation into a reality.</br></br>
+                "
+                >The Sucrerie Retrofit transformed a former barn, converted into a home in 1965, into a sustainable, Net Zero energy residence. Designed with the owners’ retirement in mind, this project brought their vision of an environmentally conscious and comfortable living space to life.</br></br>
 
                     Achieving Net Zero energy required innovative approaches, including Larsen Truss and Chainsaw Retrofit techniques. The project prioritized ecological sustainability by avoiding foam insulation and using only carbon-neutral materials. The building envelope was upgraded with 8.5 inches of cellulose insulation on the walls and 15 inches on the roof, layered over existing insulation. High-performance European triple-glazed windows and a restructured roof for photovoltaic panels ensured exceptional energy efficiency.</br></br>
                     
@@ -187,20 +227,25 @@
 
             function updateText() {
                 const textContainer = document.querySelector('.text-container');
+                const currentLang = localStorage.getItem('lang') || 'en'; // Retrieve current language
+
                 let text = '';
 
                 switch (currentIndex) {
                     case 0:
-                        text = 'sucrerie retrofit';
+                        text = currentLang === 'en' ? 'sucrerie retrofit' : 'retrofit sucrerie';
                         break;
                     case 1:
-                        text = 'sucrerie retrofit';
+                        text = currentLang === 'en' ? 'sucrerie retrofit' : 'retrofit sucrerie';
                         break;
                     case 2:
-                        text = 'sucrerie retrofit';
+                        text = currentLang === 'en' ? 'sucrerie retrofit' : 'retrofit sucrerie';
                         break;
                     case 3:
-                        text = 'sucrerie retrofit';
+                        text = currentLang === 'en' ? 'sucrerie retrofit' : 'retrofit sucrerie';
+                        break;
+                    default:
+                        text = currentLang === 'en' ? 'sucrerie retrofit' : 'retrofit sucrerie';
                         break;
                 }
 
@@ -288,7 +333,7 @@
 <footer style="display: none;">
     <div class="footer-section">
         <p><a href="./FAQ.html" class="footer-link">faq</a></p>
-        <p><a style="font-size: 17px;" class=" footer-link" href="https://www.instagram.com/retrofitconstruction/">instagram</a></p>
+        <p><a style="font-size: 17px;" class=" footer-link" onclick="window.open('https://www.instagram.com/retrofitconstruction/', '_blank');">instagram</a></p>
         <p class=" footer-link">rbq 5825-8377-01</p>
         <p><a href="./contactus.html" class="footer-link" data-fr="contactez-nous" data-en="contact us">contact us</a></p>
     </div>

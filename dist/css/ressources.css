@@ -66,14 +66,6 @@ html, body {
     background-color: #485a43; /* Change this to the desired active background color */
 }
 
-
-
-
-
-
-
-
-
 /* General category styling */
 .categories {
     display: flex;
@@ -81,21 +73,14 @@ html, body {
     margin-left: 25px; /* Keep consistent margin on the left */
     margin-right: 35px; /* Keep consistent margin on the right */
     max-width: 97.4%;
-}
 
-/* .category {
-    padding: 10px 20px;
-    background-color: #f5f5f5;
-    cursor: pointer;
-    text-align: center;
-    user-select: none;
-    flex: 1;
-    box-sizing: border-box;
-} */
+    border: 1px solid black; /* Black border */
+    border-radius: 15px; 
+}
 
 .category-2 {
     padding: 10px 20px;
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: #f5f5f5;
     cursor: pointer;
     text-align: center;
@@ -377,7 +362,8 @@ nav{
   @media (max-width: 600px) {
 
     .line{
-        max-width: 75% !important;
+        width: 75% !important;
+
     }
     footer{
         max-width: 85% !important;
@@ -396,10 +382,10 @@ nav{
     }
     .btn{
         display: flex;
-    justify-content: center;
-    margin-top: 20px;
-
-        }
+        justify-content: center;
+        margin-top: 20px;
+        
+    }
     nav{
         max-width: 85.5%;
         margin: 0 auto;
