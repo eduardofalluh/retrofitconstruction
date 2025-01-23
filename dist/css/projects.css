@@ -566,6 +566,12 @@ footer {
     transition: transform 0.3s ease; /* Animation au survol */
 }
 
+.language-bar{
+    color: #000000;
+}
+
+
+
 .close-icon:hover {
     transform: scale(1.2); /* Agrandit légèrement au survol */
 }

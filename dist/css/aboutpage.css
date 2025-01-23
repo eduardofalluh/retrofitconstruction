@@ -168,7 +168,7 @@ footer{
 
 main {
   width: 95%;
-	padding: 40px 20px;
+	padding: 0px 20px;
     min-height: 100%;
       display: flex;
       flex-direction: column;
@@ -298,7 +298,9 @@ footer {
     width: 300px;
     height: auto; /* Adjust height as needed or use 'auto' to maintain aspect ratio */
     text-align: center;
-}
+    display: block; /* Treat the image as a block-level element */
+    margin-left: auto;
+    margin-right: auto;}
 
 .image-service{
   height: 150px;
@@ -322,6 +324,10 @@ h1.about {
   padding-top: 10px;
 }
 
+.language-bar{
+  color: #000000;
+}
+
 h1.about::before {
   content: '';
   position: absolute;
@@ -334,7 +340,7 @@ h1.about::before {
 
 .main-title{
   margin-left: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   font-weight: 400;
 
 }
@@ -349,9 +355,7 @@ h1.main-title::before {
   align-items: flex-start; /* Align items to the top */
   margin-bottom: 30px;
 }
-.image-about {
-  margin-right: 20px;
-}
+
 
 .about-text {
   flex: 1;

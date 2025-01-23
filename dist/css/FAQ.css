@@ -516,6 +516,11 @@ footer {
     }
 }
 
+
+.language-bar{
+    color: #000000;
+}
+
 @media (max-width: 545px) {
   
     .language-switch {

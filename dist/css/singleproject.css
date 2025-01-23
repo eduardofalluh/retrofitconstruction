@@ -542,6 +542,10 @@ footer {
 }
 
 
+.language-bar{
+    color: #000000;
+}
+
 
 .language-link.active {
     font-weight: bold;

@@ -164,10 +164,16 @@ section img {
     padding: 5px;
 }
 
+
+
+.language-bar{
+    color: #000000;
+}
+
 main {
     max-width: 92.5%;
     margin-left: 35px;
-    padding: 15px 20px;
+    padding: 0px 20px;
     display: flex;
     flex-direction: column;
     flex: 1;

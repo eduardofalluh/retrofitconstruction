@@ -909,6 +909,11 @@ margin-bottom: 30px;
     margin-top: 20px;
 }
 
+
+.language-bar{
+    color: #000000;
+}
+
 .centered-text {
     font-family: 'Lora', serif;
     font-size: 20px;

@@ -153,12 +153,15 @@ section img {
 
 main {
     width: 99%;
-    padding: 40px 20px;
+    padding: 0px 20px;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     flex: 1;
     max-width: 100%;
+
+
+    margin-bottom: 40px;
 }
 
 section {
@@ -171,9 +174,10 @@ section {
 
 h1 {
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-family: 'Lora', serif;
     font-weight: 400;
+
 }
 
 p {
@@ -537,6 +541,7 @@ footer {
 
 /* Submit fiellldddd */
 .contact-form {
+    font-family: 'Lora', serif;
     max-width: 91%;
     margin-left: 35px;
     padding: 20px;
@@ -580,7 +585,7 @@ footer {
 button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background: red;
+    background: #485A43;
     color: white;
     border: none;
     border-radius: 4px;
@@ -590,4 +595,9 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background: #0056b3;
+}
+
+
+.language-bar{
+    color: #000000;
 }
