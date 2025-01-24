@@ -655,6 +655,19 @@ footer {
 
 }
 
+
+.circles-container-2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 99%;
+    margin-bottom: 100px;
+}
+
 .circle {
     width: 100px;
     height: 100px;
@@ -674,6 +687,7 @@ footer {
     bottom: 0;
   position: absolute;
 }
+
 
 /* Appointment Button */
 .appointment-button-container {
