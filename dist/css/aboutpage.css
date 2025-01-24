@@ -329,13 +329,12 @@ h1.about::before {
   top: 0;
   left: 0;
   height: 1px;
-  width: 200px;
+  width: 100%;
   background-color: black;
 }
 
 .main-title{
   margin-left: 40px;
-  margin-bottom: 40px;
   font-weight: 400;
 
 }
@@ -772,7 +771,6 @@ a {
     display: block;
             margin-right: auto;
             width: 93%;
-            margin-bottom: 80px;
     }
   .about-animation h1{
     font-size: 35px !important;
@@ -843,7 +841,6 @@ a {
       justify-content: center; /* Center the sections vertically (if container has height) */
       width: 100%; /* Ensure the container takes full width */
       margin: 0 auto !important; /* Center the container horizontally */
-      padding: 20px; /* Add padding for spacing */
   }
 
     .about-section{
@@ -861,9 +858,10 @@ a {
   justify-content: space-between; /* Add space between sections */
   gap: 20px; /* Add space between sections */
   max-width: 1200px; /* Set a maximum width */
-  margin-left: 0px;
-  padding: 20px; /* Add padding around the container */
+  padding-left: 20px;
   text-align: justify;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .about-section {
