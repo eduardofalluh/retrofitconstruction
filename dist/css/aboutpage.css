@@ -447,7 +447,7 @@ a {
   gap: 19.3%; /* Space between the links */
   font-size: 14px;
   color: white;
-  margin-top: 67px; /* Add space above the top links */
+  margin-top: 55px; /* Add space above the top links */
   padding-top: 10px; /* Spacing inside the border */
   border-top: 1px solid rgb(255, 255, 255);
   width: 95%;
@@ -762,6 +762,25 @@ a {
   to {
       transform: translateY(0);
       opacity: 1;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .top-links {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start; /* Align items to the left */
+      gap: 8px; /* Reduce the spacing between the items */
+      list-style: none; /* Remove bullets if it's a list */
+      max-width: 95% !important;
+  }
+
+  .top-links a {
+      text-align: left; /* Ensure text is aligned to the left */
+      text-decoration: none; /* Remove underline from links */
+      font-size: 1rem; /* Adjust font size if necessary */
+      color: white; /* Keep or change the text color */
   }
 }
 
