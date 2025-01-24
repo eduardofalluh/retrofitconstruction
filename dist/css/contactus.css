@@ -366,13 +366,19 @@ footer {
     padding: 20px; /* Add some padding */
 }
 
+@media (max-width: 768px) {
+    .white {
+        display: block !important;
+    }
+}
+
 
 @media (max-width: 768px) {
     .top-links {
         display: flex;
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start !important; /* Align items to the left */
-        gap: 8px !important; /* Reduce the spacing between the items */
+        gap: 40px !important; /* Reduce the spacing between the items */
         list-style: none; /* Remove bullets if it's a list */
         max-width: 95% !important;
     }
