@@ -530,6 +530,10 @@ footer {
     border-radius: 2px;
 }
 
+
+.burger-bar.active span {
+    background-color: white; /* Change to white when activated */
+}
 .about {
     font-size: 30px;
     line-height: 1.5;

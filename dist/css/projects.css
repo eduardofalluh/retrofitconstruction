@@ -341,7 +341,9 @@ footer {
     border-radius: 2px;
   }
   
-  
+  .burger-bar.active span {
+    background-color: white; /* Change to white when activated */
+}
   /* Transform Burger Bar to X */
   .burger-bar.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);

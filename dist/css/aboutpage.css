@@ -270,6 +270,10 @@ footer {
     transition: transform 0.3s ease-in-out;
     border-radius: 2px;
   }
+
+  .burger-bar.active span {
+    background-color: white; /* Change to white when activated */
+}
   
 
   .about {
