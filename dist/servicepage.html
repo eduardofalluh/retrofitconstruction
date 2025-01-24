@@ -100,7 +100,7 @@
                     data-fr="rétrofits énergétiques profonds & agrandissements"   
                     data-en="deep energy retrofits and extensions"
                     >deep energy retrofits and extensions</h2>
-                    <img src="./img/image-efficiency-canada.png" alt="Deep Energy Retrofits and Extensions Image" class="service-image">
+                    <img src="./img/retrofit&energetique.png" data-en="./img/retrofit&energetique.png" data-fr="./img/retrofit&energetique_fr.png" alt="Deep Energy Retrofits and Extensions Image" class="service-image">
                 </div>
                 <p class="service-description"
                 data-fr="Nous gérons les rétrofits énergétiques profonds et les agrandissements en tant qu’entrepreneurs généraux, en alliant construction performante et gestion de projet minutieuse. De l’étanchéité à l’air et l’isolation aux systèmes mécaniques et à l’intégration d’énergies propres, notre approche globale garantit des résultats conformes aux certifications telles que Passive House, EnerPHit, Net Zero et Net Zero Ready.
@@ -128,7 +128,7 @@
                     data-en="developments"
                     data-fr="développements"
                     >developments</h2>
-                    <img src="./img/image-efficiency-canada.png" alt="Construction Project Management Image" class="service-image">
+                    <img src="./img/developments.png" data-en="./img/developments.png" data-fr="./img/development_fr.png" alt="Construction Project Management Image" class="service-image">
                 </div>
                 
                 <p class="service-description"
@@ -143,7 +143,7 @@
                     data-en="consultation"
                     data-fr="consultation"
                     >consultation</h2>
-                    <img src="./img/image-efficiency-canada.png" alt="Consultation Image" class="service-image">
+                    <img src="./img/consultation.png" alt="Consultation Image" class="service-image">
                 </div>
                 <p class="service-description"
                 data-en="Our consultancy services support contractors and building owners in achieving high-performance results at any stage of their project. From evaluating retrofit potential in the early stages to integrating advanced design details and overseeing execution, we provide strategies that ensure sustainability, efficiency, and success.
@@ -168,7 +168,7 @@
                     data-en="envelope sealing specialist"
                     data-fr="spécialiste de l’étanchéité de l’enveloppe"
                     >envelope sealing specialist</h2>
-                    <img src="./img/image-efficiency-canada.png" alt="Consultation Image" class="service-image">
+                    <img src="./img/envelope sealing specialist.png" data-en="./img/envelope sealing specialist.png" data-fr="./img/envelope sealing specialist_fr.png" alt="Consultation Image" class="service-image">
                 </div>
                 <p class="service-description"
                 data-en="Airtightness and insulation are essential to high-performance buildings, and our Envelope Sealing Specialist service ensures these elements are executed with precision. Whether in new construction or retrofit projects, we apply membranes, tapes, and insulation to create a continuous airtight seal and maximize energy efficiency.
@@ -186,6 +186,41 @@
             </div>
         </div>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const languageLinks = document.querySelectorAll('.language-link');
+    const images = document.querySelectorAll('.flexbox img');
+
+    // Function to update images based on selected language
+    const updateImages = (selectedLang) => {
+        images.forEach((img) => {
+            const newSrc = img.getAttribute(`data-${selectedLang}`);
+            if (newSrc) {
+                img.src = newSrc;
+            }
+        });
+    };
+
+    // Add click event listeners for language links
+    languageLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selectedLang = link.getAttribute('data-lang');
+
+            // Save the selected language to localStorage
+            localStorage.setItem('lang', selectedLang);
+
+            // Update images based on the selected language
+            updateImages(selectedLang);
+        });
+    });
+
+    // Load the saved language preference on page load
+    const savedLang = localStorage.getItem('lang') || 'en';
+    updateImages(savedLang); // Apply the saved language images
+});
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
