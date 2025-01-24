@@ -100,18 +100,24 @@
         <div class="rest-of-page" style="display: none;">
             <div class="carousel">
                 <div class="carousel-container">
-                    <a class="carousel-item active" href="./charon.html">
+                    <a class="carousel-item active" href="./sucrerie.html">
                         <video class="carousel-video" autoplay muted loop playsinline>
-                            <source src="./img/sucrerie-video-1.mp4" type="video/mp4">
-                            <source src="./img/sucrerie-video-1.webm" type="video/webm">
+                            <source src="./img/carousselmashupsucreriewithdrone.mp4" type="video/mp4">
+                            <!-- <source src="./img/sucrerie-video-1.webm" type="video/webm"> -->
                             Your browser does not support the video tag.
                         </video>
                     </a>
                     <a class="carousel-item" href="./charon.html">
-                        <img class="carousel-image" src="./img/sucrerie-image-1.JPG" alt="Image 2">
+                        <video class="carousel-video" autoplay muted loop playsinline>
+                            <source src="./img/charonintrocaroussel.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </a>
                     <a class="carousel-item" href="./charon.html">
                         <img class="carousel-image" src="./img/charon-1.JPG" alt="Image 4">
+                    </a>
+                    <a class="carousel-item" href="./charon.html">
+                        <img class="carousel-image" src="./img/sucrerie_5.jpeg" alt="Image 2">
                     </a>
                 </div>
 
@@ -244,14 +250,14 @@
                     case 0:
                         text = currentLang === 'en' ? 'sucrerie project' : 'projet sucrerie';
                         location = currentLang === 'en' 
-                            ? 'Impasse de la sucrerie, Saint-Agath' 
-                            : 'Impasse de la sucrerie, Saint-Agath'; // Translate if needed
+                            ? 'Impasse de la sucrerie, Saint-Agathe' 
+                            : 'Impasse de la sucrerie, Saint-Agathe'; // Translate if needed
                         break;
                     case 1:
-                        text = currentLang === 'en' ? 'sucrerie project' : 'projet sucrerie';
+                        text = currentLang === 'en' ? 'charon project' : 'projet charon';
                         location = currentLang === 'en' 
-                            ? 'Impasse de la sucrerie, Saint-Agath' 
-                            : 'Impasse de la sucrerie, Saint-Agath'; // Translate if needed
+                            ? 'Charon Street, Montreal' 
+                            : 'Rue Charon, Montréal'; // Translate if needed
                         break;
                     case 2:
                         text = currentLang === 'en' ? 'charon residence' : 'résidence charon';
@@ -360,16 +366,28 @@
 
             <div class="circles-container slide-in">
                 <div class="circle">
-                    <p>Text 1</p>
+                    <p
+                    data-fr="rétrofits énergétiques profonds & agrandissements"   
+                    data-en="deep energy retrofits and extensions"
+                    >deep energy retrofits and extensions</p>
                 </div>
                 <div class="circle">
-                    <p>Text 2</p>
+                    <p
+                    data-en="developments"
+                    data-fr="développements"
+                    >developments</p>
                 </div>
                 <div class="circle">
-                    <p>Text 3</p>
+                    <p
+                    data-en="consultation"
+                    data-fr="consultation"
+                    >consultation</p>
                 </div>
                 <div class="circle">
-                    <p>Text 4</p>
+                    <p
+                    data-en="envelope sealing specialist"
+                    data-fr="spécialiste de l’étanchéité de l’enveloppe"
+                    >envelope sealing specialist</p>
                 </div>
             </div>
             <div class="service-btn slide-in">
@@ -384,30 +402,24 @@
 
             <div class="circles-container slide-in">
                 <div class="circle">
+                    <img src="./img/APCHQ BLACK.png">
                     <p>APCHQ</p>
                 </div>
                 <div class="circle">
+                    <img src="./img/nz_renovateur.png">
                     <p>CHBA NET ZERO</p>
                 </div>
                 <div class="circle">
+                    <img src="./img/BPQ.png">
                     <p>BPQ</p>
                 </div>
                 <div class="circle">
+                    <img src="./img/ADM.png">
                     <p>ADDM</p>
                 </div>
             </div>
 
-            <div class="horizontal-align">
-                <div class="centered-text" data-fr="votre partenaire de confiance en matière de rénovations en profondeur et de solutions de construction durables." 
-                data-en="                    your trusted partner in deep retrofits and sustainable building solutions.
-                "
-                >
-                    your trusted partner in deep retrofits and sustainable building solutions.
-                </div>
-                <!-- <div class="button-container">
-                    <a href="./contactus.html" class="appointment-button">Book a consultation</a>
-                </div> -->
-            </div>
+           
         </div>
     </main>
 

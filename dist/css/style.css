@@ -376,6 +376,7 @@ footer {
     bottom: 0;
     margin: 20px auto;
     transition: transform 0.5s ease-in-out;
+    margin-top: 0;
 }
 
 /* --------BURGER BAR--------------- */
@@ -650,17 +651,21 @@ footer {
     flex-wrap: wrap;
     text-align: center;
     margin: 0 auto;
+    gap: 18.5%;
+
 }
 
 .circle {
     width: 100px;
     height: 100px;
-    background-color: #ccc;
+    /* background-color: #ffffff; */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px;
+    /* margin: 9%; */
+    margin-bottom: 3%;
+
 }
 
 .circle p {
@@ -960,7 +965,7 @@ footer {
     cursor: pointer;
 text-align: center;
 border: solid 1px #485a43;
-width: 230px;
+width: 250px;
 margin-top: 20px;
 margin-bottom: 30px;
 }
