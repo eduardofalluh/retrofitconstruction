@@ -366,37 +366,17 @@
             </div>
 
             <div class="circles-container slide-in">
-                <div class="circle">
-                    <img src="./img/APCHQ BLACK.png">
-
-                    <p
-                    data-fr="rétrofits énergétiques profonds & agrandissements"   
-                    data-en="deep energy retrofits and extensions"
-                    >deep energy retrofits and extensions</p>
+                <div class="circle2">
+                    <img src="./img/retrofit&energetique.png" data-en="./img/retrofit&energetique.png" data-fr="./img/retrofit&energetique_fr.png">
                 </div>
-                <div class="circle">
-                    <img src="./img/APCHQ BLACK.png">
-
-                    <p
-                    data-en="developments"
-                    data-fr="développements"
-                    >developments</p>
+                <div class="circle2">
+                    <img src="./img/developments.png" data-en="./img/developments.png" data-fr="./img/development_fr.png">
                 </div>
-                <div class="circle">
-                    <img src="./img/APCHQ BLACK.png">
-
-                    <p
-                    data-en="consultation"
-                    data-fr="consultation"
-                    >consultation</p>
+                <div class="circle2">
+                    <img src="./img/consultation.png" data-en="./img/consultation.png" data-fr="./img/consultation.png">
                 </div>
-                <div class="circle">
-                    <img src="./img/APCHQ BLACK.png">
-
-                    <p
-                    data-en="envelope sealing specialist"
-                    data-fr="spécialiste d’étanchéité d’enveloppe"
-                    >envelope sealing specialist</p>
+                <div class="circle2">
+                    <img src="./img/envelope sealing specialist.png" data-en="./img/envelope sealing specialist.png" data-fr="./img/envelope sealing specialist_fr.png">
                 </div>
             </div>
             <div class="service-btn slide-in">
@@ -416,7 +396,7 @@
                 <div class="circle">
                     <img src="./img/nz_renovateur.png">
                 </div>
-                <div class="circle">
+                <div class="circle-2">
                     <img src="./img/BPQ.png">
                 </div>
                 <div class="circle">
@@ -427,6 +407,42 @@
            
         </div>
     </main>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const languageLinks = document.querySelectorAll('.language-link');
+    const images = document.querySelectorAll('.circle2 img');
+
+    // Function to update images based on selected language
+    const updateImages = (selectedLang) => {
+        images.forEach((img) => {
+            const newSrc = img.getAttribute(`data-${selectedLang}`);
+            if (newSrc) {
+                img.src = newSrc;
+            }
+        });
+    };
+
+    // Add click event listeners for language links
+    languageLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selectedLang = link.getAttribute('data-lang');
+
+            // Save the selected language to localStorage
+            localStorage.setItem('lang', selectedLang);
+
+            // Update images based on the selected language
+            updateImages(selectedLang);
+        });
+    });
+
+    // Load the saved language preference on page load
+    const savedLang = localStorage.getItem('lang') || 'en';
+    updateImages(savedLang); // Apply the saved language images
+});
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {

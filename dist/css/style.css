@@ -201,8 +201,8 @@ footer{
 
 @media (max-width: 768px) {
     .circle {
-        width: 95px !important; /* Adjust size for mobile */
-        height: 95px !important;
+        width: 150px !important; /* Adjust size for mobile */
+        height: 150px !important;
         border-radius: 50%;
         display: flex; /* Use flexbox for centering */
         align-items: center; /* Center items horizontally */
@@ -210,6 +210,18 @@ footer{
         position: relative; /* For text positioning */
         margin: 10px auto; /* Center the circle and add space */
     }
+
+    .circle-2{
+        width: 150px !important; /* Adjust size for mobile */
+        height: 150px !important;
+        border-radius: 50%;
+        display: flex; /* Use flexbox for centering */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        position: relative; /* For text positioning */
+        margin: 10px auto; /* Center the circle and add space */
+    }
+
 
     .circle img {
         
@@ -226,14 +238,15 @@ footer{
     *{
         box-sizing: content-box !important; /* Change to content-box or initial */
     }
-    .circle{
-        width: 95px !important;
-        height: 95px !important;
-        margin: 50px !important;
-    }
-    .circles-container, .circles-container-2 {
+    
+    .circles-container-2 {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important; /* Ensures at least 2 columns on small screens */
+    }
+
+    .circles-container{
+        display: grid !important;
+
     }
     .horizontal-align{
         width: 88% !important;
@@ -671,8 +684,8 @@ footer {
     flex-wrap: wrap;
     text-align: center;
     margin: 0 auto;
-    gap: 11.5%;
-    margin-bottom: 100px;
+    gap: 5%;
+    margin-bottom: 50px;
 }
 
 
@@ -685,12 +698,12 @@ footer {
     margin: 0 auto;
     justify-content: space-between;
     max-width: 90%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .circle {
-    width: 170px;
-    height: 170px;
+    width: 240px;
+    height: 240px;
     /* background-color: #ffffff; */
     border-radius: 50%;
     display: flex;
@@ -698,6 +711,32 @@ footer {
     justify-content: center;
     /* margin: 9%; */
     margin-bottom: 3%;
+}
+
+.circle2{
+    width: 450px;
+    height: 240px;
+    /* background-color: #ffffff; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 9%; */
+    margin: 3%;
+}
+
+
+
+.circle-2 {
+    width: 170px;
+    height: 240px;
+    /* background-color: #ffffff; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 9%; */
+    /* margin-bottom: 3%; */
 
 }
 
@@ -816,6 +855,11 @@ footer {
         margin: 0 auto;
         gap: 18.5%!important;
         margin-bottom: 100px!important;
+    }
+
+    .circle2{
+        max-width: 370px;
+        margin: 0 !important;
     }
 }
 
@@ -1048,7 +1092,6 @@ margin-bottom: 30px;
 .button-container {
     justify-content: flex-end;
     margin-bottom: 60px;
-    margin-top: 70px;
 }
 
 .appointment-button {
@@ -1078,7 +1121,7 @@ margin-bottom: 30px;
     }
 
     .service-btn{
-        margin-top: 80px !important;
+        margin-top: 170px !important;
     }
 
 }
