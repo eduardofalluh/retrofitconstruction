@@ -129,6 +129,7 @@ html, body {
     padding: 10px;
     width: 100%; /* Make sure it takes full width of its respective category */
     box-sizing: border-box;
+    margin-top: 2%;
 }
 
 .grid-container.active {
