@@ -686,6 +686,32 @@ footer {
     text-decoration: none; /* Removes the underline */
     color: inherit;
   }
+
+  /* Centering the logo in the active menu */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between top links, logo, and bottom links */
+    align-items: center; /* Center align horizontally */
+    height: 100%; /* Full height of the menu */
+    padding: 20px; /* Add padding if needed */
+}
+
+/* Styling the white logo container */
+.white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Ensures the logo takes up the center space */
+}
+
+/* Styling the logo image */
+.white-logo {
+    height: 75%; /* Adjust the height of the logo */
+    width: auto; /* Maintain the aspect ratio */
+    max-height: 120px; /* Set a maximum height */
+    margin: 20px 0; /* Add spacing around the logo */
+}
   
   
   .line {
