@@ -743,7 +743,6 @@ footer {
 }
 
 
-
 .circle-2 {
     width: 170px;
     height: 240px;
@@ -875,7 +874,7 @@ footer {
     }
 
     .circle2{
-        max-width: 370px;
+        width: 100% !important;
         margin: 0 !important;
     }
 }
@@ -1138,7 +1137,7 @@ margin-bottom: 30px;
     }
 
     .service-btn{
-        margin-top: 170px !important;
+        margin-top: 80px !important;
     }
 
 }
