@@ -98,6 +98,13 @@
         </div>
 
         <div class="rest-of-page" style="display: none;">
+            <div class="tagline">
+                <span id="typed-text" 
+                      data-en="where sustainability meets well-being and the past meets the future" 
+                      data-fr="là où la durabilité rencontre le bien-être et où le passé rencontre l’avenir">
+                </span>
+                <span class="cursor">|</span>
+            </div>
             <div class="carousel">
                 <div class="carousel-container">
                     <a class="carousel-item active" href="./sucrerie.html">
@@ -131,13 +138,13 @@
                     <p class="link" href="https://plus.lapresse.ca/screens/935953a0-3ad8-4564-b8ed-e37439a0a6c1%7C_0.html" style="font-size: 11px; margin-bottom: auto;">learn more </p><br><br>
                 </section>
 
-                <div class="tagline">
+                <!-- <div class="tagline">
                     <span id="typed-text" 
                           data-en="Where Sustainability Meets Well-Being and the Past Meets the Future" 
                           data-fr="Là où la durabilité rencontre le bien-être et où le passé rencontre l’avenir">
                     </span>
                     <span class="cursor">|</span>
-                </div>
+                </div> -->
 
             </div>
 
@@ -233,7 +240,7 @@
                 }
 
                 const initialDelay = 5000;
-                const intervalTime = 20000;
+                const intervalTime = 15000;
 
                 setTimeout(() => {
                     carouselInterval = setInterval(rotateCarousel, intervalTime);
@@ -254,28 +261,22 @@
                             : 'Impasse de la sucrerie, Saint-Agathe'; // Translate if needed
                         break;
                     case 1:
-                        text = currentLang === 'en' ? 'charon project' : 'projet charon';
+                        text = currentLang === 'en' ? 'charon residence' : 'résidence charon';
                         location = currentLang === 'en' 
-                            ? 'Charon Street, Montreal' 
-                            : 'Rue Charon, Montréal'; // Translate if needed
+                            ? 'a net zero ready duplex, pointe-saint-charles' 
+                            : 'un duplex net zero ready, pointe-saint-charles'; // Translate if needed
                         break;
                     case 2:
                         text = currentLang === 'en' ? 'charon residence' : 'résidence charon';
                         location = currentLang === 'en' 
-                            ? 'Charon Street, Montreal' 
-                            : 'Rue Charon, Montréal'; // Example translation
+                            ? 'a net zero ready duplex, pointe-saint-charles' 
+                            : 'un duplex net zero ready, pointe-saint-charles'; // Example translation
                         break;
                     case 3:
                         text = currentLang === 'en' ? 'charon residence' : 'résidence charon';
                         location = currentLang === 'en' 
-                            ? 'Charon Street, Montreal' 
-                            : 'Rue Charon, Montréal'; // Example translation
-                        break;
-                    default:
-                        text = currentLang === 'en' ? 'default project' : 'projet par défaut';
-                        location = currentLang === 'en' 
-                            ? 'Default Location' 
-                            : 'Emplacement par défaut';
+                            ? 'a net zero ready duplex, pointe-saint-charles' 
+                            : 'un duplex net zero ready, pointe-saint-charles'; // Example translation
                         break;
                 }
 

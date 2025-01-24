@@ -251,7 +251,7 @@ footer{
 
     .carousel-controls{
         right: 0px !important;
-        top: 595px;
+        top: 630px;
     }
 
     footer{
@@ -511,7 +511,7 @@ footer {
     gap: 19.3%; /* Space between the links */
     font-size: 14px;
     color: white;
-    margin-top: 50px; /* Add space above the top links */
+    margin-top: 67px; /* Add space above the top links */
     padding-top: 10px; /* Spacing inside the border */
     border-top: 1px solid rgb(255, 255, 255);
     width: 95%;
@@ -849,15 +849,12 @@ footer {
     font-size: 20px;
     font-family: 'Lora', serif;
     color: #485a43;
-    margin-top: 30px;
     margin-left: 35px;
   }
 
   @media (max-width: 768px) {
 
     .tagline{
-        margin-bottom: 50px !important;
-        margin-top: -80px !important;
         margin-left: 5px !important;
     }
 }
