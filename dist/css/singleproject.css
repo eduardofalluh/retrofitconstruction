@@ -564,6 +564,9 @@ footer {
     justify-content: center;
     align-items: center;
     position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+
 }
 
 .carousel-item.active {
@@ -582,6 +585,21 @@ footer {
     margin: 20px auto;
     transition: transform 0.5s ease-in-out;
     margin-left: 35px;
+}
+
+.carousel-image-plan{
+    width: 90%;
+    height: 95%;
+    /* object-fit: cover; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 20px auto;
+    transition: transform 0.5s ease-in-out;
+    margin-left: 35px;
+    margin: 0 auto;
 }
 
 .carousel-controls {

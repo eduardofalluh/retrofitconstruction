@@ -200,9 +200,30 @@ footer{
 }
 
 @media (max-width: 768px) {
-    .circle p{
-        position: relative !important;
-    bottom: -75px !important;
+    .circle {
+        width: 95px !important; /* Adjust size for mobile */
+        height: 95px !important;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: flex; /* Use flexbox for centering */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        position: relative; /* For text positioning */
+        margin: 10px auto; /* Center the circle and add space */
+    }
+
+    .circle img {
+        max-width: 65%; /* Adjust image size within the circle */
+        max-height: 65%; /* Prevent overflow */
+        object-fit: contain; /* Ensure proper scaling */
+        display: block; /* Ensure proper rendering */
+    }
+
+    .circle p {
+        position: absolute; /* Position text at the bottom */
+        top: 120%; /* Slightly above the bottom edge */
+        text-align: center; /* Center the text horizontally */
+        margin: 0;
     }
     *{
         box-sizing: content-box !important; /* Change to content-box or initial */
@@ -210,8 +231,9 @@ footer{
     .circle{
         width: 95px !important;
         height: 95px !important;
+        margin: 50px !important;
     }
-    .circles-container {
+    .circles-container, .circles-container-2 {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important; /* Ensures at least 2 columns on small screens */
     }
@@ -652,7 +674,7 @@ footer {
     text-align: center;
     margin: 0 auto;
     gap: 18.5%;
-
+    margin-bottom: 100px;
 }
 
 
@@ -664,7 +686,7 @@ footer {
     text-align: center;
     margin: 0 auto;
     justify-content: space-between;
-    max-width: 99%;
+    max-width: 90%;
     margin-bottom: 100px;
 }
 
@@ -687,6 +709,8 @@ footer {
     bottom: 0;
   position: absolute;
 }
+
+
 
 
 /* Appointment Button */
@@ -783,6 +807,18 @@ footer {
     .language-switch{
         right: 30px !important;
     }
+
+
+    .circles-container-2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 0 auto;
+        gap: 18.5%!important;
+        margin-bottom: 100px!important;
+    }
 }
 
 /* Slide-in animation */
@@ -807,7 +843,7 @@ footer {
   }
 
   
-  .circles-container, .bottom-image {
+  .circles-container, .bottom-image, .circles-container-2 {
     transform: translateX(-100%);
   }
   
@@ -1044,6 +1080,10 @@ margin-bottom: 30px;
     .text-container{
         margin-top: 0px !important;
 
+    }
+
+    .service-btn{
+        margin-top: 120px !important;
     }
 
 }
