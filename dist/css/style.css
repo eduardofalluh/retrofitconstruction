@@ -203,7 +203,6 @@ footer{
     .circle {
         width: 95px !important; /* Adjust size for mobile */
         height: 95px !important;
-        background-color: #ffffff;
         border-radius: 50%;
         display: flex; /* Use flexbox for centering */
         align-items: center; /* Center items horizontally */
@@ -213,8 +212,7 @@ footer{
     }
 
     .circle img {
-        max-width: 65%; /* Adjust image size within the circle */
-        max-height: 65%; /* Prevent overflow */
+        
         object-fit: contain; /* Ensure proper scaling */
         display: block; /* Ensure proper rendering */
     }
@@ -673,7 +671,7 @@ footer {
     flex-wrap: wrap;
     text-align: center;
     margin: 0 auto;
-    gap: 18.5%;
+    gap: 11.5%;
     margin-bottom: 100px;
 }
 
@@ -691,8 +689,8 @@ footer {
 }
 
 .circle {
-    width: 100px;
-    height: 100px;
+    width: 170px;
+    height: 170px;
     /* background-color: #ffffff; */
     border-radius: 50%;
     display: flex;
@@ -1083,7 +1081,7 @@ margin-bottom: 30px;
     }
 
     .service-btn{
-        margin-top: 120px !important;
+        margin-top: 80px !important;
     }
 
 }
