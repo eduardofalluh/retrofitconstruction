@@ -36,7 +36,6 @@
 }
 
 .text-below-image p{
-    border: solid 1px #485a43;
     border-radius: 10px;
     max-width: 93.5%;
     margin-top: 20px;
@@ -909,6 +908,10 @@ footer {
     .white {
         display: block !important;
     }
+}
+
+.text-p{
+    text-align:left !important;
 }
 
 
