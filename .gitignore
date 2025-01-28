@@ -6,3 +6,4 @@ dist/img/DJI_0176_compressed.mp4
 ./.git/lfs/objects/38/58/385888b489a0a65788e9a7daf59b9a7fab9948c7fe2435bc2abe007c1cc55ba9
 .node_modules
 ./node_modules
+node_modules
