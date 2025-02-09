@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrofit Construction</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+    <header style="display: none;">
+        <nav class="navbar">
+            <div class="burger-bar" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-content">
+                    <!-- Top Links (Header) -->
+                    <div class="top-links">
+                        <a href="./aboutpage.html" data-fr="à propos" data-en="about">à propos</a>
+                        <a href="./servicepage.html" data-fr="services" data-en="services">services</a>
+                        <a href="./projects.html" data-fr="projets" data-en="projects">projets</a>
+                        <a href="./ressources.html" data-fr="ressources" data-en="resources">ressources</a>
+                        <a href="./index.html" data-fr="page d&#39;accueil" data-en="home">home</a>
+
+                    </div>
+                    <!-- Separators -->
+                     <div class="white">
+                        <a href="./index.html">
+                            <img class="white-logo" src="./img/logo_white.png" href="./index.html">
+                        </a>
+                     </div>
+                    <!-- Bottom Links (Footer) -->
+                    <div class="bottom-links">
+                        <a href="./FAQ.html" data-fr="faq" data-en="faq">faq</a>
+                        <a href="javascript:void(0);" onclick="window.open('https://linktr.ee/retrofitconstruction', '_blank');" data-fr="suivez-nous" data-en="follow us">follow us</a>
+                        <span data-fr="rbq 5825-8377-01" data-en="rbq 5825-8377-01">rbq 5825-8377-01</span>
+                        <a href="./contactus.html" data-fr="contactez-nous" data-en="contact us">contactez-nous</a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+            const menuOverlay = document.querySelector('.menu-overlay');
+            const burgerBar = document.querySelector('.burger-bar');
+            const body = document.body; // Select the body element
+
+            if (menuOverlay.classList.contains('active')) {
+                // Trigger fade-out animation
+                menuOverlay.classList.add('closing');
+                burgerBar.classList.remove('active');
+                body.classList.remove('no-scroll'); // Enable scrolling
+
+                // Wait for fade-out animation to finish before hiding
+                setTimeout(() => {
+                    menuOverlay.classList.remove('active', 'closing');
+                }, 500); // Match the fade-out duration
+            } else {
+                // Show menu with fade-in animation
+                menuOverlay.classList.add('active');
+                burgerBar.classList.add('active');
+                body.classList.add('no-scroll'); // Disable scrolling
+            }
+        }
+
+                window.addEventListener('DOMContentLoaded', function () {
+                    var option3Link = document.getElementById('option3');
+                    var currentPage = window.location.href;
+
+                    if (currentPage.includes('homepage.html')) {
+                        option3Link.removeAttribute('href');
+                        option3Link.style.cursor = 'default';
+                    }
+                });
+            </script>
+
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <div class="language-switch">
+                <a href="#" id="lang-en" class="language-link" data-lang="en">en</a>
+                <a class="language-bar">/</a>
+
+                <a href="#" id="lang-fr" class="language-link" data-lang="fr">fr</a>
+            </div>
+            <div id="google_translate_element" style="display: none;"></div>
+        </nav>
+        <hr class="nav-hr" style="border-color: black;border-width: 1px; margin: 0px 17px;">
+    </header>
+
+
+    <main>
+        <div class="initial-text">
+            <h1 data-fr="rénovations énergétiques profondes" data-en="deep energy retrofits">deep energy retrofits</h1>
+            <h1 data-fr="développements" data-en="developments">developments</h1>
+            <h1 data-fr="consultation" data-en="consultation">consultation</h1>
+            <h1 data-fr="spécialiste de l’étanchéité de l’enveloppe" data-en="envelope sealing specialist">envelope sealing specialist</h1>
+        </div>
+
+        <div class="rest-of-page" style="display: none;">
+            <div class="tagline">
+                <span id="typed-text" 
+                      data-en="where sustainability meets wellbeing and the past meets the future" 
+                      data-fr="là où la durabilité rencontre le bien-être et où le passé rencontre l’avenir">
+                </span>
+                <!-- <span class="cursor">|</span> -->
+            </div>
+            <div class="carousel">
+                <div class="carousel-container">
+                    <a class="carousel-item active" href="./charon.html">
+                        <video class="carousel-video" autoplay muted loop playsinline>
+                            <source src="./img/charonintrocaroussel.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </a>
+                    <a class="carousel-item" href="./sucrerie.html">
+                        <video class="carousel-video" autoplay muted loop playsinline>
+                            <source src="./img/carousselmashupsucreriewithdrone.mp4" type="video/mp4">
+                            <!-- <source src="./img/sucrerie-video-1.webm" type="video/webm"> -->
+                            Your browser does not support the video tag.
+                        </video>
+                    </a>
+                    <a class="carousel-item" href="./charon.html">
+                        <img class="carousel-image" src="./img/charon-1.JPG" alt="Image 4">
+                    </a>
+                    <a class="carousel-item" href="./sucrerie.html">
+                        <img class="carousel-image" src="./img/sucrerie_5.png" alt="Image 2">
+                    </a>
+                </div>
+
+                <div class="carousel-controls">
+                    <img class="carousel-control previous" onclick="previousItem()" src="./img/left-arrow.png" alt="Previous">
+                    <img class="carousel-control next" onclick="nextItem()" src="./img/right-arrow.png" alt="Next">
+                </div>
+
+                <section class="text-container">
+                    <p style="margin-bottom: 3px;">charon residence</p>
+                    <p class="link" href="https://plus.lapresse.ca/screens/935953a0-3ad8-4564-b8ed-e37439a0a6c1%7C_0.html" style="font-size: 11px; margin-bottom: auto;">learn more </p><br><br>
+                </section>
+
+                <!-- <div class="tagline">
+                    <span id="typed-text" 
+                          data-en="Where Sustainability Meets Well-Being and the Past Meets the Future" 
+                          data-fr="Là où la durabilité rencontre le bien-être et où le passé rencontre l’avenir">
+                    </span>
+                    <span class="cursor">|</span>
+                </div> -->
+
+            </div>
+
+            <div class="button-container">
+                <a href="./contactus.html" class="appointment-button" data-fr="planifier une consultation" data-en="book a consultation">book a consultation</a>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                const speed = 50; // Typing speed
+                let index = 0;
+                let hasAnimated = false; // Flag to track if the animation has already been done
+
+                function typeText(text) {
+                    if (index < text.length) {
+                        document.getElementById('typed-text').textContent += text.charAt(index);
+                        index++;
+                        setTimeout(() => typeText(text), speed);
+                    }
+                }
+
+                function updateText(replaceOnly = false) {
+                    const currentLang = localStorage.getItem('lang') || 'en'; // Default to 'en' if no language is set
+                    const element = document.getElementById('typed-text');
+                    const text = element.getAttribute(`data-${currentLang}`); // Get text for current language
+
+                    if (replaceOnly || hasAnimated) {
+                        // Replace text instantly if animation has already happened
+                        element.textContent = text;
+                    } else {
+                        // Perform the typing animation for the first load
+                        element.textContent = ""; // Clear existing text
+                        index = 0; // Reset typing index
+                        hasAnimated = true; // Mark animation as done
+                        typeText(text);
+                    }
+                }
+
+                // Listen for language switch
+                document.querySelectorAll('.language-link').forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const selectedLang = this.getAttribute('data-lang'); // Get selected language
+                        localStorage.setItem('lang', selectedLang); // Save selected language
+                        updateText(true); // Replace text instantly without animation
+                    });
+                });
+
+                // Initialize text on page load
+                setTimeout(() => updateText(), 3000); // Delay animation on first load
+            });
+
+
+// ===================================================
+                var items = Array.from(document.querySelectorAll('.carousel-item'));
+                var currentIndex = 0;
+                var carouselInterval;
+
+                function updateCarousel() {
+                    items.forEach((item, index) => {
+                        item.classList.toggle('active', index === currentIndex);
+                    });
+
+                    // Replay video if it is the current item
+                    const currentActiveItem = items[currentIndex];
+                    if (currentActiveItem.querySelector('video')) {
+                        currentActiveItem.querySelector('video').currentTime = 0;
+                    }
+
+                    updateText(); // Update the text when the image changes
+                }
+
+                function rotateCarousel() {
+                    currentIndex = (currentIndex + 1) % items.length;
+                    updateCarousel();
+                }
+
+                function nextItem() {
+                    currentIndex = (currentIndex + 1) % items.length;
+                    updateCarousel();
+                    resetCarouselTimer();
+                }
+
+                function previousItem() {
+                    currentIndex = (currentIndex - 1 + items.length) % items.length;
+                    updateCarousel();
+                    resetCarouselTimer();
+                }
+
+                function resetCarouselTimer() {
+                    clearInterval(carouselInterval);
+                    carouselInterval = setInterval(rotateCarousel, intervalTime);
+                }
+
+                const initialDelay = 5000;
+                const intervalTime = 15000;
+
+                setTimeout(() => {
+                    carouselInterval = setInterval(rotateCarousel, intervalTime);
+                }, initialDelay);
+
+                function updateText() {
+                const textContainer = document.querySelector('.text-container');
+                const currentLang = localStorage.getItem('lang') || 'en'; // Retrieve current language
+
+                let text = '';
+                let location = '';
+
+                switch (currentIndex) {
+                    case 0:
+                        text = currentLang === 'en' ? 'charon residence' : 'résidence charon';
+                        location = currentLang === 'en' 
+                            ? 'a net zero ready duplex, pointe-saint-charles' 
+                            : 'un duplex net zero ready, pointe-saint-charles'; // Translate if needed
+                        break;
+                    case 1:
+                        text = currentLang === 'en' ? 'sucrerie project' : 'projet sucrerie';
+                        location = currentLang === 'en' 
+                            ? 'impasse de la sucrerie, saint-agathe' 
+                            : 'impasse de la sucrerie, saint-agathe'; // Translate if needed
+                        break;
+                    case 2:
+                        text = currentLang === 'en' ? 'charon residence' : 'résidence charon';
+                        location = currentLang === 'en' 
+                            ? 'a net zero ready duplex, pointe-saint-charles' 
+                            : 'un duplex net zero ready, pointe-saint-charles'; // Example translation
+                        break;
+                    case 3:
+                        text = currentLang === 'en' ? 'sucrerie project' : 'projet sucrerie';
+                        location = currentLang === 'en' 
+                        ? 'impasse de la sucrerie, saint-agathe' 
+                        : 'impasse de la sucrerie, saint-agathe'; // Translate if needed
+                        break;
+                }
+
+                textContainer.innerHTML = `
+                    <p style="margin-bottom: 3px;">${text}</p>
+                    <p class="link" style="font-size: 12px; margin-bottom: auto;">${location}</p>
+                    <br><br>
+                `;
+            }
+
+                window.addEventListener('DOMContentLoaded', updateText);
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    setTimeout(() => {
+                        document.querySelector('.rest-of-page').style.display = 'block';
+                        document.querySelector('.rest-of-page').classList.add('fade-in');
+                        document.querySelector('header').style.display = 'block';
+                        document.querySelector('header').classList.add('fade-in');
+                        document.querySelector('footer').style.display = 'block';
+                        document.querySelector('footer').classList.add('fade-in');
+                    }, 3000); // Display rest of the page after 6 seconds
+                });
+
+              
+
+                // Initialize Hammer.js for carousel swipe functionality
+                const carouselContainer = document.querySelector('.carousel-container');
+                const hammer = new Hammer(carouselContainer);
+
+                hammer.on('swipeleft', function () {
+                    nextItem();
+                });
+
+                hammer.on('swiperight', function () {
+                    previousItem();
+                });
+
+
+
+
+
+
+
+                // TO change languages=============
+                document.addEventListener('DOMContentLoaded', () => {
+    const languageLinks = document.querySelectorAll('.language-link');
+    const translatableElements = document.querySelectorAll('[data-en]');
+
+    // Function to update text for all elements with translations
+    const updateLanguage = (selectedLang) => {
+        translatableElements.forEach((el) => {
+            const translation = el.getAttribute(`data-${selectedLang}`);
+            if (translation) {
+                el.innerHTML = translation; // Use innerHTML to correctly render <br> tags
+            }
+        });
+    };
+
+    languageLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selectedLang = link.getAttribute('data-lang');
+
+            // Save the selected language to localStorage
+            localStorage.setItem('lang', selectedLang);
+
+            // Update the language content
+            updateLanguage(selectedLang);
+
+            // Update the active state of the language links
+            languageLinks.forEach((l) => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // Load the saved language preference on page load
+    const savedLang = localStorage.getItem('lang') || 'en';
+    updateLanguage(savedLang); // Apply the saved language
+    document.querySelector(`.language-link[data-lang="${savedLang}"]`).classList.add('active');
+});
+            </script>
+
+            <div class="bottom-image slide-in">
+                <div class="subtitle" style="margin: auto; color: red; font-family: 'Lora', serif; font-size: 20px;" data-fr="nos services" data-en="our services">our services</div>
+                <div class="link" style="font-size: 16px; margin-bottom: auto;" data-fr="Chaque bâtiment est unique, et les rétrofits nécessitent une approche adaptée. Nous nous spécialisons dans les projets résidentiels et multi-résidentiels, en proposant des solutions conçues pour répondre aux besoins spécifiques de chaque projet." data-en="Every building is unique, and retrofits require a tailored approach. We specialize in residential and multi-unit projects, providing solutions designed to meet the specific needs of each project.">Every building is unique, and retrofits require a tailored approach. We specialize in residential and multi-unit projects, providing solutions designed to meet the specific needs of each project.
+                </div><br><br>
+            </div>
+
+            <div class="circles-container slide-in">
+                <div class="circle2">
+                    <img src="./img/retrofit&energetique.png" data-en="./img/retrofit&energetique.png" data-fr="./img/retrofit&energetique_fr.png">
+                </div>
+                <div class="circle2">
+                    <img src="./img/developments.png" data-en="./img/developments.png" data-fr="./img/development_fr.png">
+                </div>
+                <div class="circle2">
+                    <img src="./img/consultation.png" data-en="./img/consultation.png" data-fr="./img/consultation.png">
+                </div>
+                <div class="circle2">
+                    <img src="./img/envelope sealing specialist.png" data-en="./img/envelope sealing specialist.png" data-fr="./img/envelope sealing specialist_fr.png">
+                </div>
+            </div>
+            <div class="service-btn slide-in">
+                <a class='btn' href="./servicepage.html" data-fr="découvrez nos services" data-en="discover our services">discover our services</a>
+            </div>
+
+            <div class="bottom-image slide-in">
+                <div class="subtitle" style="margin: auto; color: red; font-family: 'Lora', serif; font-size: 20px;" data-fr="nos partenaires" data-en="our partners">our partners</div>
+                <div class="link" style="font-size: 16px; margin-bottom: auto;" data-en="Our trusted partners are key organizations in sustainability and construction. Through these affiliations, we provide certifications that reflect our commitment to the efficiency and sustainability of buildings." data-fr="Nos partenaires de confiance sont des organisations clés en durabilité et en construction. Grâce à ces affiliations, nous offrons des certifications qui reflètent notre engagement envers l’efficacité et la durabilité des bâtiments.">Our trusted partners are key organizations in sustainability and construction. Through these affiliations, we provide certifications that reflect our commitment to the efficiency and sustainability of buildings.
+                </div><br><br>
+            </div>
+
+            <div class="circles-container-2 slide-in">
+                <div class="circle">
+                    <img src="./img/APCHQ BLACK.png">
+                </div>
+                <div class="circle">
+                    <img src="./img/nz_renovateur.png">
+                </div>
+                <div class="circle-2">
+                    <img src="./img/BPQ.png">
+                </div>
+                <div class="circle">
+                    <img src="./img/ADM.png">
+                </div>
+            </div>
+
+           
+        </div>
+    </main>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const languageLinks = document.querySelectorAll('.language-link');
+    const images = document.querySelectorAll('.circle2 img');
+
+    // Function to update images based on selected language
+    const updateImages = (selectedLang) => {
+        images.forEach((img) => {
+            const newSrc = img.getAttribute(`data-${selectedLang}`);
+            if (newSrc) {
+                img.src = newSrc;
+            }
+        });
+    };
+
+    // Add click event listeners for language links
+    languageLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selectedLang = link.getAttribute('data-lang');
+
+            // Save the selected language to localStorage
+            localStorage.setItem('lang', selectedLang);
+
+            // Update images based on the selected language
+            updateImages(selectedLang);
+        });
+    });
+
+    // Load the saved language preference on page load
+    const savedLang = localStorage.getItem('lang') || 'en';
+    updateImages(savedLang); // Apply the saved language images
+});
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slideInElements = document.querySelectorAll('.slide-in');
+
+            function handleScroll() {
+                slideInElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial check
+        });
+
+        window.addEventListener('load', function () {
+            window.scrollTo(0, 0);
+        });
+    </script>
+
+<footer style="display: none;">
+    
+    <div class="footer-section">
+        <p><a href="./FAQ.html" class="footer-link">faq</a></p>
+        <p><a href="javascript:void(0);" style="font-size: 17px;" class=" footer-link" onclick="window.open('https://linktr.ee/retrofitconstruction', '_blank');" data-en="follow us" data-fr="suivez-nous">follow us</a></p>
+        <p class=" footer-link">rbq 5825-8377-01</p>
+        <p><a href="./contactus.html" class="footer-link" data-fr="contactez-nous" data-en="contact us">contact us</a></p>
+    </div>
+    <div class="text-rights-reserved" data-fr="© 2024 Tous droits réservés" data-en="© 2024 All Rights Reserved">© 2024 All Rights Reserved</div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+<div class="container">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrofit Construction</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <link rel="stylesheet" href="./css/aboutpage.css">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+    
+
+</head>
+<body>
+    <header style="display: none;">
+        <nav class="navbar">
+            <div class="burger-bar" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-content">
+                    <!-- Top Links (Header) -->
+                    <div class="top-links">
+                        <a href="./aboutpage.html" data-fr="à propos" data-en="about">à propos</a>
+                        <a href="./servicepage.html" data-fr="services" data-en="services">services</a>
+                        <a href="./projects.html" data-fr="projets" data-en="projects">projets</a>
+                        <a href="./ressources.html" data-fr="ressources" data-en="resources">ressources</a>
+                        <a href="./index.html" data-fr="page d&#39;accueil" data-en="home">home</a>
+
+                    </div>
+                    <!-- Separators -->
+                     <div class="white">
+                        <a href="./index.html">
+                            <img class="white-logo" src="./img/logo_white.png" href="./index.html">
+                        </a>
+                     </div>
+                    <!-- Bottom Links (Footer) -->
+                    <div class="bottom-links">
+                        <a href="./FAQ.html" data-fr="faq" data-en="faq">faq</a>
+                        <a href="javascript:void(0);" onclick="window.open('https://linktr.ee/retrofitconstruction', '_blank');" data-fr="suivez-nous" data-en="follow us">follow us</a>
+                        <span data-fr="rbq 5825-8377-01" data-en="rbq 5825-8377-01">rbq 5825-8377-01</span>
+                        <a href="./contactus.html" data-fr="contactez-nous" data-en="contact us">contactez-nous</a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+            const menuOverlay = document.querySelector('.menu-overlay');
+            const burgerBar = document.querySelector('.burger-bar');
+            const body = document.body; // Select the body element
+
+            if (menuOverlay.classList.contains('active')) {
+                // Trigger fade-out animation
+                menuOverlay.classList.add('closing');
+                burgerBar.classList.remove('active');
+                body.classList.remove('no-scroll'); // Enable scrolling
+
+                // Wait for fade-out animation to finish before hiding
+                setTimeout(() => {
+                    menuOverlay.classList.remove('active', 'closing');
+                }, 500); // Match the fade-out duration
+            } else {
+                // Show menu with fade-in animation
+                menuOverlay.classList.add('active');
+                burgerBar.classList.add('active');
+                body.classList.add('no-scroll'); // Disable scrolling
+            }
+        }
+
+                window.addEventListener('DOMContentLoaded', function () {
+                    var option3Link = document.getElementById('option3');
+                    var currentPage = window.location.href;
+
+                    if (currentPage.includes('homepage.html')) {
+                        option3Link.removeAttribute('href');
+                        option3Link.style.cursor = 'default';
+                    }
+                });
+            </script>
+
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <div class="language-switch">
+                <a href="#" id="lang-en" class="language-link" data-lang="en">en</a>
+                <a class="language-bar">/</a>
+
+                <a href="#" id="lang-fr" class="language-link" data-lang="fr">fr</a>
+            </div>
+            <div id="google_translate_element" style="display: none;"></div>
+        </nav>
+        <hr class="nav-hr" style="border-color: black;border-width: 1px; ">
+    </header>
+
+    <div class="about-animation">
+        <h1 id="about-text" data-en="about" data-fr="à propos">about</h1>
+    </div>
+
+    <main style="display: none;">
+        <h1 class="main-title" data-en="about" data-fr="à propos">about</h1>
+        <div class="about-sections">
+            <div class="about-section">
+                <h1 class="about" data-en="our vision" data-fr="notre vision">our vision</h1>
+                <p data-en="We believe the most sustainable buildings are the ones already built. Our vision is to help clients unlock the full potential of their buildings through meaningful upgrades that enhance energy efficiency, comfort, health, resiliency, and market value.
+
+                We prioritize revitalizing the craftsmanship of the past while addressing modern energy and societal challenges. Each retrofit sets new benchmarks for sustainability.
+        
+                Driven by a commitment to reducing the environmental footprint of the built environment, we deliver customized solutions that make a lasting impact. We are guided by Winston Churchill’s famous words: “We shape our buildings; thereafter they shape us."
+                data-fr="Nous croyons que les bâtiments les plus durables sont ceux qui sont déjà construits. Notre vision est d’aider nos clients à révéler tout le potentiel de leurs bâtiments grâce à des améliorations significatives qui optimisent l’efficacité énergétique, le confort, la santé, la résilience et la valeur marchande.
+
+                Nous privilégions la revitalisation du savoir-faire du passé tout en répondant aux défis énergétiques et sociétaux modernes. Chaque rétrofit établit de nouvelles normes en matière de durabilité.
+                
+                Animés par un engagement à réduire l’empreinte environnementale du cadre bâti, nous offrons des solutions personnalisées qui laissent un impact durable. Nous nous inspirons des célèbres mots de Winston Churchill : « Nous façonnons nos bâtiments ; ensuite, ils nous façonnent. »
+                "
+                >We believe the most sustainable buildings are the ones already built. Our vision is to help clients unlock the full potential of their buildings through meaningful upgrades that enhance energy efficiency, comfort, health, resiliency, and market value.
+
+                    We prioritize revitalizing the craftsmanship of the past while addressing modern energy and societal challenges. Each retrofit sets new benchmarks for sustainability.
+            
+                    Driven by a commitment to reducing the environmental footprint of the built environment, we deliver customized solutions that make a lasting impact. We are guided by Winston Churchill’s famous words: “We shape our buildings; thereafter they shape us.
+                    </p>
+            </div>
+            <div class="about-section">
+                <h1 class="about" data-en="our offer" data-fr="notre offre">our offer</h1>
+                <p data-fr="Notre offre : Chaque bâtiment représente une occasion unique de créer de la valeur durable. Qu’il s’agisse d’un projet résidentiel, multi-résidentiel ou commercial, notre approche sur mesure vise à concevoir des espaces performants qui allient durabilité, confort et qualité esthétique.
+
+                Nos services incluent les retrofits énergétiques profonds, les développements, la consultation et l’expertise en étanchéité de l’enveloppe. Grâce à notre expertise en certifications Net Zero et Net Zero Ready, ainsi qu’aux standards Passive House et EnerPHit, nous réalisons des projets conformes aux normes les plus élevées de la construction durable, tout en garantissant des designs réfléchis et intemporels.
+                
+                Basés dans la région du Grand Montréal, nous concevons des espaces efficaces, résilients et élégants, parfaitement alignés sur votre vision.
+                "
+                data-en="We recognize that every building is a unique opportunity to create lasting value. Whether it’s a residential, multi-unit residential, or commercial project, our tailored approach creates high-performance spaces that combine sustainability, comfort, and aesthetic excellence.
+
+                Our services include deep energy retrofits and extensions, project development, consultancy, and envelope sealing. With expertise in Net-Zero and Net-Zero Ready certifications, Passive House, and EnerPHit standards, we deliver projects that meet the highest benchmarks of sustainable construction while ensuring thoughtful, timeless design.
+                "
+                >We recognize that every building is a unique opportunity to create lasting value. Whether it’s a residential, multi-unit residential, or commercial project, our tailored approach creates high-performance spaces that combine sustainability, comfort, and aesthetic excellence.
+
+                    Our services include deep energy retrofits and extensions, project development, consultancy, and envelope sealing. With expertise in Net-Zero and Net-Zero Ready certifications, Passive House, and EnerPHit standards, we deliver projects that meet the highest benchmarks of sustainable construction while ensuring thoughtful, timeless design.
+                    </p>
+            </div>
+            <div class="about-section">
+                <h1 class="about" data-en="our founder" data-fr="notre fondateur">our founder</h1>
+                <p data-fr="Fellipe Falluh a toujours été passionné par la construction durable, une valeur profondément ancrée dans sa famille et son éducation. Originaire du Brésil et issu d’une famille de bâtisseurs, il a grandi avec une forte sensibilité à l’environnement et à la durabilité. Avec la volonté d’améliorer le cadre bâti, Fellipe a obtenu un diplôme en génie civil et environnemental de l’Université McGill et, à seulement 24 ans, a fondé Retrofit Construction.
+
+                Reconnu parmi les 30 jeunes leaders en durabilité de moins de 30 ans par Corporate Knights, Fellipe combine une vision de changement significatif et un engagement profond envers les pratiques de construction durable.
+                
+                En tant que vice-président du conseil d’administration de Bâtiment Passif Québec, Fellipe promeut les principes de la norme Passive House à travers la province. Il est également récipiendaire de la médaille du couronnement du roi Charles III et coanime le podcast Au-Delà des Murs, où il échange avec des professionnels pour encourager l’innovation et le progrès dans le domaine de la construction performante."
+                data-en="Fellipe Falluh has always been passionate about sustainable building, a value rooted in his family and education. Originally from Brazil and coming from a family of builders, he grew up with a deep appreciation for sustainability and the environment. With a commitment to improving the built environment, Fellipe earned a degree in environmental and civil engineering from McGill University and, at just 24 years old, founded Retrofit Construction.
+
+                Recognized as one of Corporate Knights’ 30 Under 30 Sustainability leaders, Fellipe brings a vision for meaningful change and a deep commitment to sustainable building practices.
+                
+                As vice-president of the board at Bâtiment Passif Québec, Fellipe promotes Passive House principles across the province. He is also a recipient of the King Charles III coronation medal and co-hosts the podcast Au-Delà des Murs, where he engages with professionals to inspire innovation and progress in high-performance construction.
+                "
+                >Fellipe Falluh has always been passionate about sustainable building, a value rooted in his family and education. Originally from Brazil and coming from a family of builders, he grew up with a deep appreciation for sustainability and the environment. With a commitment to improving the built environment, Fellipe earned a degree in environmental and civil engineering from McGill University and, at just 24 years old, founded Retrofit Construction.
+
+                    Recognized as one of Corporate Knights’ 30 Under 30 Sustainability leaders, Fellipe brings a vision for meaningful change and a deep commitment to sustainable building practices.
+                    
+                    As vice-president of the board at Bâtiment Passif Québec, Fellipe promotes Passive House principles across the province. He is also a recipient of the King Charles III coronation medal and co-hosts the podcast Au-Delà des Murs, where he engages with professionals to inspire innovation and progress in high-performance construction.
+                </p>
+                <img class="image-about" src="./img/image_fellipe.png" alt="Image 1">
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slideInElements = document.querySelectorAll('.slide-in-2');
+
+            function handleScroll() {
+                slideInElements.forEach((el) => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial check
+        });
+
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+        const slideInElements = document.querySelectorAll('.slide-in');
+
+        // Function to add the 'visible' class immediately after the page loads
+        function activateSlideIn() {
+            slideInElements.forEach((el) => {
+                el.classList.add('visible');
+            });
+        }
+
+        activateSlideIn(); // Activate slide-in animations directly on page load
+    });
+
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
+
+
+
+    // TO change languages=============
+    document.addEventListener('DOMContentLoaded', () => {
+    const languageLinks = document.querySelectorAll('.language-link');
+    const translatableElements = document.querySelectorAll('[data-en]');
+
+    languageLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selectedLang = link.getAttribute('data-lang');
+
+            // Save the selected language to localStorage
+            localStorage.setItem('lang', selectedLang);
+
+            // Update the text content of all translatable elements
+            translatableElements.forEach(el => {
+                const translation = el.getAttribute(`data-${selectedLang}`);
+                if (translation) {
+                    el.textContent = translation;
+                }
+            });
+
+            // Update the active state of the language links
+            languageLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // Load the saved language preference on page load
+    const savedLang = localStorage.getItem('lang') || 'en';
+    document.querySelector(`.language-link[data-lang="${savedLang}"]`).click();
+});
+
+    </script>
+
+
+<footer style="display: none;">
+    
+    <div class="footer-section">
+        <p><a href="./FAQ.html" class="footer-link">faq</a></p>
+        <p><a href="javascript:void(0);" style="font-size: 17px;" class=" footer-link" onclick="window.open('https://linktr.ee/retrofitconstruction', '_blank');" data-en="follow us" data-fr="suivez-nous">follow us</a></p>
+        <p class=" footer-link">rbq 5825-8377-01</p>
+        <p><a href="./contactus.html" class="footer-link" data-fr="contactez-nous" data-en="contact us">contact us</a></p>
+    </div>
+    <div class="text-rights-reserved" data-fr="© 2024 Tous droits réservés" data-en="© 2024 All Rights Reserved">© 2024 All Rights Reserved</div>
+</footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animationDiv = document.querySelector('.about-animation');
+            const mainContent = document.querySelector('main');
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+
+            setTimeout(() => {
+                animationDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    animationDiv.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    header.style.display = 'block';
+                    footer.style.display = 'block';
+                    mainContent.classList.add('fade-in');
+                    header.classList.add('fade-in');
+                    footer.classList.add('fade-in');
+                }, 1000);
+            }, 1000); // Display the rest of the page after 2 seconds
+        });
+    </script>
+
+<script>
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
+</script>
+
+</body>
+</html>
+</div>

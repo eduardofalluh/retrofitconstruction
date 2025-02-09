@@ -1,0 +1,471 @@
+<div class="container">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrofit Construction</title>
+    <link rel="stylesheet" href="./css/ressources.css">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+
+</head>
+<body>
+    <header style="display: none;">
+        <nav class="navbar">
+            <div class="burger-bar" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-content">
+                    <!-- Top Links (Header) -->
+                    <div class="top-links">
+                        <a href="./aboutpage.html" data-fr="à propos" data-en="about">à propos</a>
+                        <a href="./servicepage.html" data-fr="services" data-en="services">services</a>
+                        <a href="./projects.html" data-fr="projets" data-en="projects">projets</a>
+                        <a href="./ressources.html" data-fr="ressources" data-en="resources">ressources</a>
+                        <a href="./index.html" data-fr="page d&#39;accueil" data-en="home">home</a>
+
+                    </div>
+                    <!-- Separators -->
+                    <div class="white">
+                        <a href="./index.html">
+                            <img class="white-logo" src="./img/logo_white.png" href="./index.html">
+                        </a>
+                     </div>
+                    <!-- Bottom Links (Footer) -->
+                    <div class="bottom-links">
+                        <a href="./FAQ.html" data-fr="faq" data-en="faq">faq</a>
+                        <a href="javascript:void(0);" onclick="window.open('https://linktr.ee/retrofitconstruction', '_blank');" target="_blank" data-fr="suivez-nous" data-en="follow us">follow us</a>
+                        <span data-fr="rbq 5825-8377-01" data-en="rbq 5825-8377-01">rbq 5825-8377-01</span>
+                        <a href="./contactus.html" data-fr="contactez-nous" data-en="contact us">contactez-nous</a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+            const menuOverlay = document.querySelector('.menu-overlay');
+            const burgerBar = document.querySelector('.burger-bar');
+            const body = document.body; // Select the body element
+
+            if (menuOverlay.classList.contains('active')) {
+                // Trigger fade-out animation
+                menuOverlay.classList.add('closing');
+                burgerBar.classList.remove('active');
+                body.classList.remove('no-scroll'); // Enable scrolling
+
+                // Wait for fade-out animation to finish before hiding
+                setTimeout(() => {
+                    menuOverlay.classList.remove('active', 'closing');
+                }, 500); // Match the fade-out duration
+            } else {
+                // Show menu with fade-in animation
+                menuOverlay.classList.add('active');
+                burgerBar.classList.add('active');
+                body.classList.add('no-scroll'); // Disable scrolling
+            }
+        }
+            </script>
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <div class="language-switch">
+                <a href="#" id="lang-en" class="language-link" data-lang="en">en</a>
+                <a class="language-bar">/</a>
+
+                <a href="#" id="lang-fr" class="language-link" data-lang="fr">fr</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="ressources-animation">
+        <h1 id="ressources-text" data-en="resources" data-fr="ressources"></h1>
+    </div>
+
+    <main class="fade-out" style="display: none;">
+        <h1 class="about" data-fr="ressources" data-en="resources">resources</h1> <br>
+    
+        <div class="content-section">
+            <div class="content-header">
+                <div class="line"></div>
+                <h2 data-fr="à la une"
+                data-en="story spotlight"
+                >story spotlight</h2>
+            </div>
+            <div class="content-body">
+                <img src="./img/RADIO_CANADA.webp" alt="Vision Image">
+                <div class="text">
+                    <p data-en="In 2024, we understand the importance of improving the energy performance of new buildings by increasing building code requirements, but this alone won’t be enough to achieve a carbon-neutral future by 2050. The existing building stock holds immense potential for the future of energy in Quebec. The best solution lies in energy-efficient renovations, modernizing the existing built environment—commonly referred to in the industry as “retrofitting.” Engineer Fellipe Falluh is the founder of Retrofit Construction, a general contractor and retrofit consultant."
+                    data-fr="En 2024, nous comprenons l’importance d’améliorer la performance énergétique des nouveaux bâtiments en augmentant les exigences du code du bâtiment, mais cela ne suffira pas à lui seul à atteindre un avenir neutre en carbone d’ici 2050. Le parc immobilier existant recèle un immense potentiel pour l’avenir énergétique du Québec. La meilleure solution réside dans les rénovations écoénergétiques, c’est-à-dire la modernisation de l’environnement bâti existant, ce que l’on appelle communément dans l’industrie la « modernisation ». L’ingénieur Fellipe Falluh est le fondateur de Retrofit Construction, entrepreneur général et consultant en rénovation."
+                    >In 2024, we understand the importance of improving the energy performance of new buildings by increasing building code requirements, but this alone won’t be enough to achieve a carbon-neutral future by 2050. The existing building stock holds immense potential for the future of energy in Quebec. The best solution lies in energy-efficient renovations, modernizing the existing built environment—commonly referred to in the industry as “retrofitting.” Engineer Fellipe Falluh is the founder of Retrofit Construction, a general contractor and retrofit consultant.</p>
+                    <div class="btn">
+                        <a class="learn-more" data-fr="en savoir plus" onclick="window.open('https://ici.radio-canada.ca/ohdio/premiere/emissions/boreale-138/segments/chronique/475861/chronique-efficacite-energetique-renovation-retrofitting-felippe-falluh', '_blank');" data-fr="savoir plus" data-en="learn more">learn more</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Categories and Grid Container -->
+        <div class="categories">
+            <div class="category-2" onclick="toggleDropdown('blog', this)">
+                <span id="blog-arrow" class="arrow arrow-up"></span>
+                <div class="category" data-en="blog" data-fr="blogue">blog</div>
+            </div>
+            <div class="category-2" onclick="toggleDropdown('press', this)">
+                <span id="press-arrow" class="arrow arrow-up"></span>
+                <div class="category" data-en="press" data-fr="presse">press</div>
+            </div>
+            <div class="category-2" onclick="toggleDropdown('podcasts', this)">
+                <span id="podcasts-arrow" class="arrow arrow-up"></span>
+                <div class="category" data-en="podcasts" data-fr="podcasts">podcasts</div>
+            </div>
+        </div>
+        
+
+        
+        
+        <div id="blog" class="grid-container">
+            <div class="grid">
+
+            </div>
+            <!-- Blog posts will be inserted here -->
+            
+        </div>
+        <div id="press" class="grid-container" style="display:none;">
+            <div class="grid">
+                <div class="grid-item">
+                    <a href="https://www.lapresse.ca/maison/renovation/2022-09-28/un-duplex-centenaire-transforme-en-modele-d-efficacite-energetique.php" target="_blank">
+                        <img src="./img/image-lapresse.png" alt="Image 2">
+                        <p class="grid-text" data-fr="lapresse <br> Un duplex centenaire transformé en modèle d’efficacité énergétique" data-en="lapresse <br>A century-old duplex transformed into a model of energy efficiency">lapresse <br>A century-old duplex transformed into a model of energy efficiency</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.efficiencycanada.org/career-hub/career-guide-fellipe-falluh/" target="_blank">
+                        <img src="./img/image-efficiency-canada.png" alt="Image 2">
+                        <p class="grid-text" data-fr="efficiency canada <br> Rencontrez notre leader efficace: Fellipe Falluh" data-en="efficiency canada <br> Meet our efficiency leader: Fellipe Falluh">efficiency canada <br> Meet our efficiency leader: Fellipe Falluh</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://maisonsaine.ca/enkiosque?id=100384" target="_blank">
+                        <img src="./img/image-maison-21e.png" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="the house of the 21st century<br>A century-old duplex transformed into a model of energy efficiency"
+                        data-fr="la maison du 21e siècle<br> Un duplex centenaire transformé en modèle d’efficacité énergétique"
+                        >the house of the 21st century<br>A century-old duplex transformed into a model of energy efficiency</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/watch?v=26aFvmbba7I" target="_blank">
+                        <img src="./img/image-efficiency canada-2.png" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="efficiency canada <br> Becoming a Retrofit Renovator, with Fellipe Falluh"
+                        data-fr="efficiency canada <br> Devenir un rénovateur en rénovation, avec Fellipe Falluh"
+                        >efficiency canada <br> Becoming a Retrofit Renovator, with Fellipe Falluh</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://buildingdiversity.ca/2024-recipient/retrofit-construction/" target="_blank">
+                        <img src="./img/BDA.png" alt="Image 2">
+                        <p class="grid-text"
+                        data-fr="building diversity awards <br> Lauréats des prix 2024"
+                        data-en="building diversity awards <br> 2024 award recepients"
+                        >building diversity awards <br> 2024 award recepients</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://ici.radio-canada.ca/ohdio/premiere/emissions/boreale-138/segments/chronique/475861/chronique-efficacite-energetique-renovation-retrofitting-felippe-falluh" target="_blank">
+                        <img src="./img/RADIO_CANADA.webp" alt="Image 2"
+                        data-en="radio-canada <br> Chronicle Energy efficiency: renovation & “retrofitting”"
+                        data-fr="radio-canada <br> Chronique Efficacité énergétique : rénovation & « rétrofitting »"
+                        >
+                        <p class="grid-text">radio-canada <br> Chronicle Energy efficiency: renovation & “retrofitting”</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/watch?v=MdsYZLzQxn4" target="_blank">
+                        <img src="./img/BS&BEER.jpg" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="bs&beer canada <br> Fellipe Falluh of Retrofit Construction shows us a deep dive into the process he recently completed doing a deep energy retrofit on his own property"
+                        data-fr="bs&beer canada <br> Fellipe Falluh de Retrofit Construction nous montre une plongée en profondeur dans le processus qu'il a récemment achevé en effectuant une rénovation énergétique en profondeur sur sa propre propriété"
+                        >bs&beer canada <br> Fellipe Falluh of Retrofit Construction shows us a deep dive into the process he recently completed doing a deep energy retrofit on his own property</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/watch?v=YD_4vLE1XAA" target="_blank">
+                        <img src="./img/logo-radio-canada-pizza-rouge-archives.avif" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="radio-canada info <br>Making Quebec's real estate portfolio more energy efficient"
+
+                        data-fr="radio-canada info <br>Rendre le parc immobilier québécois plus écoénergétique "
+                        >radio-canada info <br>Making Quebec's real estate portfolio more energy efficient</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/watch?v=fgS4DQbfjSU" target="_blank">
+                        <img src="./img/image-maison-21e.png" alt="Image 2"
+                        data-en="the 21st century house <br> 4 Strategies for deep renovations"
+                        data-fr="la maison du 21e siècle <br> 4 Stratégies de rénovations profondes"
+                        >
+                        <p class="grid-text">data-en="the 21st century house <br> 4 Strategies for deep renovations"</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/watch?v=pjFwvoS-gBc" target="_blank">
+                        <img src="./img/day_in_a_life.png" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="efficiency canada <br>  A Day In the Life of a Retrofitter: Fellipe Falluh"
+                        data-fr="efficiency Canada <br> Une journée dans la vie d'un rénovateur : Fellipe Falluh"
+                        >efficiency canada <br>  A Day In the Life of a Retrofitter: Fellipe Falluh </p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/watch?v=uh1ZMtE2SpM" target="_blank">
+                        <img src="./img/image-efficiency canada-2.png" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="efficiency canada <br>  DiscoverEE: Day in the Life of a Retrofitter"
+                        data-fr="efficiency canada <br> DiscoverEE : une journée dans la vie d'un rénovateur"
+                        >efficiency canada <br>  DiscoverEE: Day in the Life of a Retrofitter</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/watch?v=sO2nbgEIJc8" target="_blank">
+                        <img src="./img/HPTHPB.png" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="efficiency canada <br>  DeConstruct Highlights: High Performance Teams for High Performance Buildings"
+                        data-fr="efficiency canada <br> Faits saillants de DeConstruct : des équipes à haute performance pour des bâtiments à haute performance"
+                        >efficiency canada <br>  DeConstruct Highlights: High Performance Teams for High Performance Buildings</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/watch?v=eWx7ES54Rdw" target="_blank">
+                        <img src="./img/Logo_Ecosphere.jpg" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="ecosphere fair <br> Conference: Renovation ready for net zero consumption - FTV 2023 (04/23)"
+                        data-fr="foire écosphère <br>  Conférence : La réno prête pour la consommation nette zéro - FTV 2023 (23/04)"
+                        >ecosphere fair <br> Conference: Renovation ready for net zero consumption - FTV 2023 (04/23)</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.youtube.com/watch?v=oAebMb4rl9Q" target="_blank">
+                        <img src="./img/image-maison-21e.png" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="the 21st century house <br> An exemplary renovation in Montreal"
+                        data-fr="la maison du 21e siècle <br>  Une rénovation exemplaire à Montréal"
+                        >
+                        the 21st century house <br> An exemplary renovation in Montreal</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://reporter.mcgill.ca/30under30_2024/" target="_blank">
+                        <img src="./img/mcgill_repoter.png" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="mcgill reporter <br>For the youngest ‘30 Under 30’ sustainability leader, change is ‘never impossible’"
+                        data-fr="journaliste de McGill <br>Pour le plus jeune leader du développement durable « 30 Under 30 », le changement n'est « jamais impossible »"
+                        >mcgill reporter <br>For the youngest ‘30 Under 30’ sustainability leader, change is ‘never impossible’</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://www.corporateknights.com/issues/2024-11-education-and-youth-issue/2024-30-under-30-leading-green-youthquake/" target="_blank">
+                        <img src="./img/corporate_knights.png" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="corporate knights <br>These 30 under 30 are leading a green youthquake"
+                        data-fr="chevaliers d'entreprise <br>Ces 30 jeunes de moins de 30 ans mènent un séisme vert pour la jeunesse"
+                        >corporate knights <br>These 30 under 30 are leading a green youthquake</p>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="https://batimentpassifquebec.com/article/invitation-visite-realisation-dun-chantier-retrofit-net-zero/" target="_blank">
+                        <img src="./img/batiment_passif_quebec.png" alt="Image 2">
+                        <p class="grid-text"
+                        data-en="bâtiment passif québec <br>Site visit – Net-Zero renovation project – Retrofit Construction"
+                        data-fr="bâtiment passif québec <br>Visite de chantier – Projet de rénovation Net-Zéro – Retrofit Construction"
+                        >bâtiment passif québec <br>Site visit – Net-Zero renovation project – Retrofit Construction</p>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <div id="podcasts" class="grid-container" style="display:none;">
+            <iframe title="Au-delà des murs" allowtransparency="true" height="315" width="100%" style="border: none; min-width: min(100%, 430px);height:590px;" scrolling="yes" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=46d7m-f99bec-pbblog-playlist&share=1&download=1&rtl=0&fonts=Arial&skin=1&font-color=auto&logo_link=episode_page&order=episodic&limit=10&filter=all&ss=a713390a017602015775e868a2cf26b0&btn-skin=2baf9e&size=315" loading="lazy" allowfullscreen=""></iframe>
+        </div>
+    </main>
+    
+    <footer style="display: none;">
+        <div class="footer-section">
+            <p><a href="./FAQ.html" class="footer-link">faq</a></p>
+            <p><a href="javascript:void(0);" style="font-size: 17px;" class=" footer-link" onclick="window.open('https://linktr.ee/retrofitconstruction', '_blank');" data-en="follow us" data-fr="suivez-nous">follow us</a></p>
+            <p class=" footer-link">rbq 5825-8377-01</p>
+            <p><a href="./contactus.html" class="footer-link" data-fr="contactez-nous" data-en="contact us">contact us</a></p>
+        </div>
+        <div class="text-rights-reserved" data-fr="© 2024 Tous droits réservés" data-en="© 2024 All Rights Reserved">© 2024 All Rights Reserved</div>
+    </footer>
+
+    <script>
+         document.addEventListener('DOMContentLoaded', () => {
+    const animationDiv = document.querySelector('.ressources-animation');
+    const mainContent = document.querySelector('main');
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+
+    const text = 'resources';
+    const textElement = document.getElementById('ressources-text');
+
+    let delay = 0;
+    for (let i = 0; i < text.length; i++) {
+        const span = document.createElement('span');
+        span.textContent = text[i];
+        span.style.animationDelay = `${delay}s`;
+        span.classList.add('letter');
+        textElement.appendChild(span);
+        delay += 0.1;
+    }
+
+    setTimeout(() => {
+        animationDiv.classList.add('fade-out');
+        setTimeout(() => {
+            animationDiv.style.display = 'none';
+            mainContent.style.display = 'block';
+            header.style.display = 'block';
+            footer.style.display = 'block';
+            mainContent.classList.remove('fade-out');
+            mainContent.classList.add('fade-in');
+            header.classList.add('slide-in');
+            footer.classList.add('slide-in');
+        }, 1000);
+    }, delay * 1000 + 1000);
+
+    // Ensure all categories are hidden initially
+    const allCategories = document.querySelectorAll('.grid-container');
+    const allArrows = document.querySelectorAll('.arrow');
+    allCategories.forEach(container => {
+        container.style.display = 'none'; // Hide all containers
+    });
+
+    // Ensure all arrows point down initially
+    allArrows.forEach(arrow => {
+        arrow.classList.add('arrow-up');
+        arrow.classList.remove('arrow-down');
+    });
+
+    fetchMediumPosts(); // Fetch Medium posts on page load
+});
+
+function toggleDropdown(category, categoryDiv) {
+    const allCategories = document.querySelectorAll('.grid-container');
+    const allArrows = document.querySelectorAll('.arrow');
+    const allCategoryDivs = document.querySelectorAll('.category-2'); // Get all category-2 divs
+
+    allCategories.forEach(container => {
+        const arrow = document.getElementById(`${container.id}-arrow`);
+        if (container.id === category) {
+            const isCurrentlyVisible = container.style.display === 'block';
+
+            // Toggle visibility of the content
+            container.style.display = isCurrentlyVisible ? 'none' : 'block';
+
+            // Toggle the arrow direction
+            if (arrow) {
+                arrow.classList.toggle('arrow-up', isCurrentlyVisible);
+                arrow.classList.toggle('arrow-down', !isCurrentlyVisible);
+            }
+
+            // Toggle active class for the background color
+            if (categoryDiv) {
+                categoryDiv.classList.toggle('active', !isCurrentlyVisible);
+            }
+        } else {
+            // Hide other content
+            container.style.display = 'none';
+
+            // Reset other arrows and active classes
+            if (arrow) {
+                arrow.classList.remove('arrow-down');
+                arrow.classList.add('arrow-up');
+            }
+            // Remove active class from other category divs
+            const otherCategoryDiv = document.querySelector(`.category-2[onclick="toggleDropdown('${container.id}', this)"]`);
+            if (otherCategoryDiv) {
+                otherCategoryDiv.classList.remove('active');
+            }
+        }
+    });
+}
+
+
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+        });
+
+        // Fetch and display Medium blog posts with images
+        async function fetchMediumPosts() {
+    try {
+        const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@fellipe_52552&cache_bust=${new Date().getTime()}`);
+        const data = await response.json();
+        const blogGrid = document.querySelector('#blog .grid');
+
+        blogGrid.innerHTML = ''; // Clear previous posts
+
+        data.items.forEach(item => {
+            const blogItem = document.createElement('div');
+            blogItem.className = 'grid-item';
+            blogItem.innerHTML = `
+                <a href="${item.link}" target="_blank">
+                    <img src="${item.thumbnail}" alt="${item.title}" onerror="this.style.display='none'">
+                    <h2>${item.title}</h2>
+                    <p>${item.description.replace(/<[^>]*>?/gm, '').substring(0, 100)}...</p>
+                </a>
+            `;
+            blogGrid.appendChild(blogItem);
+        });
+    } catch (error) {
+        console.error('Error fetching Medium posts:', error);
+    }
+}
+
+
+
+    // TO change languages=============
+    document.addEventListener('DOMContentLoaded', () => {
+    const languageLinks = document.querySelectorAll('.language-link');
+    const translatableElements = document.querySelectorAll('[data-en]');
+
+    // Function to update text for all elements with translations
+    const updateLanguage = (selectedLang) => {
+        translatableElements.forEach((el) => {
+            const translation = el.getAttribute(`data-${selectedLang}`);
+            if (translation) {
+                el.innerHTML = translation; // Use innerHTML to correctly render <br> tags
+            }
+        });
+    };
+
+    languageLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selectedLang = link.getAttribute('data-lang');
+
+            // Save the selected language to localStorage
+            localStorage.setItem('lang', selectedLang);
+
+            // Update the language content
+            updateLanguage(selectedLang);
+
+            // Update the active state of the language links
+            languageLinks.forEach((l) => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // Load the saved language preference on page load
+    const savedLang = localStorage.getItem('lang') || 'en';
+    updateLanguage(savedLang); // Apply the saved language
+    document.querySelector(`.language-link[data-lang="${savedLang}"]`).classList.add('active');
+});
+
+
+    </script>
+
+</body>
+</html>
+</div>

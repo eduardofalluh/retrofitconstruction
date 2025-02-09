@@ -1,0 +1,1183 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+@media (min-width: 1600px) {
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+body {
+    touch-action: pan-y;
+    overflow-x: hidden;
+}
+
+/* Base styles */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
+}
+
+html, body {
+    background-color: rgb(245, 245, 245);
+}
+
+.footer-section{
+    background-color: rgb(245, 245, 245);
+
+}
+/* Update the category class to include background color transition */
+.category-2 {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    background-color: transparent; /* Initial background color */
+    transition: background-color 0.3s ease;
+}
+
+.arrow {
+    margin-right: 10px; /* space between arrow and text */
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(-45deg); /* Default down arrow */
+    transition: transform 0.3s ease;
+}
+
+.arrow-up {
+    transform: rotate(-135deg); /* Up arrow */
+}
+
+.category {
+    font-size: 18px; /* Adjust the font size as needed */
+    transition: color 0.3s ease;
+}
+
+/* Active state for the category background */
+.category-2.active {
+    background-color: #485a43; /* Change this to the desired active background color */
+}
+
+/* General category styling */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 25px; /* Keep consistent margin on the left */
+    margin-right: 35px; /* Keep consistent margin on the right */
+    max-width: 97.4%;
+    gap: 10px;
+
+    
+}
+
+
+@media (max-width: 768px) {
+    .white {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-links {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start !important; /* Align items to the left */
+        gap: 40px !important; /* Reduce the spacing between the items */
+        list-style: none; /* Remove bullets if it's a list */
+        max-width: 95% !important;
+    }
+
+    .top-links a {
+        text-align: left; /* Ensure text is aligned to the left */
+        text-decoration: none; /* Remove underline from links */
+        font-size: 1rem; /* Adjust font size if necessary */
+        color: white; /* Keep or change the text color */
+    }
+}
+
+.category-2 {
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+
+    border: 1px solid black; /* Black border */
+    border-radius: 50px; 
+}
+
+.close-icon {
+    width: 24px; /* Taille de l'image */
+    height: 24px; /* Ajustez selon vos besoins */
+    cursor: pointer; /* Ajoute un curseur clic */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.close-icon:hover {
+    transform: scale(1.2); /* Agrandit légèrement au survol */
+}
+
+
+/* Grid container styling */
+.grid-container {
+    display: none;
+    padding: 10px;
+    width: 100%; /* Make sure it takes full width of its respective category */
+    box-sizing: border-box;
+    margin-top: 2%;
+}
+
+.grid-container.active {
+    display: block;
+    margin-top: 10px;
+}
+
+.grid-item {
+    margin-bottom: 15px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.learn-more{
+    background-color: #3d4e3a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    right: 30%;
+    cursor: pointer;
+}
+@media (min-width: 1600px) {
+    .learn-more{
+        right: 95px !important;
+    }
+
+    .language-switch{
+        right:70 !important;
+    }
+}
+
+/* Ensure responsiveness for mobile */
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+        margin-left: 25px !important;
+        max-width: 88%;
+        margin-top: 30px !important;
+        
+    }
+
+    .category {
+        margin-bottom: 10px;
+    }
+
+    .grid-container {
+        padding: 15px;
+        width: 95% !important;
+        margin-left: 20px !important;
+        margin-top: 20px;
+    }
+
+    .grid-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* Ensure proper spacing for desktop */
+@media (min-width: 769px) {
+    .grid{
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    .grid-item {
+        margin-bottom: 25px;
+    }
+
+    .grid-item a{
+        margin: 13px !important;
+    }
+
+    .grid-container{
+        margin-left: 10px !important;
+    }
+}
+
+/* General category styling */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+
+.category:last-child {
+    border-right: none;
+}
+
+
+.category-2:hover{
+    background-color: #485a43;
+
+}
+
+.grid-container {
+    display: none;
+    width: 100%; /* Ensure the grid container aligns with the category width */
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Space between content and next section */
+}
+
+.grid-item {
+    margin-bottom: 15px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Ensure responsiveness for mobile */
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+    }
+
+    .category {
+        margin-bottom: 10px;
+    }
+
+    .grid-container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .grid-item {
+        margin-bottom: 20px;
+    }
+}
+
+.text-rights-reserved{
+    background-color: rgb(245, 245, 245);
+    font-size: 10px;
+
+}
+
+
+
+h1 {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+h2{
+    font-size: 25px;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+
+}
+
+
+.line {
+    border-top: 1px solid black;
+    width: 33.33%;
+    margin-bottom: 10px;
+}
+
+.content-body {
+    display: flex;
+    margin-left: 35px; /* Add left margin */
+    align-items: flex-start; /* Align items to the start */
+    text-align: justify;
+}
+
+.content-body img {
+    max-width: 33.33%; /* Adjust as needed */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.content-body p {
+    font-size: 20px;
+    flex: 1;
+    margin-top: 0; /* Remove top margin */
+    margin-left: 0; /* Reset left margin */
+}
+
+.content-header {
+    margin-left: 35px;
+}
+
+.main-header {
+    margin-left: 35px;
+}
+
+.content-section {
+    margin-bottom: 50px;
+}
+
+header {
+    color: #fff;
+    position: relative;
+    margin-top: 15px;
+}
+
+.language {
+    top: 165px;
+    overflow-y: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 96%;
+    margin: 0 auto;
+    margin-left: 50px;
+
+}
+
+nav img {
+    height: 20px;
+    margin-bottom: 30px;
+    margin-top: 18px;
+}
+
+nav{
+    max-width: 92.5%;
+  }
+  
+  footer{
+    max-width: 92.5%;
+  }
+
+  @media (max-width: 600px) {
+
+    .line{
+        width: 75% !important;
+
+    }
+    footer{
+        max-width: 85% !important;
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    .content-section{
+        min-height: 700px !important;
+
+    }
+    .learn-more{
+        margin-bottom: 30px !important;
+        right: auto !important;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        
+    }
+    nav{
+        max-width: 85.5%;
+        margin: 0 auto;
+  
+    }
+
+    .bottom-content{
+        max-width: 85% !important;
+    }
+    .content-body{
+        margin-left: 30px !important;
+
+    }
+
+    .content-header{
+        margin-left: 30px !important;
+    }
+
+    .about{
+        margin-left: 30px !important;
+    }
+  
+    footer{
+        max-width: 82% !important;
+        margin-left: 40px !important;
+    }
+  
+    .bottom-image{
+        margin-left: 20px !important;
+    }
+    .text-container{
+        margin-left: 20px !important;
+  
+    }
+  
+    .category::before{
+        margin-left: 5px !important;
+    }
+  
+  }
+
+.link {
+    font-size: 13px;
+    margin-bottom: auto;
+    display: inline-block;
+}
+
+.footer-link {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    color: inherit; /* Ensures the text color is inherited */
+}
+
+
+.language-bar{
+    color: #000000;
+}
+
+main {
+    padding: 0px 20px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 95%;
+    /* margin: 0 auto; */
+    margin-bottom: 80px;
+}
+
+.main-image {
+    position: relative;
+    text-align: center;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+}
+
+.categories label {
+    margin: 0 10px;
+}
+
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 99%;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: 35px;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-around; /* You can use space-between or space-around */
+    width: 100%; /* Ensure it takes the full width */
+    padding: 0 10px; /* Adjust padding as needed */
+    margin-left: 25px;
+}
+
+.grid-column {
+    flex: 1;
+    margin: 10px; /* Adjust margin to control spacing between columns */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    height: 600px; /* Set a fixed height for each column */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+.grid-column.podcast {
+    overflow-y: hidden; /* Disable vertical scrolling */
+}
+
+.grid-item {
+    margin-bottom: 20px;
+    width: 104%; /* Ensure it takes the full width of the column */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: inherit; /* Ensures the text color is inherited */
+    display: block;
+    text-align: justify;
+}
+
+.grid-item a img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.grid-text {
+    margin: 10px 0 0 0;
+    text-align: left;
+}
+
+.grid-item p {
+    margin: 10px 0 0 0;
+    color: inherit; /* Ensures the text color is inherited and not the link color */
+    text-align: left;
+}
+
+footer {
+    border-top: 1px solid black;
+    width: 96%;
+    text-align: center;
+    background-color: #fff;
+    margin-left: 55px;
+    margin-top: 8%;
+}
+
+.footer p {
+    flex: 1;
+    margin: 0;
+}
+
+.footer-section {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-p {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.burger-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+.burger-bar span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+
+.burger-bar.active span {
+    background-color: white; /* Change to white when activated */
+}
+.about {
+    font-size: 40px;
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+    margin-left: 35px;
+}
+
+.image-about {
+    width: 300px;
+    height: 320px;
+    margin-left: 50px;
+}
+
+.about-text {
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+    margin-left: 100px;
+    margin-right: 70px;
+}
+
+.about-div {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+
+
+.burger-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 55px;
+    z-index: 1001;
+  
+  }
+  
+  a {
+    font-family: 'Lora', serif;
+    text-decoration: none; /* Removes the underline */
+    color: inherit;
+  }
+
+  /* Centering the logo in the active menu */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between top links, logo, and bottom links */
+    align-items: center; /* Center align horizontally */
+    height: 100%; /* Full height of the menu */
+    padding: 20px; /* Add padding if needed */
+}
+
+/* Styling the white logo container */
+.white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Ensures the logo takes up the center space */
+}
+
+/* Styling the logo image */
+.white-logo {
+    height: 75%; /* Adjust the height of the logo */
+    width: auto; /* Maintain the aspect ratio */
+    max-height: 120px; /* Set a maximum height */
+    margin: 20px 0; /* Add spacing around the logo */
+}
+  
+  
+  .line {
+    
+    transition: all 0.3s ease;
+  
+  }
+  
+  .burger-bar span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 2px;
+  }
+  
+  
+  /* Transform Burger Bar to X */
+  .burger-bar.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger-bar.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+  }
+  
+  .burger-bar.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Menu Overlay Styling */
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #435B41;
+    z-index: 1000;
+    opacity: 0;
+    animation: none;
+  }
+  
+  /* .menu-overlay.active {
+    display: block;
+    animation: fade-in 0.5s forwards;
+  } */
+  
+  
+  
+  .menu-content {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    height: 100%; /* Full height of the overlay */
+    justify-content: space-between; /* Space between top and bottom links */
+    padding: 20px; /* Add some padding */
+  }
+  
+  .top-links {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    gap: 19.3%; /* Space between the links */
+    font-size: 14px;
+    color: white;
+    margin-top: 55px; /* Add space above the top links */
+    padding-top: 10px; /* Spacing inside the border */
+    border-top: 1px solid rgb(255, 255, 255);
+    width: 95%;
+    margin-left: auto; /* Center horizontally in parent */
+    margin-right: auto; /* Center horizontally in parent */
+  }
+  
+  .no-scroll {
+    overflow: hidden; /* Disable scrolling */
+    height: 100%; /* Prevent content from moving */
+  }
+  
+  .bottom-links {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    gap: 26.2%; /* Space between the links */
+    font-size: 14px;
+    color: white;
+    margin-bottom: 50px; /* Add space below the bottom links */
+    padding-top: 10px; /* Spacing inside the border */
+    border-top: 1px solid rgb(255, 255, 255);
+    width: 95%;
+    margin-left: auto; /* Center horizontally in parent */
+    margin-right: auto; /* Center horizontally in parent */
+  }
+  
+  .menu-separator {
+    width: 80%;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 20px auto; /* Centered horizontally */
+  }
+  
+  .divider {
+    color: white;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  
+  }
+  
+  .close-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .menu-content {
+        padding: 30px 15px;
+    }
+  
+    .top-links,
+    .bottom-links {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+  }
+  
+  /* Active (Fade-In) */
+  .menu-overlay.active {
+    animation: fade-in 0.5s forwards; /* 0.5s duration */
+    opacity: 1;
+    display: block; /* Ensure the menu is visible */
+  }
+  
+  /* Closing (Fade-Out) */
+  .menu-overlay.closing {
+    animation: fade-out 0.5s forwards !important; /* 0.5s duration */
+    opacity: 0;
+  }
+
+.close-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+@keyframes fadeInLetter {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInLetter 0.5s forwards;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+}
+
+.category {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+label {
+    padding-top: 10px;
+    font-family: 'Lora', serif;
+    width: 100%;
+    margin-left: 15px;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-column {
+    flex: 1;
+    margin: 10px;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blur {
+    filter: blur(2px);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.ressources-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.ressources-animation h1 {
+    font-size: 50px;
+    font-family: 'Lora', serif;
+    animation: fadeInOut 2s ease-in-out forwards;
+    font-weight: 400;
+    color: #3d4e3a;
+
+}
+
+
+
+
+.grid-column-content {
+    display: block;
+}
+
+
+.menu-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 35px;
+    margin: 10px 0;
+    font-family: 'Lora', serif;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-options a:hover {
+    color: #485a43;
+  }
+
+/* Ensure spacing on the right side when the screen width is smaller */
+@media (max-width: 768px) {
+
+    .burger-bar{
+        left: 38px !important;
+    }
+
+    main{
+        padding: 15px 0px;
+        margin: 0 auto;
+
+    }
+    .ressources-animation h1{
+        font-size: 35px !important;
+
+    }
+    .grid-container {
+        flex-direction: column; /* Stack columns vertically */
+        padding-right: 35px; /* Add right padding to prevent content from being smushed */
+    }
+
+    .grid-column {
+        max-height: 590px; /* Set the desired height */
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    .grid-column {
+        width: 100%;
+        margin-bottom: 20px; /* Add bottom margin between stacked columns */
+        /* padding-right: 35px; Add padding inside columns */
+    }
+
+
+    .grid-item img {
+        height: auto; /* Allow images to adjust height naturally */
+    }
+    
+
+    .bottom-content{
+        max-width: 91%;
+        margin-left: 15px !important;
+    }
+
+    .content-body{
+        display: block;
+    }
+
+    .content-body img{
+        max-width: 93%;
+    }
+
+    .content-body p{
+        max-width: 93%;
+    }
+}
+
+
+
+
+
+/* Add this to your CSS file */
+
+/* For the fade-in and fade-out animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1s forwards;
+}
+
+.fade-out {
+    animation: fade-out 1s forwards;
+}
+
+/* For the black and white hover effect */
+.grid-item img {
+    transition: filter 0.5s ease;
+}
+
+/* Make images black and white by default */
+.grid-item img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+
+/* On hover, revert to the original color */
+.grid-item img:hover {
+    filter: grayscale(0%);
+}
+
+
+.grid-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media (max-width: 545px) {
+    nav {
+        max-width: 83%;
+      }
+
+      footer {
+        max-width: 84%;
+      }
+}
+
+@media (max-width: 675px) {
+
+    .language-switch {
+        right: 40px !important;
+    }
+  
+  
+  }
+  
+  @media (max-width: 545px) {
+    nav {
+        max-width: 82%;
+      }
+  
+    .language-switch {
+        right: 40px !important;
+    }
+  }
+  
+  
+  .language-switch {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+  }
+  
+  .language-link {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: black; /* Adjust as needed */
+    text-decoration: none;
+  }
+  
+  .language-link:hover {
+    color: red; /* Adjust as needed */
+  }
+  
+  @media (max-width: 768px) {
+  
+    .language-switch{
+        right: 55px;
+    }
+  }
+
+
+
+
+
+.language-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }

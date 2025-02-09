@@ -1,0 +1,665 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+/* ============================================
+   Global & Base Styles (Non–Header/ Footer)
+   ============================================ */
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+body {
+  touch-action: pan-y;
+  overflow-x: hidden;
+}
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+html,
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+.footer-section {
+  background-color: rgb(245, 245, 245);
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 24px;
+  margin-left: 55px;
+  font-weight: 400;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 94.5%;
+  margin-left: 25px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* Ensures images remain square */
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.grid-item img:hover {
+  filter: none;
+}
+
+.grid-item p {
+  font-family: 'Lora', serif;
+  margin-top: 10px;
+  font-size: 15px;
+  color: #485a43;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+    margin-left: 20px !important;
+  }
+
+  .grid-item img {
+    width: 100%;
+    margin-right: 40px !important;
+    left: 0;
+  }
+
+  .grid-item {
+    margin-left: 14px !important;
+  }
+  body{
+    margin-right: 4% !important;
+  }
+}
+
+/* For the fade-in and fade-out animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1s forwards;
+}
+
+.fade-out {
+  animation: fade-out 1s forwards;
+}
+
+.grid-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================================
+   Extracted HEADER CSS
+   ============================================ */
+
+/* ----------------------- HEADER CSS ----------------------- */
+
+/* Header container */
+header {
+  color: #fff;
+  position: relative;
+  margin-top: 15px;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  width: 92.5%;
+  margin: 0 auto;
+}
+
+nav img {
+  height: 20px;
+  margin-top: 18px;
+  margin-bottom: 30px;
+}
+
+/* Burger Menu */
+.burger-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  left: 3.5%;
+  z-index: 1001;
+}
+
+.burger-bar span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #000000;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+/* When active, change colors and transform to an “X” */
+.burger-bar.active span {
+  background-color: white;
+}
+.burger-bar.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger-bar.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger-bar.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Language switch in header */
+.language-switch {
+  position: absolute;
+  top: 20px;
+  right: 3.5%;
+}
+
+.language-link {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+.language-link:hover {
+  color: #485a43;
+}
+.language-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.language-bar {
+  color: #000000;
+}
+
+/* Menu Overlay (for mobile/fullscreen menu) */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #435B41;
+  z-index: 1000;
+  opacity: 0;
+  animation: none;
+}
+
+.menu-overlay.active {
+  animation: fade-in 0.5s forwards;
+  opacity: 1;
+  display: block;
+}
+
+.menu-overlay.closing {
+  animation: fade-out 0.5s forwards !important;
+  opacity: 0;
+}
+
+/* Menu content inside the overlay */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Top links, logo, bottom links */
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+/* Top Links in the overlay */
+.top-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 19.3%;
+  font-size: 14px;
+  color: white;
+  margin-top: 55px;
+  padding-top: 10px;
+  border-top: 1px solid #fff;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Bottom Links in the overlay */
+.bottom-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26.2%;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 50px;
+  padding-top: 10px;
+  border-top: 1px solid #fff;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* White logo container in the overlay */
+.white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+@media (max-width: 768px) {
+  .white {
+    display: block !important;
+  }
+}
+
+/* Logo image styling */
+.white-logo {
+  height: 75%;
+  width: auto;
+  max-height: 120px;
+  margin: 20px 0;
+}
+
+/* Close button in the menu */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+.close-icon:hover {
+  transform: scale(1.2);
+}
+
+/* ----------------------- MEDIA QUERIES (HEADER) ----------------------- */
+
+@media (min-width: 1600px) {
+  .burger-bar {
+    left: 60px !important;
+  }
+}
+@media (min-width: 1401PX) {
+    .nav-hr{
+        display: none;
+    }
+}
+@media (min-width: 520px) and (max-width: 1400px) {
+  .burger-bar {
+    left: 30px !important;
+  }
+  nav {
+    width: 100%;
+    max-width: 96% !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .burger-bar {
+    left: 22px !important;
+  }
+  
+}
+
+@media (max-width: 1400px) {
+  nav {
+    border-bottom: none !important;
+  }
+  
+}
+
+/* ============================================
+   End of Extracted HEADER CSS
+   ============================================ */
+
+
+/* ============================================
+   Non–Header/ Footer Additional Styles
+   ============================================ */
+
+/* Carousel container and related styles */
+.carousel-container {
+  width: 275px;
+  height: 470px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel {
+  margin-top: 15px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Other miscellaneous classes */
+.box {
+  margin-top: 9px;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 20px;
+  border: 2px solid black;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: 'Lora', serif;
+}
+
+.link {
+  font-size: 13px;
+  margin-bottom: auto;
+  display: inline-block;
+  max-width: 97.5%;
+}
+
+/* Overwrite duplicate close-icon (if any) */
+.close-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.language-bar {
+  color: #000000;
+}
+
+.language-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Additional text and layout styles */
+.contact-us-animation h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.initial-text {
+  font-family: 'Lora', serif;
+  font-size: 50px;
+  color: #3d4e3a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  text-align: center;
+  animation: fadeOut 1.0s ease-in-out forwards;
+  animation-delay: 1.0s;
+  font-weight: 400;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .initial-text {
+    font-size: 35px !important;
+  }
+  nav {
+    max-width: 84.5%;
+    margin-left: 33px !important;
+  }
+  footer {
+    max-width: 84.5%;
+    margin-left: 33px !important;
+  }
+  .bottom-image {
+    margin-left: 20px !important;
+  }
+  .burger-bar {
+    left: 33px;
+  }
+  .text-container {
+    margin-left: 20px !important;
+  }
+  h1 {
+    margin-left: 33px !important;
+    margin-bottom: 30px !important;
+  }
+  .language-switch{
+    right: 2.5%;
+  }
+}
+
+
+
+
+/* ============================================
+   Extracted FOOTER CSS
+   ============================================ */
+
+/* ----------------------- FOOTER CSS ----------------------- */
+
+/* Footer container */
+footer {
+  max-width: 92.5%;
+  border-top: 1px solid black;
+  width: 96%;
+  text-align: center;
+  background-color: #fff;
+  left: 2%;
+  margin-left: 50px;
+}
+
+/* Rights/reserved text */
+.text-rights-reserved {
+  background-color: rgb(245, 245, 245);
+  font-size: 10px;
+}
+
+/* Footer section wrapper */
+.footer-section {
+  background-color: rgb(245, 245, 245);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Footer links */
+.footer-link {
+  line-height: 1.5;
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Footer paragraph styling */
+.footer p {
+  flex: 1;
+  margin: 0;
+}
+
+/* ----------------------- MEDIA QUERIES (FOOTER) ----------------------- */
+
+@media (max-width: 768px) {
+  footer {
+    max-width: 89.5%;
+    /* margin-left: 25px !important; */
+  }
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+  footer {
+    width: 92% !important;
+  }
+}
+@media (min-width: 1101px) and (max-width: 1400px) {
+    .nav-hr{
+        margin-right: 3.4% !important;
+    }
+    .language-switch{
+        right:3.4% !important;
+    }
+}
+@media (min-width: 1101px) and (max-width: 1400px) {
+    .nav-hr{
+        margin-right: 3.4% !important;
+    }
+    .language-switch{
+        right:3.4% !important;
+    }
+}
+@media (min-width: 951px) and (max-width: 1100px) {
+    .nav-hr{
+        margin-right: 3.2% !important;
+    }
+    .language-switch{
+        right:3.2% !important;
+    }
+}
+@media (min-width: 769px) and (max-width: 950px) {
+    .nav-hr{
+        margin-right: 2.5% !important;
+    }
+    .language-switch{
+        right:2.5% !important;
+    }
+}
+@media (min-width: 769px) and (max-width: 1400px) {
+    .nav-hr{
+        margin-left: 53px !important;
+    }
+    .burger-bar{
+        left: 53px !important;
+    }
+}
+@media (max-width: 768px) {
+    .nav-hr, .language-switch{
+        margin-left: 25px !important;
+    }
+    
+}
+@media (max-width: 550px) {
+    .nav-hr{
+        margin-right: 1.8% !important;
+    }
+}
+
+@media (min-width: 520px) and (max-width: 1400px) {
+  footer {
+    margin-left: 55px;
+    justify-content: space-between;
+    padding: 0px 10px;
+    background-color: transparent;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1400px) {
+    footer{
+        max-width: 92%;
+    }
+}
+@media (min-width: 1101px) and (max-width: 1300px) {
+    footer{
+        max-width: 90.5%;
+    }
+}
+@media (min-width: 800px) and (max-width: 1100px) {
+    footer{
+        max-width: 89%;
+    }
+}
+@media  (min-width: 520px) and (max-width: 620px) {
+    footer{
+        max-width: 88.5%;
+    }
+}
+@media (max-width: 519px) {
+    footer{
+        max-width: 100%;
+
+    }
+}
+
+/* ============================================
+   End of Extracted FOOTER CSS
+   ============================================ */
+
+a{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,489 @@
+<div class="container">
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrofit Construction</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <link rel="stylesheet" href="./css/servicepage.css">
+    <!-- <link rel="stylesheet" href="./css/style.css "> -->
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+
+</head>
+<body>
+    <header style="display: none;">
+        <nav class="navbar">
+            <div class="burger-bar" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay">
+                <div class="menu-content">
+                    <!-- Top Links (Header) -->
+                    <div class="top-links">
+                        <a href="./aboutpage.html" data-fr="à propos" data-en="about">à propos</a>
+                        <a href="./servicepage.html" data-fr="services" data-en="services">services</a>
+                        <a href="./projects.html" data-fr="projets" data-en="projects">projets</a>
+                        <a href="./ressources.html" data-fr="ressources" data-en="resources">ressources</a>
+                        <a href="./index.html" data-fr="page d&#39;accueil" data-en="home">home</a>
+
+                    </div>
+                    <!-- Separators -->
+                     <div class="white">
+                        <a href="./index.html">
+                            <img class="white-logo" src="./img/logo_white.png" href="./index.html">
+                        </a>
+                     </div>
+                    <!-- Bottom Links (Footer) -->
+                    <div class="bottom-links">
+                        <a href="./FAQ.html" data-fr="faq" data-en="faq">faq</a>
+                        <a href="javascript:void(0);" onclick="window.open('https://linktr.ee/retrofitconstruction', '_blank');" data-fr="suivez-nous" data-en="follow us">follow us</a>
+                        <span data-fr="rbq 5825-8377-01" data-en="rbq 5825-8377-01">rbq 5825-8377-01</span>
+                        <a href="./contactus.html" data-fr="contactez-nous" data-en="contact us">contactez-nous</a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function toggleMenu() {
+            const menuOverlay = document.querySelector('.menu-overlay');
+            const burgerBar = document.querySelector('.burger-bar');
+            const body = document.body; // Select the body element
+
+            if (menuOverlay.classList.contains('active')) {
+                // Trigger fade-out animation
+                menuOverlay.classList.add('closing');
+                burgerBar.classList.remove('active');
+                body.classList.remove('no-scroll'); // Enable scrolling
+
+                // Wait for fade-out animation to finish before hiding
+                setTimeout(() => {
+                    menuOverlay.classList.remove('active', 'closing');
+                }, 500); // Match the fade-out duration
+            } else {
+                // Show menu with fade-in animation
+                menuOverlay.classList.add('active');
+                burgerBar.classList.add('active');
+                body.classList.add('no-scroll'); // Disable scrolling
+            }
+        }
+
+                window.addEventListener('DOMContentLoaded', function () {
+                    var option3Link = document.getElementById('option3');
+                    var currentPage = window.location.href;
+
+                    if (currentPage.includes('homepage.html')) {
+                        option3Link.removeAttribute('href');
+                        option3Link.style.cursor = 'default';
+                    }
+                });
+            </script>
+
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+            <div class="language-switch">
+                <a href="#" id="lang-en" class="language-link" data-lang="en">en</a>
+                <a class="language-bar">/</a>
+
+                <a href="#" id="lang-fr" class="language-link" data-lang="fr">fr</a>
+            </div>
+            <div id="google_translate_element" style="display: none;"></div>
+        </nav>
+        <hr class="nav-hr" style="border-color: black;border-width: 1px; margin: 0px 17px;">
+    </header>
+
+    <div class="service-animation">
+        <h1 id="service-text"></h1>
+    </div>
+
+    <main style="display: none;">
+        <h1 class="main-title" data-en="frequently asked questions" data-fr="questions fréquemment posées">frequently asked questions</h1>
+        <div class="services-container">
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="1. What is a deep energy retrofit, and why is it essential?" data-fr="1. Qu’est-ce qu’un retrofit énergétique profond et pourquoi est-il essentiel ?">1. What is a deep energy retrofit, and why is it essential?</h2>
+                </div>
+                <p class="service-description" data-en="A deep energy retrofit is a comprehensive upgrade to a building’s energy performance, addressing insulation, airtightness, windows, and HVAC systems. These retrofits significantly reduce energy consumption, improve comfort, and lower utility bills while extending the building’s lifespan and contributing to carbon neutrality."
+                    data-fr="Un retrofit énergétique profond est une rénovation complète visant à améliorer les performances énergétiques d’un bâtiment. Cela inclut l’isolation, l’étanchéité à l’air, les fenêtres et les systèmes mécaniques. Ces travaux réduisent considérablement la consommation d’énergie, améliorent le confort intérieur et prolongent la durée de vie du bâtiment, tout en contribuant à la neutralité carbone.">
+                </p>
+            </div>
+    
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="2. What are the benefits of high-performance buildings?" data-fr="2. Quels sont les avantages des bâtiments à haute performance ?">2. What are the benefits of high-performance buildings?</h2>
+                </div>
+                <p class="service-description" data-en="High-performance buildings reduce energy consumption, enhance indoor air quality, and provide consistent thermal comfort. They also lower utility costs, increase market value, and create healthier, more sustainable living environments."
+                    data-fr="Les bâtiments à haute performance consomment moins d’énergie, offrent une meilleure qualité de l’air intérieur, assurent un confort thermique constant et réduisent les factures énergétiques. Ils augmentent également la valeur marchande et créent des environnements plus sains et plus durables.">
+                </p>
+            </div>
+    
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="3. How can retrofits contribute to carbon neutrality?" data-fr="3. Comment les retrofits contribuent-ils à la neutralité carbone ?">3. How can retrofits contribute to carbon neutrality?</h2>
+                </div>
+                <p class="service-description" data-en="Retrofits lower energy demand by upgrading insulation, airtightness, and mechanical systems. Combined with renewable energy systems like solar panels, they reduce a building’s carbon footprint, helping Quebec meet its climate goals."
+                    data-fr="Les retrofits réduisent la demande énergétique en améliorant l’isolation, l’étanchéité à l’air et les systèmes mécaniques. En y ajoutant des énergies renouvelables comme les panneaux solaires, ils diminuent l’empreinte carbone des bâtiments et contribuent aux objectifs climatiques du Québec.">
+                </p>
+            </div>
+    
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="4. What is Net Zero certification, and why is it important?" data-fr="4. Qu’est-ce que la certification Net Zero et pourquoi est-elle importante ?">4. What is Net Zero certification, and why is it important?</h2>
+                </div>
+                <p class="service-description" data-en="Net Zero certification ensures that a building produces as much energy as it consumes annually. This certification reduces energy costs, supports sustainability, and demonstrates leadership in environmental responsibility."
+                    data-fr="La certification Net Zero garantit qu’un bâtiment produit autant d’énergie qu’il en consomme annuellement. Cela réduit les coûts énergétiques, soutient la durabilité et montre un leadership en matière de responsabilité environnementale.">
+                </p>
+            </div>
+    
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="5. Are there financial incentives for retrofits in Quebec?" data-fr="5. Existe-t-il des incitatifs financiers pour les retrofits au Québec ?">5. Are there financial incentives for retrofits in Quebec?</h2>
+                </div>
+                <p class="service-description" data-en="Yes, programs like the Canada Greener Homes Grant, Hydro-Québec rebates, and Rénoclimat provide financial assistance for energy-efficient upgrades, including insulation, heat pumps, and windows. Retrofit Construction helps clients navigate these options to maximize benefits."
+                    data-fr="Oui, des programmes tels que le Canada Greener Homes Grant, les rabais d’Hydro-Québec et le programme Rénoclimat offrent une aide financière pour des rénovations écoénergétiques, y compris l’isolation, les pompes à chaleur et les fenêtres. Retrofit Construction aide ses clients à maximiser ces avantages.">
+                </p>
+            </div>
+    
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="6. How do high-performance windows improve energy efficiency?" data-fr="6. Comment les fenêtres à haute performance améliorent-elles l’efficacité énergétique ?">6. How do high-performance windows improve energy efficiency?</h2>
+                </div>
+                <p class="service-description" data-en="Triple-pane windows reduce heat loss, improve indoor comfort, and block outside noise. Proper installation ensures their full performance, including airtight seals and minimized thermal bridging."
+                    data-fr="Les fenêtres à triple vitrage réduisent les pertes de chaleur, bloquent les bruits extérieurs et améliorent le confort intérieur. Une installation correcte, incluant des membranes d’étanchéité et des rubans, maximise leur efficacité et leur durabilité.">
+                </p>
+            </div>
+    
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="7. How does airtightness impact building performance?" data-fr="7. Quel est le rôle de l’étanchéité à l’air dans la performance des bâtiments ?">7. How does airtightness impact building performance?</h2>
+                </div>
+                <p class="service-description" data-en="Airtightness prevents uncontrolled air leakage, reducing heat loss and energy waste. It stabilizes indoor temperatures, improves comfort, and lowers heating and cooling costs."
+                    data-fr="L’étanchéité à l’air empêche les fuites d’air incontrôlées, réduisant les pertes de chaleur et la consommation énergétique. Elle stabilise les températures intérieures, améliore le confort et diminue les coûts de chauffage et de climatisation.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="8. What is Passive House certification?" data-fr="8. Qu’est-ce que la certification Passive House ?">8. What is Passive House certification?</h2>
+                </div>
+                <p class="service-description" data-en="Passive House certification ensures exceptional energy efficiency by focusing on airtightness, superinsulation, and balanced ventilation. These buildings consume up to 90% less energy for heating and cooling compared to conventional constructions."
+                    data-fr="La certification Passive House garantit une efficacité énergétique exceptionnelle en se concentrant sur l’étanchéité à l’air, la super-isolation et la ventilation équilibrée. Ces bâtiments consomment jusqu’à 90 % moins d’énergie pour le chauffage et la climatisation par rapport aux constructions conventionnelles.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="9. How does EnerPHit certification apply to retrofits?" data-fr="9. Comment la certification EnerPHit s’applique-t-elle aux retrofits ?">9. How does EnerPHit certification apply to retrofits?</h2>
+                </div>
+                <p class="service-description" data-en="EnerPHit certification adapts Passive House standards to existing buildings, emphasizing airtightness, insulation, and energy-efficient systems. It ensures significant energy savings while respecting the constraints of retrofits."
+                    data-fr="La certification EnerPHit adapte les normes Passive House aux bâtiments existants, en mettant l’accent sur l’étanchéité, l’isolation et les systèmes écoénergétiques. Cela garantit des économies d’énergie significatives tout en respectant les contraintes liées aux rénovations.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="10. What are the health benefits of high-performance buildings?" data-fr="10. Quels sont les bienfaits pour la santé des bâtiments à haute performance ?">10. What are the health benefits of high-performance buildings?</h2>
+                </div>
+                <p class="service-description" data-en="High-performance buildings provide clean, fresh air through mechanical ventilation, reducing allergens and pollutants. They eliminate drafts and maintain stable temperatures, creating a healthier indoor environment."
+                    data-fr="Ces bâtiments offrent de l’air frais grâce à une ventilation mécanique, réduisent les allergènes et les polluants, éliminent les courants d’air et maintiennent des températures stables, créant un environnement intérieur plus sain.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="11. How does sustainable construction reduce environmental impact?" data-fr="11. Comment la construction durable réduit-elle l’impact environnemental ?">11. How does sustainable construction reduce environmental impact?</h2>
+                </div>
+                <p class="service-description" data-en="Sustainable construction minimizes energy consumption, incorporates eco-friendly materials, and reduces greenhouse gas emissions. These practices contribute to long-term environmental benefits and support Quebec’s carbon neutrality goals."
+                    data-fr="La construction durable minimise la consommation énergétique, utilise des matériaux écologiques et réduit les émissions de gaz à effet de serre. Ces pratiques soutiennent les objectifs de neutralité carbone et offrent des avantages environnementaux à long terme.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="12. What is the difference between Net Zero and Net Zero Ready?" data-fr="12. Quelle est la différence entre Net Zero et Net Zero Ready ?">12. What is the difference between Net Zero and Net Zero Ready?</h2>
+                </div>
+                <p class="service-description" data-en="Net Zero buildings produce as much energy as they consume annually. Net Zero Ready buildings are designed for future renewable energy integration, offering flexibility to achieve Net Zero status later."
+                    data-fr="Les bâtiments Net Zero produisent autant d’énergie qu’ils en consomment sur une année. Les bâtiments Net Zero Ready sont conçus pour intégrer des énergies renouvelables ultérieurement, offrant une flexibilité pour atteindre cet objectif à l’avenir.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="13. How do retrofits improve a building’s market value?" data-fr="13. Comment les retrofits augmentent-ils la valeur d’un bâtiment ?">13. How do retrofits improve a building’s market value?</h2>
+                </div>
+                <p class="service-description" data-en="Energy-efficient upgrades make properties more attractive to buyers by lowering operating costs and improving comfort. Retrofits also extend a building’s lifespan and align with growing demand for sustainable homes."
+                    data-fr="Les rénovations écoénergétiques rendent les propriétés plus attractives pour les acheteurs en réduisant les coûts d’exploitation et en améliorant le confort. Elles prolongent également la durée de vie du bâtiment et répondent à la demande croissante pour des maisons durables.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="14. What role does building science play in retrofits?" data-fr="14. Quel rôle joue la science du bâtiment dans les retrofits ?">14. What role does building science play in retrofits?</h2>
+                </div>
+                <p class="service-description" data-en="Building science examines heat, air, and moisture movement in buildings, guiding decisions on insulation, airtightness, and ventilation. This ensures retrofits are durable, efficient, and optimized for Quebec’s climate."
+                    data-fr="La science du bâtiment examine les mouvements de la chaleur, de l’air et de l’humidité, guidant les décisions sur l’isolation, l’étanchéité et la ventilation. Cela garantit que les retrofits sont durables, performants et adaptés au climat québécois.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="15. How does Passive Solar Heating benefit buildings?" data-fr="15. Comment le chauffage solaire passif profite-t-il aux bâtiments ?">15. How does Passive Solar Heating benefit buildings?</h2>
+                </div>
+                <p class="service-description" data-en="Passive Solar Heating captures sunlight through strategic window placement and thermal mass. It reduces the need for mechanical heating, especially in climates like Quebec’s with significant winter sunlight."
+                    data-fr="Le chauffage solaire passif capture la lumière du soleil grâce à des fenêtres stratégiquement placées et à des matériaux à haute masse thermique. Cela réduit le besoin de chauffage mécanique, particulièrement dans des climats comme celui du Québec.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="16. What are the unique challenges of retrofitting older buildings in Quebec?" data-fr="16. Quels sont les défis spécifiques des retrofits pour les bâtiments anciens au Québec ?">16. What are the unique challenges of retrofitting older buildings in Quebec?</h2>
+                </div>
+                <p class="service-description" data-en="Older buildings often have outdated insulation, poor airtightness, and inefficient mechanical systems. Retrofits address these issues comprehensively, improving energy performance while preserving architectural character."
+                    data-fr="Les bâtiments anciens souffrent souvent d’une isolation insuffisante, d’une mauvaise étanchéité et de systèmes mécaniques obsolètes. Les retrofits corrigent ces problèmes, améliorant la performance énergétique tout en préservant le caractère architectural.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="17. How can consulting services support sustainable construction?" data-fr="17. Comment les services de consultation soutiennent-ils la construction durable ?">17. How can consulting services support sustainable construction?</h2>
+                </div>
+                <p class="service-description" data-en="Consulting services provide expert guidance on energy-efficient design, material selection, and certification processes like Passive House or Net Zero. Retrofit Construction empowers clients to achieve high-performance results."
+                    data-fr="Les services de consultation offrent des conseils sur le design écoénergétique, la sélection des matériaux et les certifications comme Passive House ou Net Zero. Retrofit Construction aide ses clients à atteindre des résultats à haute performance.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="18. What is the Rénoclimat program, and how does it help homeowners?" data-fr="18. Qu’est-ce que le programme Rénoclimat et comment aide-t-il les propriétaires ?">18. What is the Rénoclimat program, and how does it help homeowners?</h2>
+                </div>
+                <p class="service-description" data-en="Rénoclimat offers financial incentives for energy-efficient upgrades, such as insulation and airtightness. It includes an energy audit to identify areas for improvement and provides grants to offset costs."
+                    data-fr="Rénoclimat offre des incitatifs financiers pour des rénovations écoénergétiques, comme l’isolation et l’étanchéité. Il inclut un audit énergétique pour identifier les améliorations possibles et fournit des subventions pour réduire les coûts.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="19. How do retrofits benefit multi-unit residential buildings?" data-fr="19. Comment les retrofits profitent-ils aux bâtiments multi-unités ?">19. How do retrofits benefit multi-unit residential buildings?</h2>
+                </div>
+                <p class="service-description" data-en="Retrofits improve energy efficiency across all units, lowering energy costs and enhancing comfort for residents. They also increase the building’s market value and align with sustainability goals."
+                    data-fr="Les retrofits améliorent l’efficacité énergétique dans toutes les unités, réduisent les coûts énergétiques et augmentent le confort des résidents. Ils augmentent également la valeur marchande de l’immeuble.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="20. What is the lifecycle impact of a deep energy retrofit?" data-fr="20. Quel est l’impact d’un retrofit énergétique profond sur le cycle de vie d’un bâtiment ?">20. What is the lifecycle impact of a deep energy retrofit?</h2>
+                </div>
+                <p class="service-description" data-en="Deep energy retrofits reduce energy use and emissions for decades. They extend the lifespan of buildings, lower long-term operating costs, and contribute to environmental sustainability."
+                    data-fr="Les retrofits énergétiques profonds réduisent la consommation énergétique et les émissions pendant des décennies. Ils prolongent la durée de vie des bâtiments, réduisent les coûts d’exploitation et contribuent à la durabilité environnementale.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="21. How does Retrofit Construction ensure aesthetic quality in retrofits?" data-fr="21. Comment Retrofit Construction assure-t-il la qualité esthétique dans les retrofits ?">21. How does Retrofit Construction ensure aesthetic quality in retrofits?</h2>
+                </div>
+                <p class="service-description" data-en="Retrofit Construction integrates energy efficiency with design, ensuring that upgrades respect the architectural character of the building while meeting modern performance standards."
+                    data-fr="Retrofit Construction intègre l’efficacité énergétique au design pour que chaque amélioration respecte le caractère architectural du bâtiment tout en atteignant des normes modernes de performance.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="22. Why is airtightness especially critical in Quebec’s cold climate?" data-fr="22. Pourquoi l’étanchéité à l’air est-elle particulièrement importante dans le climat froid du Québec ?">22. Why is airtightness especially critical in Quebec’s cold climate?</h2>
+                </div>
+                <p class="service-description" data-en="In cold climates, air leaks can lead to significant heat loss and higher energy consumption. Airtightness prevents drafts, stabilizes indoor temperatures, and reduces heating needs."
+                    data-fr="Dans un climat froid, les fuites d’air entraînent des pertes de chaleur importantes et augmentent la consommation énergétique. L’étanchéité à l’air prévient ces pertes, stabilise les températures intérieures et réduit les besoins en chauffage.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="23. How does Hydro-Québec support energy efficiency?" data-fr="23. Comment Hydro-Québec soutient-il l’efficacité énergétique ?">23. How does Hydro-Québec support energy efficiency?</h2>
+                </div>
+                <p class="service-description" data-en="Hydro-Québec provides rebates for energy-efficient technologies, such as heat pumps and smart thermostats, encouraging homeowners to reduce energy consumption and lower electricity bills."
+                    data-fr="Hydro-Québec offre des rabais pour des technologies écoénergétiques comme les pompes à chaleur et les thermostats intelligents. Ces incitatifs encouragent les propriétaires à réduire leur consommation énergétique et à diminuer leurs factures d’électricité.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="24. What sustainable materials are recommended for retrofits?" data-fr="24. Quels matériaux durables recommandez-vous pour les retrofits ?">24. What sustainable materials are recommended for retrofits?</h2>
+                </div>
+                <p class="service-description" data-en="Materials like cellulose insulation, triple-pane windows, and low-VOC finishes reduce environmental impact while improving indoor air quality. These materials are durable and enhance a building’s performance."
+                    data-fr="Nous recommandons des matériaux comme l’isolation en cellulose, les fenêtres à triple vitrage et les finitions à faibles émissions de COV. Ces matériaux améliorent les performances énergétiques, réduisent l’impact environnemental et favorisent la qualité de l’air intérieur.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="25. How does Retrofit Construction approach Net Zero Ready projects?" data-fr="25. Comment Retrofit Construction aborde-t-il les projets Net Zero Ready ?">25. How does Retrofit Construction approach Net Zero Ready projects?</h2>
+                </div>
+                <p class="service-description" data-en="Retrofit Construction designs buildings with optimized airtightness, insulation, and efficient mechanical systems, ensuring they are future-proofed for renewable energy integration."
+                    data-fr="Retrofit Construction conçoit des bâtiments optimisés avec une isolation renforcée, une étanchéité à l’air exemplaire et des systèmes mécaniques performants. Ces projets sont prêts pour intégrer des énergies renouvelables ultérieurement.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="26. What is the importance of an energy audit in retrofits?" data-fr="26. Quelle est l’importance d’un audit énergétique dans un retrofit ?">26. What is the importance of an energy audit in retrofits?</h2>
+                </div>
+                <p class="service-description" data-en="An energy audit identifies inefficiencies in a building’s envelope, insulation, and mechanical systems, guiding retrofit decisions to maximize energy savings and performance."
+                    data-fr="Un audit énergétique identifie les inefficacités dans l’enveloppe, l’isolation et les systèmes mécaniques d’un bâtiment. Ces données permettent de guider les décisions pour maximiser les économies d’énergie et la performance globale du projet.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="27. How do retrofits reduce a building’s carbon footprint?" data-fr="27. Comment les retrofits réduisent-ils l’empreinte carbone d’un bâtiment ?">27. How do retrofits reduce a building’s carbon footprint?</h2>
+                </div>
+                <p class="service-description" data-en="Retrofits improve energy efficiency, reducing reliance on fossil fuels and greenhouse gas emissions. Adding renewable energy systems further offsets the building’s environmental impact."
+                    data-fr="Les retrofits améliorent l’efficacité énergétique en réduisant la dépendance aux combustibles fossiles et les émissions de gaz à effet de serre. L’intégration de systèmes d’énergie renouvelable compense encore davantage l’impact environnemental.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="28. How do heat pumps contribute to energy-efficient buildings?" data-fr="28. Comment les thermopompes contribuent-elles à l’efficacité énergétique des bâtiments ?">28. How do heat pumps contribute to energy-efficient buildings?</h2>
+                </div>
+                <p class="service-description" data-en="Heat pumps efficiently heat and cool buildings by transferring heat instead of generating it. They are ideal for retrofits in Quebec, offering significant energy savings and year-round comfort."
+                    data-fr="Les thermopompes chauffent et refroidissent efficacement les bâtiments en transférant la chaleur plutôt qu’en la générant. Elles offrent des économies d’énergie significatives et un confort toute l’année.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="29. What is the Canada Greener Homes Grant?" data-fr="29. Qu’est-ce que la subvention Canada Greener Homes Grant ?">29. What is the Canada Greener Homes Grant?</h2>
+                </div>
+                <p class="service-description" data-en="The Canada Greener Homes Grant offers up to $5,000 for energy-efficient upgrades, including insulation, windows, and heat pumps. It also provides $600 for an energy evaluation to guide retrofit planning."
+                    data-fr="La subvention Canada Greener Homes Grant offre jusqu’à 5 000 $ pour des rénovations écoénergétiques comme l’isolation, les fenêtres et les thermopompes. Elle inclut également 600 $ pour un audit énergétique.">
+                </p>
+            </div>
+            
+            <div class="service">
+                <div class="flexbox">
+                    <div class="service-line"></div>
+                    <h2 class="service-title" data-en="30. Why is Retrofit Construction the right partner for sustainable building projects?" data-fr="30. Pourquoi Retrofit Construction est-il le partenaire idéal pour vos projets de construction durable ?">30. Why is Retrofit Construction the right partner for sustainable building projects?</h2>
+                </div>
+                <p class="service-description" data-en="With expertise in Passive House, EnerPHit, and Net Zero certifications, Retrofit Construction delivers tailored solutions for retrofits and new constructions. We combine energy efficiency, sustainability, and design excellence to create high-performance spaces."
+                    data-fr="Grâce à une expertise dans les certifications Passive House, EnerPHit et Net Zero, Retrofit Construction propose des solutions sur mesure pour les retrofits et les nouvelles constructions. Nous combinons efficacité énergétique, durabilité et qualité esthétique pour créer des espaces à haute performance.">
+                </p>
+            </div>            
+        </div>
+    </main>
+
+    <footer  style="display: none;">
+
+        <div class="footer-section">
+            <p><a href="./FAQ.html" class="footer-link">faq</a></p>
+            <p><a href="javascript:void(0);" style="font-size: 17px;" class=" footer-link" onclick="window.open('https://linktr.ee/retrofitconstruction', '_blank');" data-en="follow us" data-fr="suivez-nous">follow us</a></p>
+            <p class=" footer-link">rbq 5825-8377-01</p>
+            <p><a href="./contactus.html" class="footer-link" data-fr="contactez-nous" data-en="contact us">contact us</a></p>
+        </div>
+        <div class="text-rights-reserved" data-fr="© 2024 Tous droits réservés" data-en="© 2024 All Rights Reserved">© 2024 All Rights Reserved</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animationDiv = document.querySelector('.service-animation');
+            const mainContent = document.querySelector('main');
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+
+            const text = 'faq';
+            const textElement = document.getElementById('service-text');
+
+            textElement.textContent = text;
+
+            setTimeout(() => {
+                animationDiv.classList.add('fade-out');
+                setTimeout(() => {
+                    animationDiv.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    header.style.display = 'block';
+                    footer.style.display = 'block';
+                    mainContent.classList.add('fade-in');
+                    header.classList.add('fade-in');
+                    footer.classList.add('fade-in');
+                }, 1000);
+            }, 1000); // Adjust the duration as needed
+        });
+
+        // TO change languages=============
+        document.addEventListener('DOMContentLoaded', () => {
+    const languageLinks = document.querySelectorAll('.language-link');
+    const translatableElements = document.querySelectorAll('[data-en]');
+
+    // Function to update text for all elements with translations
+    const updateLanguage = (selectedLang) => {
+        translatableElements.forEach((el) => {
+            const translation = el.getAttribute(`data-${selectedLang}`);
+            if (translation) {
+                el.innerHTML = translation; // Use innerHTML to correctly render <br> tags
+            }
+        });
+    };
+
+    languageLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selectedLang = link.getAttribute('data-lang');
+
+            // Save the selected language to localStorage
+            localStorage.setItem('lang', selectedLang);
+
+            // Update the language content
+            updateLanguage(selectedLang);
+
+            // Update the active state of the language links
+            languageLinks.forEach((l) => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // Load the saved language preference on page load
+    const savedLang = localStorage.getItem('lang') || 'en';
+    updateLanguage(savedLang); // Apply the saved language
+    document.querySelector(`.language-link[data-lang="${savedLang}"]`).classList.add('active');
+});
+    </script>
+
+<script>
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+    });
+</script>
+
+</body>
+</html>
+</div>

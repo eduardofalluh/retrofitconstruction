@@ -1,0 +1,9 @@
+# Local Netlify folder
+.netlify
+.env
+dist/img/DJI_0176_compressed.mp4
+./.git/objects/pack/pack-ef9386b4e1ed8d0d8c8296015c3c31fddd6c9634.pack
+./.git/lfs/objects/38/58/385888b489a0a65788e9a7daf59b9a7fab9948c7fe2435bc2abe007c1cc55ba9
+.node_modules
+./node_modules
+node_modules

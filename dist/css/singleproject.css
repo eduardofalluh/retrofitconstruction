@@ -1,0 +1,973 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@media (min-width: 1600px) {
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+
+.content{
+    display: flex;
+    margin-left: 35px; /* Add left margin */
+    align-items: flex-start; /* Align items to the start */
+    text-align: justify;
+    width: 95%;
+}
+
+.text-rights-reserved{
+    background-color: rgb(245, 245, 245);
+    font-size: 10px;
+
+}
+
+
+
+.text-below-image h2{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.text-below-image p{
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 95%;
+}
+
+.text-below-image p{
+    border-radius: 10px;
+    max-width: 93.5%;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+h2{
+    font-size: 25px;
+    font-family: 'Lora', serif;
+}
+
+.content img {
+    max-width: 95%; /* Adjust as needed */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.content p {
+    flex: 1;
+    margin-top: 0; /* Remove top margin */
+    margin-left:0; /* Reset left margin */
+}
+
+.content-header{
+    margin-left: 35px;
+}
+
+.content-header h2{
+    font-weight: 400;
+
+}
+
+.main-header{
+    margin-left: 35px;
+}
+
+.content-section{
+    margin-bottom: 50px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.initial-text h1{
+    font-family: 'Lora', serif;
+    font-size: 50px;
+    color: #3d4e3a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    text-align: center;
+    animation: fadeOut 1.0s ease-in-out forwards;
+    animation-delay: 1.0s;
+    font-weight: 400;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(245, 245, 245);
+    max-width: 100%; /* Ensure the body does not exceed the viewport width */
+}
+
+.footer-section{
+    background-color: rgb(245, 245, 245);
+
+}
+
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    color: #fff;
+    position: relative;
+    margin-top: 15px;
+}
+
+.language {
+    top: 165px;
+}
+
+.logo-2 {
+    height: 20px;
+    width: 25px;
+}
+
+.box {
+    border: 2px solid black;
+    position: absolute;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+    max-width: 92.5%;
+    margin-left: 55px;
+}
+
+nav img {
+    height: 20px;
+    margin-bottom: 30px;
+    margin-top: 18px;
+}
+
+.link {
+    font-size: 13px;
+    margin-bottom: auto;
+    display: inline-block;
+    max-width: 97.5%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-link {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    color: inherit; /* Ensures the text color is inherited */
+}
+
+section img {
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 97%;
+    margin-left: 22px;
+    margin-top: 30px;
+}
+
+section {
+    margin-bottom: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.pictures {
+    text-align: center;
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 80px;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+}
+
+text {
+    font-family: 'Lora', serif;
+    margin-top: 10px;
+}
+
+.centered-section {
+    text-align: center;
+}
+
+.numbers{
+    position: relative;
+    margin-left: 35px;
+    top:0;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.bottom-image {
+    position: relative;
+    left: 35px;
+}
+
+footer {
+    border-top: 1px solid black;
+    text-align: center;
+    background-color: #fff;
+    left: 2%;
+    margin-left: 55px;
+    max-width: 92.5%;
+}
+
+.footer p {
+    flex: 1;
+    margin: 0;
+}
+
+.footer-section {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-p {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* --------BURGER BAR--------------- */
+
+.burger-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 55px;
+    z-index: 1001;
+  
+  }
+  
+  a {
+    font-family: 'Lora', serif;
+    text-decoration: none; /* Removes the underline */
+    color: inherit;
+  }
+  
+  
+
+  /* Centering the logo in the active menu */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between top links, logo, and bottom links */
+    align-items: center; /* Center align horizontally */
+    height: 100%; /* Full height of the menu */
+    padding: 20px; /* Add padding if needed */
+}
+
+/* Styling the white logo container */
+.white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Ensures the logo takes up the center space */
+}
+
+/* Styling the logo image */
+.white-logo {
+    height: 75%; /* Adjust the height of the logo */
+    width: auto; /* Maintain the aspect ratio */
+    max-height: 120px; /* Set a maximum height */
+    margin: 20px 0; /* Add spacing around the logo */
+}
+  .line {
+    transition: all 0.3s ease;
+  
+  }
+  
+  .burger-bar span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 2px;
+  }
+  
+  .burger-bar.active span {
+    background-color: white; /* Change to white when activated */
+}
+  
+  /* Transform Burger Bar to X */
+  .burger-bar.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger-bar.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+  }
+  
+  .burger-bar.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Menu Overlay Styling */
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #435B41;
+    z-index: 1000;
+    opacity: 0;
+    animation: none;
+  }
+  
+  /* .menu-overlay.active {
+    display: block;
+    animation: fade-in 0.5s forwards;
+  } */
+  
+  
+  
+  .menu-content {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    height: 100%; /* Full height of the overlay */
+    justify-content: space-between; /* Space between top and bottom links */
+    padding: 20px; /* Add some padding */
+  }
+  
+  .top-links {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    gap: 19.3%; /* Space between the links */
+    font-size: 14px;
+    color: white;
+    margin-top: 55px; /* Add space above the top links */
+    padding-top: 10px; /* Spacing inside the border */
+    border-top: 1px solid rgb(255, 255, 255);
+    width: 95%;
+    margin-left: auto; /* Center horizontally in parent */
+    margin-right: auto; /* Center horizontally in parent */
+  }
+  
+  .no-scroll {
+    overflow: hidden; /* Disable scrolling */
+    height: 100%; /* Prevent content from moving */
+  }
+  
+  .bottom-links {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    gap: 26.2%; /* Space between the links */
+    font-size: 14px;
+    color: white;
+    margin-bottom: 50px; /* Add space below the bottom links */
+    padding-top: 10px; /* Spacing inside the border */
+    border-top: 1px solid rgb(255, 255, 255);
+    width: 95%;
+    margin-left: auto; /* Center horizontally in parent */
+    margin-right: auto; /* Center horizontally in parent */
+  }
+  
+  .menu-separator {
+    width: 80%;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 20px auto; /* Centered horizontally */
+  }
+  
+  .divider {
+    color: white;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  
+  }
+  
+  .close-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .menu-content {
+        padding: 30px 15px;
+    }
+  
+    .top-links,
+    .bottom-links {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+  }
+  
+  /* Active (Fade-In) */
+  .menu-overlay.active {
+    animation: fade-in 0.5s forwards; /* 0.5s duration */
+    opacity: 1;
+    display: block; /* Ensure the menu is visible */
+  }
+  
+  /* Closing (Fade-Out) */
+  .menu-overlay.closing {
+    animation: fade-out 0.5s forwards !important; /* 0.5s duration */
+    opacity: 0;
+  }
+
+
+  .line {
+    border-top: 1px solid black;
+    width: 46.5%;
+    margin-bottom: 50px;
+}
+
+.close-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+/* Circles */
+.circles-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+.circle p {
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
+/* Appointment Button */
+.appointment-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.appointment-button {
+    background-color: #3d4e3a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Carousel */
+.carousel {
+    margin-top: 15px;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+.carousel-image, .carousel-video {
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 20px auto;
+    transition: transform 0.5s ease-in-out;
+    margin-left: 35px;
+}
+
+.carousel-image-plan{
+    width: 90%;
+    height: 95%;
+    /* object-fit: cover; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 20px auto;
+    transition: transform 0.5s ease-in-out;
+    margin-left: 35px;
+    margin: 0 auto;
+}
+
+.carousel-controls {
+    display: flex;
+    position: absolute;
+    right: 50px;
+    pointer-events: none;
+    z-index: 2;
+}
+@media (min-width: 1600px) {
+    .carousel-controls {
+        
+        right: 65px !important;
+        
+    }
+
+    .language-switch{
+        right:65px !important;
+    }
+}
+
+
+.language-bar{
+    color: #000000;
+}
+
+
+.language-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+.carousel-control {
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    width: 15px;
+    margin: 15px;
+}
+
+.carousel-control:hover {
+    cursor: pointer;
+}
+
+.text-container {
+    text-align: left;
+    margin-top: 0;
+    position: relative;
+    bottom: 10px;
+    left: 35px;
+    font-family: 'Lora', serif;
+}
+
+* {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+
+@media (max-width: 768px) {
+
+    .content-body{
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .main-content, 
+    .carousel-container, 
+    nav, 
+    footer {
+        max-width: 100vw;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /* Remove any extra padding or margins */
+    .main-content {
+        padding: 0;
+    }
+
+    /* Ensure images and videos are responsive and don't overflow */
+    .carousel-image, 
+    .carousel-video {
+        width: 100%;
+        /* height: auto; */
+    }
+
+    /* Adjust other elements if necessary */
+    .text-container {
+        margin-left: 0 !important;
+    }
+
+
+    .line{
+        width: 98% !important;
+    }
+
+    *{
+        box-sizing: content-box !important; /* Change to content-box or initial */
+    }
+    main{
+        margin-left: 0px !important;
+        /* max-width: 96.8% !important; */
+    }
+
+    .text-container {
+        bottom: 115px !important;
+    }
+
+    .carousel-control{
+        bottom: 120px !important;
+  position: relative !important;
+  margin-right: 15px;
+    }
+
+    .carousel-controls{
+        right: 15px !important;
+        /* bottom: 100px; */
+    }
+
+    .initial-text h1{
+        font-size: 35px !important;
+
+    }
+    .carousel-control {
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+
+    .content img{
+        max-width: 94%;
+
+    }
+
+    .content{
+        display: block !important;
+    }
+
+    .content p{
+        max-width: 94%;
+    }
+
+    nav{
+        max-width: 84.5%;
+        margin-left: 35px;
+    }
+
+    footer{
+        max-width: 84.5%;
+
+        margin-left: 35px;
+
+    }
+
+    .carousel-image {
+        max-width: 87% !important;
+        max-height: 75% !important;
+    }
+    .carousel-video{
+        max-width: 87% !important;
+        max-height: 75% !important;
+
+    }
+
+    .content-section{
+        max-width: 97%;
+    }
+
+    .carousel {
+    max-height: 630px;
+    }
+}
+
+/* Collapsable see more */
+.text-container {
+    max-height: 300px; /* Set to match the height of the image */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    position: relative;
+}
+
+.text-container.expanded {
+    max-height: none; /* Allow full expansion when clicked */
+}
+
+#see-more-btn {
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#see-more-btn:hover {
+    background-color: #555;
+}
+
+
+
+@media (max-width: 675px) {
+    .burger-bar{
+        left: 35px !important;
+    }
+
+    .language-switch {
+        right: 45px !important;
+    }
+  
+  
+  }
+  
+  @media (max-width: 545px) {
+  
+    .language-switch {
+        right: 30px !important;
+    }
+  }
+  
+  
+  .language-switch {
+    position: absolute;
+    top: 20px;
+    right: 57px;
+  }
+  
+  .language-link {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: black; /* Adjust as needed */
+    text-decoration: none;
+  }
+  
+  .language-link:hover {
+    color: #485a43; /* Adjust as needed */
+  }
+  
+  @media (max-width: 768px) {
+  
+    .language-switch{
+        right: 60px;
+    }
+  }
+
+
+  /* NEW PAGE FOR SMALLER TEXTE ==============*/
+  .content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Add space between the image and the text */
+    align-items: flex-start; /* Align items at the top */
+}
+
+.content-body {
+    flex: 0 0 auto; /* Prevent resizing of the image */
+    width: 50%; /* Adjust the width of the image */
+}
+
+.text-section {
+    flex: 1; /* Make the text take up remaining space */
+}
+
+.project-numbers {
+    margin-top: 20px; /* Add space below the descriptive text */
+    clear: both; /* Ensure it stays below everything */
+}
+
+@media (max-width: 768px) {
+    .white {
+        display: block !important;
+    }
+}
+
+.text-p{
+    text-align:left !important;
+}
+
+
+@media (max-width: 768px) {
+    .top-links {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 40px !important; /* Reduce the spacing between the items */
+        list-style: none; /* Remove bullets if it's a list */
+        max-width: 95% !important;
+    }
+
+    .top-links a {
+        text-align: left; /* Ensure text is aligned to the left */
+        text-decoration: none; /* Remove underline from links */
+        font-size: 1rem; /* Adjust font size if necessary */
+        color: white; /* Keep or change the text color */
+    }
+}
+
+  
+
+  .close-icon {
+    width: 24px; /* Taille de l'image */
+    height: 24px; /* Ajustez selon vos besoins */
+    cursor: pointer; /* Ajoute un curseur clic */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.close-icon:hover {
+    transform: scale(1.2); /* Agrandit légèrement au survol */
+}
+
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+/* Carousel Items */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+/* Active Carousel Item */
+.carousel-item.active {
+    opacity: 1;
+}

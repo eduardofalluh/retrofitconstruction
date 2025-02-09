@@ -1,0 +1,1280 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@media (min-width: 1600px) {
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+
+@media (min-width: 1600px) {
+    .burger-bar{
+        left: 60px !important;
+    }
+
+    .carousel-controls{
+        right: 95px !important;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.close-icon {
+    width: 24px; /* Taille de l'image */
+    height: 24px; /* Ajustez selon vos besoins */
+    cursor: pointer; /* Ajoute un curseur clic */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.close-icon:hover {
+    transform: scale(1.2); /* Agrandit légèrement au survol */
+}
+
+
+.initial-text {
+    font-family: 'Lora';
+    font-size: 50px;
+    color: #3d4e3a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    text-align: center;
+    animation: fadeOut 2.0s ease-in-out forwards;
+    animation-delay: 3.0s;
+    width: 1000.5px;
+    font-weight: 400;
+}
+
+.initial-text h1{
+    font-size: 50px;
+    color: #3d4e3a;
+    font-weight: 400;
+
+
+}
+
+
+
+
+.language-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(245, 245, 245);
+    max-width: 100%;
+}
+
+.footer-section{
+    background-color: rgb(245, 245, 245);
+
+}
+
+
+
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    -webkit-text-size-adjust: none;
+}
+
+header {
+    color: #fff;
+    position: relative;
+    margin-top: 15px;
+}
+
+.language {
+    top: 165px;
+}
+
+.logo-2 {
+    height: 20px;
+    width: 25px;
+}
+
+.text-rights-reserved{
+    background-color: rgb(245, 245, 245);
+    font-size: 10px;
+
+}
+
+
+.box {
+    border: 2px solid black;
+    position: absolute;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    width: 95.5%;
+    margin: 0 auto;  
+}
+
+nav img {
+    height: 20px;
+    margin-bottom: 30px;
+    margin-top: 18px;
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    text-align: justify;
+    max-width: 97.5%;
+}
+
+
+section img {
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+main {
+    flex: 1;
+    padding: 15px 18.5px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    max-width: 92.5%;
+}
+
+footer{
+    max-width: 92.5%;
+}
+
+@media (max-width: 768px) {
+    .circle {
+        width: 150px !important; /* Adjust size for mobile */
+        height: 150px !important;
+        border-radius: 50%;
+        display: flex; /* Use flexbox for centering */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        position: relative; /* For text positioning */
+        margin: 10px auto; /* Center the circle and add space */
+    }
+
+    .circle-2{
+        width: 150px !important; /* Adjust size for mobile */
+        height: 150px !important;
+        border-radius: 50%;
+        display: flex; /* Use flexbox for centering */
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        position: relative; /* For text positioning */
+        margin: 10px auto; /* Center the circle and add space */
+    }
+
+
+    .circle img {
+        
+        object-fit: contain; /* Ensure proper scaling */
+        display: block; /* Ensure proper rendering */
+    }
+
+    .circle p {
+        position: absolute; /* Position text at the bottom */
+        top: 120%; /* Slightly above the bottom edge */
+        text-align: center; /* Center the text horizontally */
+        margin: 0;
+    }
+    *{
+        box-sizing: content-box !important; /* Change to content-box or initial */
+    }
+    
+    .circles-container-2 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Ensures at least 2 columns on small screens */
+    }
+
+    .circles-container{
+        display: grid ;
+
+    }
+    .horizontal-align{
+        width: 88% !important;
+      margin-left: 5px !important;
+    }
+    .initial-text h1{
+        font-size: 30px;
+
+    }
+
+    nav{
+        max-width: 89.5%;
+
+    }
+
+    .carousel-controls{
+        right: 0px !important;
+        top: 630px;
+    }
+
+    footer{
+        max-width: 89.5%;
+        margin-left: 25px !important;
+    }
+
+    .bottom-image{
+        margin-left: 5px !important;
+    }
+    .text-container{
+        margin-left: 5px !important;
+        bottom: 115px !important;
+        font-size: 12px !important;
+    }
+
+    .carousel-image{
+        width: 99% !important;
+        max-height: 75% !important;
+        margin: 20px 3px !important;
+    }
+    .carousel-video{
+        width: 99% !important;
+        max-height: 75% !important;
+        margin: 20px 3px !important;
+    }
+
+}
+
+
+
+section {
+    margin-bottom: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.pictures {
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'Lora', serif;
+}
+
+p {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+}
+
+text {
+    font-family: 'Lora', serif;
+    margin-top: 10px;
+}
+
+.centered-section {
+    text-align: center;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.bottom-image{
+    position: relative; /* Change the position property */
+    margin-left:35px;
+}
+
+.subtitle{
+    font-size: 15px;
+    font-family: 'Lora', serif;
+
+}
+
+.text{
+    font-size: 13px;
+    font-family: 'Lora', serif;
+
+}
+
+footer {
+    border-top: 1px solid black;
+    width: 96%;
+    text-align: center;
+    background-color: #fff;
+    left: 2%;
+    margin-left: 50px;
+}
+
+.footer p {
+    flex: 1;
+    margin: 0;
+}
+
+.footer-section {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-p {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+
+
+
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+/* -------------------CAROUSEL---------------- */
+
+
+.carousel {
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.carousel-image, .carousel-video {
+    width: 95%;
+    height: 100%; /* Ensures the image takes the full height of the container */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 20px auto;
+    transition: transform 0.5s ease-in-out;
+    margin-top: 0;
+}
+
+/* --------BURGER BAR--------------- */
+.burger-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 55px;
+}
+@media (min-width: 1401px) {
+    .tagline{
+        margin-left: 35px !important;
+      }
+      .nav-hr{
+        display: none;
+    }
+}
+@media (max-width: 1400px) {
+    nav{
+        border-bottom: none !important;
+    }
+    
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+    .circle2{
+        height: fit-content !important;
+        margin-top: 20px !important;
+    }
+    footer{
+        width: 92% !important;
+    }
+}
+@media (min-width: 520px) and (max-width: 1400px) {
+    
+    body{
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+  .burger-bar{
+    left: 18px !important;
+  }
+  .language-switch{
+    right: 20px !important;
+  }
+  .tagline{
+    margin-left: 0px;
+  }
+  .carousel-image, .carousel-video {
+    margin: 0px;
+    width: 100%;
+  }
+  .bottom-image{
+    margin-left: 0px;
+  }
+  nav{
+    width: 100%;
+    max-width: 96% !important;
+  }
+  .circles-container-2{
+    margin: 0px !important;
+    max-width: 100% !important;
+    display: flex;
+    justify-content: space-between !important;
+
+  }
+  .circles-container{
+    gap: 1% !important;
+    width: 100%;
+    justify-content: space-between !important;
+  }
+  .link {
+    max-width: 100% !important;
+  }
+  footer{
+    margin-left: 25px;
+    max-width: 96.5%;
+    justify-content: space-between;
+    padding: 0px 10px;
+    background-color: transparent;
+  }
+  .text-container{
+    margin-left: 0px !important;
+  }
+  
+  .carousel-controls{
+    right: 5% !important;
+  }
+}
+  
+
+.burger-bar span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 2px;
+}
+/* ========================================================== */
+
+/* Centering the logo in the active menu */
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between top links, logo, and bottom links */
+    align-items: center; /* Center align horizontally */
+    height: 100%; /* Full height of the menu */
+    padding: 20px; /* Add padding if needed */
+}
+
+/* Styling the white logo container */
+.white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Ensures the logo takes up the center space */
+}
+
+@media (max-width: 768px) {
+    .white {
+        display: block !important;
+    }
+}
+
+/* Styling the logo image */
+.white-logo {
+    height: 75%; /* Adjust the height of the logo */
+    width: auto; /* Maintain the aspect ratio */
+    max-height: 120px; /* Set a maximum height */
+    margin: 20px 0; /* Add spacing around the logo */
+}
+
+.burger-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 55px;
+    z-index: 1001;
+  
+  }
+  
+  a {
+    font-family: 'Lora', serif;
+    text-decoration: none; /* Removes the underline */
+    color: inherit;
+  }
+  
+  
+  .line {
+    border-top: 1px solid black;
+    padding: 10px;
+    width: 40%;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  
+  }
+  
+  .burger-bar span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #000000;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 2px;
+  }
+
+  .burger-bar.active span {
+    background-color: white; /* Change to white when activated */
+}
+  
+  
+  /* Transform Burger Bar to X */
+  .burger-bar.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .burger-bar.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+  }
+  
+  .burger-bar.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Menu Overlay Styling */
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #435B41;
+    z-index: 1000;
+    opacity: 0;
+    animation: none;
+  }
+  
+  /* .menu-overlay.active {
+    display: block;
+    animation: fade-in 0.5s forwards;
+  } */
+  
+  
+  
+  .menu-content {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    height: 100%; /* Full height of the overlay */
+    justify-content: space-between; /* Space between top and bottom links */
+    padding: 20px; /* Add some padding */
+  }
+  
+  .top-links {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    gap: 19.3%; /* Space between the links */
+    font-size: 14px;
+    color: white;
+    margin-top: 55px; /* Add space above the top links */
+    padding-top: 10px; /* Spacing inside the border */
+    border-top: 1px solid rgb(255, 255, 255);
+    width: 95%;
+    margin-left: auto; /* Center horizontally in parent */
+    margin-right: auto; /* Center horizontally in parent */
+  }
+  
+  .no-scroll {
+    overflow: hidden; /* Disable scrolling */
+    height: 100%; /* Prevent content from moving */
+  }
+  
+  .bottom-links {
+    display: flex;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+    gap: 26.2%; /* Space between the links */
+    font-size: 14px;
+    color: white;
+    margin-bottom: 50px; /* Add space below the bottom links */
+    padding-top: 10px; /* Spacing inside the border */
+    border-top: 1px solid rgb(255, 255, 255);
+    width: 95%;
+    margin-left: auto; /* Center horizontally in parent */
+    margin-right: auto; /* Center horizontally in parent */
+  }
+  
+  .menu-separator {
+    width: 80%;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 20px auto; /* Centered horizontally */
+  }
+  
+  .divider {
+    color: white;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  
+  }
+  
+  .close-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .menu-content {
+        padding: 30px 15px;
+    }
+  
+    .top-links,
+    .bottom-links {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+
+    .top-links {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 40px !important; /* Reduce the spacing between the items */
+        list-style: none; /* Remove bullets if it's a list */
+        max-width: 95% !important;
+    }
+    
+    .top-links a {
+        text-align: left; /* Ensure text is aligned to the left */
+        text-decoration: none; /* Remove underline from links */
+        font-size: 1rem; /* Adjust font size if necessary */
+        color: white; /* Keep or change the text color */
+    }
+  }
+
+  
+  @keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+  }
+  
+  /* Active (Fade-In) */
+  .menu-overlay.active {
+    animation: fade-in 0.5s forwards; /* 0.5s duration */
+    opacity: 1;
+    display: block; /* Ensure the menu is visible */
+  }
+  
+  /* Closing (Fade-Out) */
+  .menu-overlay.closing {
+    animation: fade-out 0.5s forwards !important; /* 0.5s duration */
+    opacity: 0;
+  }
+
+/* Close button styles */
+.close-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+
+.main-content {
+    display: none; /* Hide initially */
+}
+
+.main-content.visible {
+    display: block;
+    animation: slideIn 1s ease-in-out;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    /* height: 100vh; */ /* Remove if present */
+}
+
+#text-container {
+    margin-left: 20px;
+}
+
+.line {
+    font-size: 24px;
+    color: #3d4e3a;
+}
+
+.letter {
+    opacity: 0;
+    display: inline-block;
+    animation: write 0.05s forwards;
+    font-family: 'Lora', serif;
+}
+
+@keyframes write {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Circles */
+.circles-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+    /* gap: 0%; */
+    margin-bottom: 50px;
+}
+
+
+.circles-container-2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    max-width: 90%;
+    margin-bottom: 50px;
+}
+
+.circle {
+    width: 240px;
+    height: 240px;
+    /* background-color: #ffffff; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 9%; */
+    margin-bottom: 3%;
+}
+
+.circle2{
+    width: 23.8%;
+    height: 240px;
+    /* background-color: #ffffff; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 9%; */
+}
+
+
+.circle-2 {
+    width: 170px;
+    height: 240px;
+    /* background-color: #ffffff; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 9%; */
+    /* margin-bottom: 3%; */
+
+}
+
+.circle p {
+    margin: 0;
+    font-family: 'Lora', serif;
+    bottom: 0;
+  position: absolute;
+}
+
+
+
+
+/* Appointment Button */
+.appointment-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.appointment-button {
+    background-color: #3d4e3a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 600px; /* Keep your desired height */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%; /* Ensure the height of each item is 100% */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer !important; /* Ensure the normal cursor is shown */
+
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+.carousel-controls {
+    display: flex;
+    position: absolute;
+    right: 52px; /* Adjust the right position */
+    pointer-events: none;
+    z-index: 2;
+}
+
+.carousel-control {
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 13px;
+    width: 13px;
+    margin: 15px;
+}
+
+.carousel-control:hover {
+    cursor: pointer;
+}
+
+.text-container {
+    text-align: left;
+    margin-top: 0;
+    position: absolute;
+    bottom: 10px; /* Align with carousel controls */
+    margin-left: 35px; /* Adjust the left position to place it under the carousel */
+    font-family: 'Lora', serif;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .carousel-control {
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+    .carousel {
+        margin-bottom: 0px !important;
+    }
+    .circles-container-2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 0 auto;
+        gap: 18.5%!important;
+        margin-bottom: 100px!important;
+    }
+    .circle2{
+        width: 100% !important;
+        /* margin: 0 !important; */
+    }
+}
+
+/* Slide-in animation */
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in {
+    opacity: 0;
+  }
+  
+  .slide-in.visible {
+    animation: slideInFromLeft 1s forwards;
+    opacity: 1;
+  }
+
+  
+  .circles-container, .bottom-image, .circles-container-2 {
+    transform: translateX(-100%);
+  }
+  
+  .tagline{
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    color: #485a43;
+    /* margin-left: 35px; */
+  }
+
+  @media (max-width: 768px) {
+
+    .tagline{
+        margin-left: 0px ;
+    }
+}
+
+
+
+  .text-container {
+    font-family: 'Courier New', Courier, monospace; /* Gives a typewriter feel */
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cursor {
+    font-weight: bold;
+    font-size: 20px;
+    color: #485a43;
+    animation: blink 1.3s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/* Add this to your CSS file (./css/style.css) */
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    position: relative; /* To ensure the active item stays in the flow of the document */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure the carousel container has relative positioning */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden; /* Ensure the carousel items stay within the container */
+}
+
+/* Ensure the carousel items take up the correct space */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust height to fit the container */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-container a {
+    display: block;
+}
+
+
+
+
+
+
+
+.text-container {
+    margin-top: 5px;
+
+    text-align: left; /* Align text to the left */
+    margin-top: 20px;
+    position: relative; 
+    height: 40px;
+}
+
+.text-container p {
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
+.link {
+    font-size: 13px;
+    margin-bottom: auto;
+    display: inline-block;
+}
+
+.footer-link {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    color: inherit; /* Ensures the text color is inherited */
+}
+
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.btn{
+    color: #485a43;
+
+}
+
+.service-btn{
+  color: #485a43;
+  padding: 10px 20px;
+  /* text-decoration: none; */
+  border-radius: 50px;
+  font-family: 'Lora', serif;
+  font-size: 18px;
+    /* display: block; */
+    margin: 0 auto;
+    cursor: pointer;
+text-align: center;
+border: solid 1px #485a43;
+width: 250px;
+margin-top: 20px;
+margin-bottom: 30px;
+}
+
+.button-container{
+    text-align: center;
+}
+
+.horizontal-align {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 94.8%;
+    margin-left: 30px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 20px;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+
+.language-bar{
+    color: #000000;
+}
+
+.centered-text {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    color: #485a43;
+}
+
+.button-container {
+    justify-content: flex-end;
+    margin-bottom: 60px;
+}
+
+.appointment-button {
+    background-color: #485a43;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/* SEE MORE FUNCTION */
+
+.language-link.active {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 675px) {
+    .text-container{
+        margin-top: 0px !important;
+
+    }
+
+    .service-btn{
+        margin-top: 80px !important;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .burger-bar{
+        left: 22px !important;
+    }
+
+    .language-switch {
+        right: 20px !important;
+    }
+}
+
+
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 57px;
+}
+
+.language-link {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: black; /* Adjust as needed */
+    text-decoration: none;
+}
+
+.language-link:hover {
+    color: #485a43; /* Adjust as needed */
+}
+
+
