@@ -205,6 +205,10 @@
   .language-link:hover {
     color: #485a43; /* Adjust as needed */
   }
+  .language-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
    
    
    /* Menu Overlay for Mobile/Fullscreen Menu */
@@ -330,10 +334,25 @@
      .initial-text {
        font-size: 35px;
      }
+     .top-links a {
+      margin-bottom: 7%;
+      text-align: left; /* Ensure text is aligned to the left */
+      text-decoration: none; /* Remove underline from links */
+      font-size: 1rem; /* Adjust font size if necessary */
+      color: white; /* Keep or change the text color */
+  }
      .top-links,
     .bottom-links {
+      
         font-size: 14px; /* Adjust font size for smaller screens */
         gap: 20px; /* Adjust gap for smaller screens */
+    }
+    .white{
+      margin-top: -50%;
+    }
+    .top-links{
+      flex-direction: column;
+      align-items: start;
     }
      .menu-content {
       padding: 30px 15px;
