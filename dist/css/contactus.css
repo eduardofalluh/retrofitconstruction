@@ -11,7 +11,6 @@
 body {
     touch-action: pan-y;
     overflow-x: hidden;
-    margin-right: 5% !important;
 }
 .contact-form{
     max-width: 100% !important;
@@ -27,73 +26,14 @@ body {
 }
 
 
-@media (min-width: 1600px) {
-
-    .language-switch{
-        right:65px !important;
-    }
-}
 
 html, body {
     background-color: rgb(245, 245, 245);
 }
 
-.footer-section{
-    background-color: rgb(245, 245, 245);
-
-}
-
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fade-out {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-.fade-in {
-    animation: fade-in 1s forwards;
-}
-
-.fade-out {
-    animation: fade-out 1s forwards;
-}
-
-.fade {
-    opacity: 0;
-}
-
-a {
-    font-family: 'Lora', serif;
-    text-decoration: none; /* Removes the underline */
-    color: inherit;
-}
-
 .contact-text {
     margin-bottom: 50px;
-    margin-left: 35px;
     font-size: 20px;
-}
-
-header {
-    color: #fff;
-    position: relative;
-    margin-top: 15px;
-}
-
-.language {
-    top: 165px;
-    overflow-y: hidden;
 }
 
 .contact-us span {
@@ -121,36 +61,16 @@ header {
     font-family: 'Lora', serif;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid black;
-    
-    margin: 0 auto;
-    max-width: 100%;
-    margin-left: 55px;
-}
 
-nav img {
-    height: 20px;
-    margin-bottom: 30px;
-    margin-top: 18px;
-}
 
 .link {
     font-size: 13px;
     margin-bottom: auto;
     display: inline-block;
-    max-width: 97.5%;
+    max-width: 100%;
 }
 
-.footer-link {
-    line-height: 1.5;
-    font-family: 'Lora', serif;
-    text-decoration: none;
-    color: inherit;
-}
+
 
 section img {
     height: 200px;
@@ -159,8 +79,7 @@ section img {
 }
 
 main {
-    width: 99%;
-    padding: 0px 20px;
+    width: 100%;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -179,24 +98,6 @@ section {
     text-align: center;
 }
 
-h1 {
-    font-size: 40px;
-    margin-bottom: 30px;
-    font-family: 'Lora', serif;
-    font-weight: 400;
-
-}
-
-p {
-    line-height: 1.5;
-    margin-bottom: 20px;
-    font-family: 'Lora', serif;
-}
-
-text {
-    font-family: 'Lora', serif;
-    margin-top: 10px;
-}
 
 .centered-section {
     text-align: center;
@@ -209,33 +110,6 @@ text {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
-}
-
-footer {
-    border-top: 1px solid black;
-    /* width: 96%; */
-    text-align: center;
-    background-color: #fff;
-    left: 2%;
-    margin-left: 55px;
-    max-width: 100%;
-}
-
-.footer p {
-    flex: 1;
-    margin: 0;
-}
-
-.footer-section {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-p {
-    font-size: 15px;
-    line-height: 1.5;
-    font-family: 'Lora', serif;
 }
 
 .button:hover {
@@ -263,46 +137,6 @@ footer {
     transition: transform 0.5s ease-in-out;
 }
 
-.burger-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    cursor: pointer;
-    border-radius: 5px;
-    position: absolute;
-    top: 20px;
-    left: 55px;
-    z-index: 1001;
-
-}
-
-
-/* Centering the logo in the active menu */
-.menu-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Space between top links, logo, and bottom links */
-    align-items: center; /* Center align horizontally */
-    height: 100%; /* Full height of the menu */
-    padding: 20px; /* Add padding if needed */
-}
-
-/* Styling the white logo container */
-.white {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1; /* Ensures the logo takes up the center space */
-}
-
-/* Styling the logo image */
-.white-logo {
-    height: 75%; /* Adjust the height of the logo */
-    width: auto; /* Maintain the aspect ratio */
-    max-height: 120px; /* Set a maximum height */
-    margin: 20px 0; /* Add spacing around the logo */
-}
-
 .line {
     border-top: 1px solid black;
     padding: 10px;
@@ -312,123 +146,9 @@ footer {
 
 }
 
-.burger-bar span {
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #000000;
-    margin-bottom: 5px;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 2px;
-}
-
-.burger-bar.active span {
-    background-color: white; /* Change to white when activated */
-}
-
-
-/* Transform Burger Bar to X */
-.burger-bar.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.burger-bar.active span:nth-child(2) {
-    opacity: 0; /* Hide the middle line */
-}
-
-.burger-bar.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Menu Overlay Styling */
-.menu-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #435B41;
-    z-index: 1000;
-    opacity: 0;
-    animation: none;
-}
-
-.menu-overlay.active {
-    display: block;
-    animation: fade-in 0.5s forwards;
-}
-
-/* .menu-overlay.closing {
-    animation: fade-out 0.5s forwards;
-} */
-
-.menu-content {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    height: 100%; /* Full height of the overlay */
-    justify-content: space-between; /* Space between top and bottom links */
-    padding: 20px; /* Add some padding */
-}
-
-@media (max-width: 768px) {
-    .white {
-        display: block !important;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .top-links {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start !important; /* Align items to the left */
-        gap: 40px !important; /* Reduce the spacing between the items */
-        list-style: none; /* Remove bullets if it's a list */
-        max-width: 95% !important;
-    }
-
-    .top-links a {
-        text-align: left; /* Ensure text is aligned to the left */
-        text-decoration: none; /* Remove underline from links */
-        font-size: 1rem; /* Adjust font size if necessary */
-        color: white; /* Keep or change the text color */
-    }
-}
-
-.top-links {
-    display: flex;
-    justify-content: center; /* Center align horizontally */
-    align-items: center; /* Center align vertically */
-    gap: 19.3%; /* Space between the links */
-    font-size: 14px;
-    color: white;
-    margin-top: 55px; /* Add space above the top links */
-    padding-top: 10px; /* Spacing inside the border */
-    border-top: 1px solid rgb(255, 255, 255);
-    width: 95%;
-    margin-left: auto; /* Center horizontally in parent */
-    margin-right: auto; /* Center horizontally in parent */
-}
-
 .no-scroll {
     overflow: hidden; /* Disable scrolling */
     height: 100%; /* Prevent content from moving */
-}
-
-.bottom-links {
-    display: flex;
-    justify-content: center; /* Center align horizontally */
-    align-items: center; /* Center align vertically */
-    gap: 26.2%; /* Space between the links */
-    font-size: 14px;
-    color: white;
-    margin-bottom: 50px; /* Add space below the bottom links */
-    padding-top: 10px; /* Spacing inside the border */
-    border-top: 1px solid rgb(255, 255, 255);
-    width: 95%;
-    margin-left: auto; /* Center horizontally in parent */
-    margin-right: auto; /* Center horizontally in parent */
 }
 
 .menu-separator {
@@ -442,37 +162,12 @@ footer {
     color: white;
 }
 
-.close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.close-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s;
-
-}
-
-.close-icon:hover {
-    transform: scale(1.2);
-}
-
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
     .menu-content {
         padding: 30px 15px;
     }
 
-    .top-links,
-    .bottom-links {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        gap: 20px; /* Adjust gap for smaller screens */
-    }
 }
 
 @keyframes fade-in {
@@ -491,26 +186,6 @@ footer {
     to {
         opacity: 0;
     }
-}
-
-.menu-overlay.closing {
-    animation: fade-out 0.5s forwards;
-}
-
-
-.menu-overlay.active {
-    top: 0;
-}
-
-.close-button {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-
-    margin-right: 2.2%;
-    margin-bottom: 2%;
 }
 
 @keyframes fadeIn {
@@ -583,72 +258,11 @@ footer {
     .contact-us-animation h1{
         font-size: 35px !important;
     }
-    nav {
-        max-width: 100%;
-        margin-left: 35px !important;
-    }
+  
+ 
 
-    footer {
-        max-width: 100%;
-        margin-left: 35px !important;
-    }
-
-    .bottom-image {
-        margin-left: 20px !important;
-    }
-    .text-container {
-        margin-left: 20px !important;
-    }
-
-    .burger-bar{
-        left: 35px !important;
-
-    }
 }
 
-
-@media (max-width: 675px) {
-
-    .language-switch {
-        right: 0px !important;
-    }
-
-  
-  
-  }
-  
-  @media (max-width: 545px) {
-  
-  
-    .language-switch {
-        right: 0px !important;
-    }
-  }
-  
-  
-  .language-switch {
-    position: absolute;
-    top: 20px;
-    right: 0px;
-  }
-  
-  .language-link {
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    color: black; /* Adjust as needed */
-    text-decoration: none;
-  }
-  
-  .language-link:hover {
-    color: #485a43; /* Adjust as needed */
-  }
-  
-  @media (max-width: 768px) {
-  
-    .language-switch{
-        right: 0px;
-    }
-  }
 
   .text-rights-reserved{
     background-color: rgb(245, 245, 245);
@@ -657,21 +271,6 @@ footer {
 }
 
 
-.language-link.active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-.close-icon {
-    width: 24px; /* Taille de l'image */
-    height: 24px; /* Ajustez selon vos besoins */
-    cursor: pointer; /* Ajoute un curseur clic */
-    transition: transform 0.3s ease; /* Animation au survol */
-}
-
-.close-icon:hover {
-    transform: scale(1.2); /* Agrandit légèrement au survol */
-}
 
 
 
@@ -679,8 +278,7 @@ footer {
 /* Submit fiellldddd */
 .contact-form {
     font-family: 'Lora', serif;
-    max-width: 91%;
-    margin-left: 35px;
+    max-width: 100%;
     padding: 20px;
     background: #f9f9f9;
     border-radius: 8px;
@@ -734,7 +332,3 @@ button[type="submit"]:hover {
     background: #0056b3;
 }
 
-
-.language-bar{
-    color: #000000;
-}

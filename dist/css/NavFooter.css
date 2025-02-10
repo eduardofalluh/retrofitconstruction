@@ -216,9 +216,9 @@
        padding-top: 10px;
        /* Spacing inside the border */
        border-top: 1px solid rgb(255, 255, 255);
-       width: 95%;
-       margin-left: 5%;
-       margin-right: 5%;
+       width: 93%;
+       margin-left: 6.5%;
+       margin-right: 7%;
    }
 
    .bottom-links {
@@ -233,9 +233,9 @@
        padding-top: 10px;
        /* Spacing inside the border */
        border-top: 1px solid rgb(255, 255, 255);
-       width: 95%;
-       margin-left: 5%;
-       margin-right: 5%;
+       width: 93%;
+       margin-left: 7%;
+       margin-right: 7%;
    }
 
 

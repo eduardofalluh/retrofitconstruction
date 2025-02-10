@@ -3,7 +3,7 @@
 
 @media (min-width: 1600px) {
     .container {
-      max-width: 1600px;
+      max-width: 100%;
       margin: 0 auto;
       padding: 0 20px;
     }
@@ -27,10 +27,6 @@ html, body {
     background-color: rgb(245, 245, 245);
 }
 
-.footer-section{
-    background-color: rgb(245, 245, 245);
-
-}
 /* Update the category class to include background color transition */
 .category-2 {
     display: flex;
@@ -69,37 +65,12 @@ html, body {
 .categories {
     display: flex;
     justify-content: space-around;
-    margin-left: 25px; /* Keep consistent margin on the left */
+    margin-left: 0px; /* Keep consistent margin on the left */
     margin-right: 35px; /* Keep consistent margin on the right */
-    max-width: 97.4%;
+    max-width: 100%;
     gap: 10px;
 
     
-}
-
-
-@media (max-width: 768px) {
-    .white {
-        display: block !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .top-links {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start !important; /* Align items to the left */
-        gap: 40px !important; /* Reduce the spacing between the items */
-        list-style: none; /* Remove bullets if it's a list */
-        max-width: 95% !important;
-    }
-
-    .top-links a {
-        text-align: left; /* Ensure text is aligned to the left */
-        text-decoration: none; /* Remove underline from links */
-        font-size: 1rem; /* Adjust font size if necessary */
-        color: white; /* Keep or change the text color */
-    }
 }
 
 .category-2 {
@@ -117,22 +88,12 @@ html, body {
     border-radius: 50px; 
 }
 
-.close-icon {
-    width: 24px; /* Taille de l'image */
-    height: 24px; /* Ajustez selon vos besoins */
-    cursor: pointer; /* Ajoute un curseur clic */
-    transition: transform 0.3s ease; /* Animation au survol */
-}
-
-.close-icon:hover {
-    transform: scale(1.2); /* Agrandit légèrement au survol */
-}
 
 
 /* Grid container styling */
 .grid-container {
     display: none;
-    padding: 10px;
+    padding: 10px 0px;
     width: 100%; /* Make sure it takes full width of its respective category */
     box-sizing: border-box;
     margin-top: 2%;
@@ -156,7 +117,11 @@ html, body {
     margin-top: 10px;
     font-size: 14px;
 }
-
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
 .learn-more{
     background-color: #3d4e3a;
     color: #fff;
@@ -166,26 +131,21 @@ html, body {
     font-family: 'Lora', serif;
     font-size: 18px;
     text-align: center;
-    position: absolute;
-    right: 30%;
+    margin-top: 5% !important;
     cursor: pointer;
 }
 @media (min-width: 1600px) {
     .learn-more{
-        right: 95px !important;
+        right: 0px !important;
     }
 
-    .language-switch{
-        right:70 !important;
-    }
 }
 
 /* Ensure responsiveness for mobile */
 @media (max-width: 768px) {
     .categories {
         flex-direction: column;
-        margin-left: 25px !important;
-        max-width: 88%;
+        max-width: 100%;
         margin-top: 30px !important;
         
     }
@@ -195,9 +155,9 @@ html, body {
     }
 
     .grid-container {
-        padding: 15px;
-        width: 95% !important;
-        margin-left: 20px !important;
+        padding: 15px 0px;
+        width: 100% !important;
+        margin-left: 0px !important;
         margin-top: 20px;
     }
 
@@ -221,16 +181,14 @@ html, body {
         margin: 13px !important;
     }
 
-    .grid-container{
-        margin-left: 10px !important;
-    }
+    
 }
 
 /* General category styling */
 .categories {
     display: flex;
     justify-content: space-around;
-    margin-left: 35px;
+    margin-left: 0px;
     margin-right: 35px;
     margin-top: 30px;
     cursor: pointer;
@@ -251,7 +209,7 @@ html, body {
 .grid-container {
     display: none;
     width: 100%; /* Ensure the grid container aligns with the category width */
-    padding: 10px;
+    padding: 10px 0px;
     box-sizing: border-box;
     margin-bottom: 20px; /* Space between content and next section */
 }
@@ -281,7 +239,7 @@ html, body {
     }
 
     .grid-container {
-        padding: 15px;
+        padding: 15px 0px;
         width: 100%;
     }
 
@@ -323,7 +281,7 @@ h2{
 
 .content-body {
     display: flex;
-    margin-left: 35px; /* Add left margin */
+    margin-left: 0px; /* Add left margin */
     align-items: flex-start; /* Align items to the start */
     text-align: justify;
 }
@@ -341,62 +299,23 @@ h2{
 }
 
 .content-header {
-    margin-left: 35px;
+    margin-left: 0px;
 }
 
-.main-header {
-    margin-left: 35px;
-}
+
 
 .content-section {
     margin-bottom: 50px;
 }
 
-header {
-    color: #fff;
-    position: relative;
-    margin-top: 15px;
-}
-
-.language {
-    top: 165px;
-    overflow-y: hidden;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid black;
-    width: 96%;
-    margin: 0 auto;
-    margin-left: 50px;
-
-}
-
-nav img {
-    height: 20px;
-    margin-bottom: 30px;
-    margin-top: 18px;
-}
-
-nav{
-    max-width: 92.5%;
-  }
-  
-  footer{
-    max-width: 92.5%;
-  }
 
   @media (max-width: 600px) {
 
     .line{
-        width: 75% !important;
+        width: 100% !important;
 
     }
-    footer{
-        max-width: 85% !important;
-    }
+  
   }
 
   
@@ -415,43 +334,34 @@ nav{
         margin-top: 20px;
         
     }
-    nav{
-        max-width: 85.5%;
-        margin: 0 auto;
-  
-    }
+   
 
     .bottom-content{
-        max-width: 85% !important;
+        max-width: 100% !important;
     }
     .content-body{
-        margin-left: 30px !important;
+        margin-left: 0px !important;
 
     }
 
     .content-header{
-        margin-left: 30px !important;
+        margin-left: 0px !important;
     }
 
     .about{
-        margin-left: 30px !important;
+        margin-left: 0px !important;
     }
-  
-    footer{
-        max-width: 82% !important;
-        margin-left: 40px !important;
-    }
-  
+
     .bottom-image{
-        margin-left: 20px !important;
+        margin-left: 0px !important;
     }
     .text-container{
-        margin-left: 20px !important;
+        margin-left: 0px !important;
   
     }
   
     .category::before{
-        margin-left: 5px !important;
+        margin-left: 0px !important;
     }
   
   }
@@ -462,25 +372,15 @@ nav{
     display: inline-block;
 }
 
-.footer-link {
-    line-height: 1.5;
-    font-family: 'Lora', serif;
-    text-decoration: none;
-    color: inherit; /* Ensures the text color is inherited */
-}
 
-
-.language-bar{
-    color: #000000;
-}
 
 main {
-    padding: 0px 20px;
+    padding: 20px 0px;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     flex: 1;
-    max-width: 95%;
+    max-width: 100%;
     /* margin: 0 auto; */
     margin-bottom: 80px;
 }
@@ -519,22 +419,21 @@ main {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    width: 99%;
+    width: 100%;
 }
 
 .categories {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-left: 35px;
+    margin-left: 0px;
 }
 
 .grid-container {
     display: flex;
     justify-content: space-around; /* You can use space-between or space-around */
-    width: 100%; /* Ensure it takes the full width */
-    padding: 0 10px; /* Adjust padding as needed */
-    margin-left: 25px;
+    width: 100%; 
+    margin-left: 0px;
 }
 
 .grid-column {
@@ -551,7 +450,7 @@ main {
 
 .grid-item {
     margin-bottom: 20px;
-    width: 104%; /* Ensure it takes the full width of the column */
+    width: 100%; /* Ensure it takes the full width of the column */
 }
 
 .grid-item img {
@@ -584,30 +483,8 @@ main {
     text-align: left;
 }
 
-footer {
-    border-top: 1px solid black;
-    width: 96%;
-    text-align: center;
-    background-color: #fff;
-    margin-left: 55px;
-    margin-top: 8%;
-}
 
-.footer p {
-    flex: 1;
-    margin: 0;
-}
 
-.footer-section {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-p {
-    line-height: 1.5;
-    font-family: 'Lora', serif;
-}
 
 .button {
     background-color: #333;
@@ -621,49 +498,24 @@ footer {
     background-color: #555;
 }
 
-.burger-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    cursor: pointer;
-    border-radius: 5px;
-    position: absolute;
-    top: 20px;
-    left: 50px;
-}
-
-.burger-bar span {
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #000000;
-    margin-bottom: 5px;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 2px;
-}
-
-
-.burger-bar.active span {
-    background-color: white; /* Change to white when activated */
-}
 .about {
     font-size: 40px;
     line-height: 1.5;
     font-family: 'Lora', serif;
-    margin-left: 35px;
+    margin-left: 0px;
 }
 
 .image-about {
     width: 300px;
     height: 320px;
-    margin-left: 50px;
+    margin-left: 0px;
 }
 
 .about-text {
     font-size: 20px;
     line-height: 1.5;
     font-family: 'Lora', serif;
-    margin-left: 100px;
+    margin-left: 0px;
     margin-right: 70px;
 }
 
@@ -674,229 +526,22 @@ footer {
 }
 
 
-.burger-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    cursor: pointer;
-    border-radius: 5px;
-    position: absolute;
-    top: 20px;
-    left: 55px;
-    z-index: 1001;
-  
-  }
-  
-  a {
-    font-family: 'Lora', serif;
-    text-decoration: none; /* Removes the underline */
-    color: inherit;
-  }
-
-  /* Centering the logo in the active menu */
-.menu-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Space between top links, logo, and bottom links */
-    align-items: center; /* Center align horizontally */
-    height: 100%; /* Full height of the menu */
-    padding: 20px; /* Add padding if needed */
-}
-
-/* Styling the white logo container */
-.white {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1; /* Ensures the logo takes up the center space */
-}
-
-/* Styling the logo image */
-.white-logo {
-    height: 75%; /* Adjust the height of the logo */
-    width: auto; /* Maintain the aspect ratio */
-    max-height: 120px; /* Set a maximum height */
-    margin: 20px 0; /* Add spacing around the logo */
-}
-  
-  
   .line {
     
     transition: all 0.3s ease;
   
   }
   
-  .burger-bar span {
-    display: block;
-    width: 30px;
-    height: 2px;
-    background-color: #000000;
-    margin-bottom: 5px;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 2px;
-  }
-  
-  
-  /* Transform Burger Bar to X */
-  .burger-bar.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .burger-bar.active span:nth-child(2) {
-    opacity: 0; /* Hide the middle line */
-  }
-  
-  .burger-bar.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  /* Menu Overlay Styling */
-  .menu-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #435B41;
-    z-index: 1000;
-    opacity: 0;
-    animation: none;
-  }
-  
-  /* .menu-overlay.active {
-    display: block;
-    animation: fade-in 0.5s forwards;
-  } */
-  
-  
-  
-  .menu-content {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    height: 100%; /* Full height of the overlay */
-    justify-content: space-between; /* Space between top and bottom links */
-    padding: 20px; /* Add some padding */
-  }
-  
-  .top-links {
-    display: flex;
-    justify-content: center; /* Center align horizontally */
-    align-items: center; /* Center align vertically */
-    gap: 19.3%; /* Space between the links */
-    font-size: 14px;
-    color: white;
-    margin-top: 55px; /* Add space above the top links */
-    padding-top: 10px; /* Spacing inside the border */
-    border-top: 1px solid rgb(255, 255, 255);
-    width: 95%;
-    margin-left: auto; /* Center horizontally in parent */
-    margin-right: auto; /* Center horizontally in parent */
-  }
   
   .no-scroll {
     overflow: hidden; /* Disable scrolling */
     height: 100%; /* Prevent content from moving */
   }
   
-  .bottom-links {
-    display: flex;
-    justify-content: center; /* Center align horizontally */
-    align-items: center; /* Center align vertically */
-    gap: 26.2%; /* Space between the links */
-    font-size: 14px;
-    color: white;
-    margin-bottom: 50px; /* Add space below the bottom links */
-    padding-top: 10px; /* Spacing inside the border */
-    border-top: 1px solid rgb(255, 255, 255);
-    width: 95%;
-    margin-left: auto; /* Center horizontally in parent */
-    margin-right: auto; /* Center horizontally in parent */
-  }
-  
-  .menu-separator {
-    width: 80%;
-    height: 1px;
-    background-color: #ffffff;
-    margin: 20px auto; /* Centered horizontally */
-  }
-  
   .divider {
     color: white;
   }
   
-  .close-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .close-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s;
-  
-  }
-  
-  .close-icon:hover {
-    transform: scale(1.2);
-  }
-  
-  /* Adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .menu-content {
-        padding: 30px 15px;
-    }
-  
-    .top-links,
-    .bottom-links {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        gap: 20px; /* Adjust gap for smaller screens */
-    }
-  }
-  
-  @keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-  }
-  
-  @keyframes fade-out {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-  }
-  
-  /* Active (Fade-In) */
-  .menu-overlay.active {
-    animation: fade-in 0.5s forwards; /* 0.5s duration */
-    opacity: 1;
-    display: block; /* Ensure the menu is visible */
-  }
-  
-  /* Closing (Fade-Out) */
-  .menu-overlay.closing {
-    animation: fade-out 0.5s forwards !important; /* 0.5s duration */
-    opacity: 0;
-  }
-
-.close-button {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 24px;
-    margin-top: 50px;
-    cursor: pointer;
-}
 
 @keyframes fadeInLetter {
     from {
@@ -934,7 +579,7 @@ label {
     padding-top: 10px;
     font-family: 'Lora', serif;
     width: 100%;
-    margin-left: 15px;
+    margin-left: 0px;
 }
 
 .grid-container {
@@ -1010,9 +655,6 @@ label {
 /* Ensure spacing on the right side when the screen width is smaller */
 @media (max-width: 768px) {
 
-    .burger-bar{
-        left: 38px !important;
-    }
 
     main{
         padding: 15px 0px;
@@ -1025,7 +667,7 @@ label {
     }
     .grid-container {
         flex-direction: column; /* Stack columns vertically */
-        padding-right: 35px; /* Add right padding to prevent content from being smushed */
+        padding-right: 0px; /* Add right padding to prevent content from being smushed */
     }
 
     .grid-column {
@@ -1046,8 +688,8 @@ label {
     
 
     .bottom-content{
-        max-width: 91%;
-        margin-left: 15px !important;
+        max-width: 100%;
+        margin-left: 0px !important;
     }
 
     .content-body{
@@ -1055,11 +697,11 @@ label {
     }
 
     .content-body img{
-        max-width: 93%;
+        max-width: 100%;
     }
 
     .content-body p{
-        max-width: 93%;
+        max-width: 100%;
     }
 }
 
@@ -1118,66 +760,3 @@ label {
     color: inherit;
 }
 
-
-@media (max-width: 545px) {
-    nav {
-        max-width: 83%;
-      }
-
-      footer {
-        max-width: 84%;
-      }
-}
-
-@media (max-width: 675px) {
-
-    .language-switch {
-        right: 40px !important;
-    }
-  
-  
-  }
-  
-  @media (max-width: 545px) {
-    nav {
-        max-width: 82%;
-      }
-  
-    .language-switch {
-        right: 40px !important;
-    }
-  }
-  
-  
-  .language-switch {
-    position: absolute;
-    top: 20px;
-    right: 60px;
-  }
-  
-  .language-link {
-    font-family: 'Lora', serif;
-    font-size: 18px;
-    color: black; /* Adjust as needed */
-    text-decoration: none;
-  }
-  
-  .language-link:hover {
-    color: red; /* Adjust as needed */
-  }
-  
-  @media (max-width: 768px) {
-  
-    .language-switch{
-        right: 55px;
-    }
-  }
-
-
-
-
-
-.language-link.active {
-    font-weight: bold;
-    text-decoration: underline;
-  }

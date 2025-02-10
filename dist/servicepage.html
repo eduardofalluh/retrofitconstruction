@@ -8,6 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./css/servicepage.css">
+    <link rel="stylesheet" href="./css/NavFooter.css">
     <link rel="icon" href="./img/favicon.png" type="image/png">
 
 </head>
@@ -50,19 +51,22 @@
             const menuOverlay = document.querySelector('.menu-overlay');
             const burgerBar = document.querySelector('.burger-bar');
             const body = document.body; // Select the body element
+            let main=document.getElementById('rest-page');
 
             if (menuOverlay.classList.contains('active')) {
                 // Trigger fade-out animation
                 menuOverlay.classList.add('closing');
                 burgerBar.classList.remove('active');
                 body.classList.remove('no-scroll'); // Enable scrolling
-
+                main.style.display="block"
                 // Wait for fade-out animation to finish before hiding
                 setTimeout(() => {
                     menuOverlay.classList.remove('active', 'closing');
                 }, 500); // Match the fade-out duration
             } else {
                 // Show menu with fade-in animation
+                main.style.display="none"
+
                 menuOverlay.classList.add('active');
                 burgerBar.classList.add('active');
                 body.classList.add('no-scroll'); // Disable scrolling
@@ -88,98 +92,108 @@
                 <a href="#" id="lang-fr" class="language-link" data-lang="fr">fr</a>
             </div>
         </nav>
-        <hr class="nav-hr" style="border-color: black;border-width: 1px; margin: 0px 17px;">
 
     </header>
 
     <div class="service-animation">
         <h1 id="service-text"></h1>
     </div>
+    <div id="rest-page">
 
-    <main style="display: none;">
-        <h1 class="main-title">services</h1>
-        <div class="services-container">
-            <div class="service slide-in">
-                <div class="flexbox">
-                    <div class="service-line"></div>
-                
-                    <img src="./img/retrofit&energetique.png" data-en="./img/retrofit&energetique.png" data-fr="./img/retrofit&energetique_fr.png" alt="Deep Energy Retrofits and Extensions Image" class="service-image">
-                </div>
-                <p class="service-description"
-                data-fr="Nous gérons les rétrofits énergétiques profonds et les agrandissements en tant qu’entrepreneurs généraux, en alliant construction performante et gestion de projet minutieuse. De l’étanchéité à l’air et l’isolation aux systèmes mécaniques et à l’intégration d’énergies propres, notre approche globale garantit des résultats conformes aux certifications telles que Passive House, EnerPHit, Net Zero et Net Zero Ready.
-
-                Chaque projet repose sur une communication claire, un suivi rigoureux des budgets et une planification fiable. Au-delà de l’efficacité énergétique, nous veillons à ce que les finitions intérieures et extérieures reflètent le même souci du détail que le travail réalisé derrière les murs.
-                
-                Notre mission est de créer des espaces durables et performants qui excellent dans l’exécution, la performance et le design.
-                "
-                data-en="We manage deep energy retrofits and extensions as general contractors, blending high-performance construction with meticulous project management. From airtightness and insulation to mechanical systems and clean energy integration, our whole-building approach delivers results that meet certifications such as Passive House, EnerPHit, Net Zero, and Net Zero Ready.
-
-                At the core of every project is clear communication, careful budget tracking, and reliable scheduling. Beyond energy efficiency, we ensure interiors and exteriors are finished with the same care and attention as the work behind the walls.
-                
-                Our mission is to create sustainable, energy-efficient spaces that excel in execution, performance, and design."
-                >We manage deep energy retrofits and extensions as general contractors, blending high-performance construction with meticulous project management. From airtightness and insulation to mechanical systems and clean energy integration, our whole-building approach delivers results that meet certifications such as Passive House, EnerPHit, Net Zero, and Net Zero Ready.
-
+        <main style="display: none;" >
+            <h1 class="main-title">services</h1>
+            <div class="services-container">
+                <div class="service slide-in">
+                    <div class="flexbox">
+                        <div class="service-line"></div>
+                    
+                        <img src="./img/retrofit&energetique.png" data-en="./img/retrofit&energetique.png" data-fr="./img/retrofit&energetique_fr.png" alt="Deep Energy Retrofits and Extensions Image" class="service-image">
+                    </div>
+                    <p class="service-description"
+                    data-fr="Nous gérons les rétrofits énergétiques profonds et les agrandissements en tant qu’entrepreneurs généraux, en alliant construction performante et gestion de projet minutieuse. De l’étanchéité à l’air et l’isolation aux systèmes mécaniques et à l’intégration d’énergies propres, notre approche globale garantit des résultats conformes aux certifications telles que Passive House, EnerPHit, Net Zero et Net Zero Ready.
+    
+                    Chaque projet repose sur une communication claire, un suivi rigoureux des budgets et une planification fiable. Au-delà de l’efficacité énergétique, nous veillons à ce que les finitions intérieures et extérieures reflètent le même souci du détail que le travail réalisé derrière les murs.
+                    
+                    Notre mission est de créer des espaces durables et performants qui excellent dans l’exécution, la performance et le design.
+                    "
+                    data-en="We manage deep energy retrofits and extensions as general contractors, blending high-performance construction with meticulous project management. From airtightness and insulation to mechanical systems and clean energy integration, our whole-building approach delivers results that meet certifications such as Passive House, EnerPHit, Net Zero, and Net Zero Ready.
+    
                     At the core of every project is clear communication, careful budget tracking, and reliable scheduling. Beyond energy efficiency, we ensure interiors and exteriors are finished with the same care and attention as the work behind the walls.
                     
-                    Our mission is to create sustainable, energy-efficient spaces that excel in execution, performance, and design.
-                    </p>
-            </div>
-            <div class="service slide-in-2">
-                <div class="flexbox">
-                    <div class="service-line"></div>
-                    
-                    <img src="./img/consultation.png" alt="Consultation Image" class="service-image">
+                    Our mission is to create sustainable, energy-efficient spaces that excel in execution, performance, and design."
+                    >We manage deep energy retrofits and extensions as general contractors, blending high-performance construction with meticulous project management. From airtightness and insulation to mechanical systems and clean energy integration, our whole-building approach delivers results that meet certifications such as Passive House, EnerPHit, Net Zero, and Net Zero Ready.
+    
+                        At the core of every project is clear communication, careful budget tracking, and reliable scheduling. Beyond energy efficiency, we ensure interiors and exteriors are finished with the same care and attention as the work behind the walls.
+                        
+                        Our mission is to create sustainable, energy-efficient spaces that excel in execution, performance, and design.
+                        </p>
                 </div>
-                <p class="service-description"
-                data-en="Our consultancy services support contractors and building owners in achieving high-performance results at any stage of their project. From evaluating retrofit potential in the early stages to integrating advanced design details and overseeing execution, we provide strategies that ensure sustainability, efficiency, and success.
-
-                For projects we cannot take on directly, our consultancy offers the knowledge and tools needed to navigate the challenges of high-performance construction, empowering clients to achieve exceptional outcomes independently.
-                "
-                data-fr="Nos services de consultation accompagnent les entrepreneurs et les propriétaires dans l’atteinte de résultats performants à toutes les étapes de leur projet. De l’évaluation du potentiel de rétrofit à l’intégration de détails avancés dans la conception et le suivi de l’exécution, nous proposons des stratégies qui garantissent durabilité, efficacité et succès.
-
-                Pour les projets que nous ne pouvons pas prendre en charge directement, nos services de consultation fournissent les connaissances et outils nécessaires pour relever les défis de la construction performante, permettant ainsi à nos clients d’atteindre des résultats exceptionnels en toute autonomie.
-                "
-                >Our consultancy services support contractors and building owners in achieving high-performance results at any stage of their project. From evaluating retrofit potential in the early stages to integrating advanced design details and overseeing execution, we provide strategies that ensure sustainability, efficiency, and success.
-
+                <div class="service slide-in-2">
+                    <div class="flexbox">
+                        <div class="service-line"></div>
+                        
+                        <img src="./img/consultation.png" alt="Consultation Image" class="service-image">
+                    </div>
+                    <p class="service-description"
+                    data-en="Our consultancy services support contractors and building owners in achieving high-performance results at any stage of their project. From evaluating retrofit potential in the early stages to integrating advanced design details and overseeing execution, we provide strategies that ensure sustainability, efficiency, and success.
+    
                     For projects we cannot take on directly, our consultancy offers the knowledge and tools needed to navigate the challenges of high-performance construction, empowering clients to achieve exceptional outcomes independently.
-                    
-                </p>
-            </div>
-
-            <div class="service slide-in-2">
-                <div class="flexbox">
-                    <div class="service-line"></div>
-                    
-                    <img src="./img/envelope sealing specialist.png" data-en="./img/envelope sealing specialist.png" data-fr="./img/envelope sealing specialist_fr.png" alt="Consultation Image" class="service-image">
+                    "
+                    data-fr="Nos services de consultation accompagnent les entrepreneurs et les propriétaires dans l’atteinte de résultats performants à toutes les étapes de leur projet. De l’évaluation du potentiel de rétrofit à l’intégration de détails avancés dans la conception et le suivi de l’exécution, nous proposons des stratégies qui garantissent durabilité, efficacité et succès.
+    
+                    Pour les projets que nous ne pouvons pas prendre en charge directement, nos services de consultation fournissent les connaissances et outils nécessaires pour relever les défis de la construction performante, permettant ainsi à nos clients d’atteindre des résultats exceptionnels en toute autonomie.
+                    "
+                    >Our consultancy services support contractors and building owners in achieving high-performance results at any stage of their project. From evaluating retrofit potential in the early stages to integrating advanced design details and overseeing execution, we provide strategies that ensure sustainability, efficiency, and success.
+    
+                        For projects we cannot take on directly, our consultancy offers the knowledge and tools needed to navigate the challenges of high-performance construction, empowering clients to achieve exceptional outcomes independently.
+                        
+                    </p>
                 </div>
-                <p class="service-description"
-                data-en="Airtightness and insulation are essential to high-performance buildings, and our Envelope Sealing Specialist service ensures these elements are executed with precision. Whether in new construction or retrofit projects, we apply membranes, tapes, and insulation to create a continuous airtight seal and maximize energy efficiency.
-
-                Installing high-performance triple-pane windows is a complex process where precision is critical. Proper installation ensures these windows deliver their full efficiency, durability, and performance. By addressing every detail during this phase, we guarantee a building envelope that exceeds industry standards."
-                data-fr="L’étanchéité à l’air et l’isolation sont essentielles pour des bâtiments à haute performance, et notre service de spécialiste de l’étanchéité de l’enveloppe garantit leur mise en œuvre avec précision. Que ce soit pour une nouvelle construction ou un projet de rétrofit, nous appliquons des membranes, des rubans et des isolants pour créer un sceau hermétique continu et maximiser l’efficacité énergétique.
-
-                L’installation de fenêtres à triple vitrage haute performance est un processus complexe qui exige une grande précision. Une installation correcte permet à ces fenêtres de garantir leur efficacité, leur durabilité et leur performance. En maîtrisant chaque détail de cette phase, nous assurons une enveloppe qui dépasse les normes de l’industrie.
-                "
-                >Airtightness and insulation are essential to high-performance buildings, and our Envelope Sealing Specialist service ensures these elements are executed with precision. Whether in new construction or retrofit projects, we apply membranes, tapes, and insulation to create a continuous airtight seal and maximize energy efficiency.
-
-                    Installing high-performance triple-pane windows is a complex process where precision is critical. Proper installation ensures these windows deliver their full efficiency, durability, and performance. By addressing every detail during this phase, we guarantee a building envelope that exceeds industry standards.
-                                   
-                </p>
-            </div>
-            <div class="service slide-in-2">
-                <div class="flexbox">
-                    <div class="service-line"></div>
-                    
-                    <img src="./img/developments.png" data-en="./img/developments.png" data-fr="./img/development_fr.png" alt="Construction Project Management Image" class="service-image">
+    
+                <div class="service slide-in-2">
+                    <div class="flexbox">
+                        <div class="service-line"></div>
+                        
+                        <img src="./img/envelope sealing specialist.png" data-en="./img/envelope sealing specialist.png" data-fr="./img/envelope sealing specialist_fr.png" alt="Consultation Image" class="service-image">
+                    </div>
+                    <p class="service-description"
+                    data-en="Airtightness and insulation are essential to high-performance buildings, and our Envelope Sealing Specialist service ensures these elements are executed with precision. Whether in new construction or retrofit projects, we apply membranes, tapes, and insulation to create a continuous airtight seal and maximize energy efficiency.
+    
+                    Installing high-performance triple-pane windows is a complex process where precision is critical. Proper installation ensures these windows deliver their full efficiency, durability, and performance. By addressing every detail during this phase, we guarantee a building envelope that exceeds industry standards."
+                    data-fr="L’étanchéité à l’air et l’isolation sont essentielles pour des bâtiments à haute performance, et notre service de spécialiste de l’étanchéité de l’enveloppe garantit leur mise en œuvre avec précision. Que ce soit pour une nouvelle construction ou un projet de rétrofit, nous appliquons des membranes, des rubans et des isolants pour créer un sceau hermétique continu et maximiser l’efficacité énergétique.
+    
+                    L’installation de fenêtres à triple vitrage haute performance est un processus complexe qui exige une grande précision. Une installation correcte permet à ces fenêtres de garantir leur efficacité, leur durabilité et leur performance. En maîtrisant chaque détail de cette phase, nous assurons une enveloppe qui dépasse les normes de l’industrie.
+                    "
+                    >Airtightness and insulation are essential to high-performance buildings, and our Envelope Sealing Specialist service ensures these elements are executed with precision. Whether in new construction or retrofit projects, we apply membranes, tapes, and insulation to create a continuous airtight seal and maximize energy efficiency.
+    
+                        Installing high-performance triple-pane windows is a complex process where precision is critical. Proper installation ensures these windows deliver their full efficiency, durability, and performance. By addressing every detail during this phase, we guarantee a building envelope that exceeds industry standards.
+                                       
+                    </p>
                 </div>
-                
-                <p class="service-description"
-                data-en="We identify properties with strong retrofit potential and manage their transformation—from design to commissioning. Each project is driven by innovation and built to meet the highest standards of sustainability, performance, and resilience. With a focus on thoughtful design, precise execution, and a long-term vision, we create spaces that are efficient, future-ready, and built to last."
-                data-fr="Nous identifions des propriétés avec un fort potentiel de rétrofit et gérons leur transformation, de la conception à la mise en service. Chaque projet est guidé par l’innovation et conçu selon les normes les plus élevées en matière de durabilité, de performance et de résilience. Grâce à un design soigné, une exécution précise et une vision à long terme, nous créons des espaces efficaces, durables et prêts pour l’avenir."
-                >We identify properties with strong retrofit potential and manage their transformation—from design to commissioning. Each project is driven by innovation and built to meet the highest standards of sustainability, performance, and resilience. With a focus on thoughtful design, precise execution, and a long-term vision, we create spaces that are efficient, future-ready, and built to last.</p>
+                <div class="service slide-in-2">
+                    <div class="flexbox">
+                        <div class="service-line"></div>
+                        
+                        <img src="./img/developments.png" data-en="./img/developments.png" data-fr="./img/development_fr.png" alt="Construction Project Management Image" class="service-image">
+                    </div>
+                    
+                    <p class="service-description"
+                    data-en="We identify properties with strong retrofit potential and manage their transformation—from design to commissioning. Each project is driven by innovation and built to meet the highest standards of sustainability, performance, and resilience. With a focus on thoughtful design, precise execution, and a long-term vision, we create spaces that are efficient, future-ready, and built to last."
+                    data-fr="Nous identifions des propriétés avec un fort potentiel de rétrofit et gérons leur transformation, de la conception à la mise en service. Chaque projet est guidé par l’innovation et conçu selon les normes les plus élevées en matière de durabilité, de performance et de résilience. Grâce à un design soigné, une exécution précise et une vision à long terme, nous créons des espaces efficaces, durables et prêts pour l’avenir."
+                    >We identify properties with strong retrofit potential and manage their transformation—from design to commissioning. Each project is driven by innovation and built to meet the highest standards of sustainability, performance, and resilience. With a focus on thoughtful design, precise execution, and a long-term vision, we create spaces that are efficient, future-ready, and built to last.</p>
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
+        <footer style="display: none;">
+            <div class="footer-section">
+                <p><a href="./FAQ.html" class="footer-link">faq</a></p>
+                <p><a href="javascript:void(0);" style="font-size: 17px;" class=" footer-link" onclick="window.open('https://linktr.ee/retrofitconstruction', '_blank');" data-en="follow us" data-fr="suivez-nous">follow us</a></p>
+                <p class=" footer-link">rbq 5825-8377-01</p>
+                <p><a href="./contactus.html" class="footer-link" data-fr="contactez-nous" data-en="contact us">contact us</a></p>
+            </div>
+            <div class="text-rights-reserved" data-fr="© 2024 Tous droits réservés" data-en="© 2024 All Rights Reserved">© 2024 All Rights Reserved</div>
+        </footer>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -300,15 +314,7 @@
 
     </script>
 
-<footer style="display: none;">
-    <div class="footer-section">
-        <p><a href="./FAQ.html" class="footer-link">faq</a></p>
-        <p><a href="javascript:void(0);" style="font-size: 17px;" class=" footer-link" onclick="window.open('https://linktr.ee/retrofitconstruction', '_blank');" data-en="follow us" data-fr="suivez-nous">follow us</a></p>
-        <p class=" footer-link">rbq 5825-8377-01</p>
-        <p><a href="./contactus.html" class="footer-link" data-fr="contactez-nous" data-en="contact us">contact us</a></p>
-    </div>
-    <div class="text-rights-reserved" data-fr="© 2024 Tous droits réservés" data-en="© 2024 All Rights Reserved">© 2024 All Rights Reserved</div>
-</footer>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
