@@ -1,0 +1,414 @@
+   @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+   @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+
+   /* ============================================
+      Links
+      ============================================ */
+   a,
+   .grid-link {
+       text-decoration: none;
+       color: inherit;
+   }
+
+
+   /* ============================================
+         Header
+         ============================================ */
+   header {
+       position: relative;
+       margin-top: 15px;
+       color: #fff;
+   }
+
+   /* Navigation */
+   nav {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       border-bottom: 1px solid black;
+       width: 100%;
+   }
+
+   nav img {
+       height: 20px;
+       margin-top: 18px;
+       margin-bottom: 30px;
+   }
+
+   @keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  @keyframes fade-out {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+  
+  .fade-in {
+    animation: fade-in 1s forwards;
+  }
+  
+  .fade-out {
+    animation: fade-out 1s forwards;
+  }
+   /* Main header text */
+   .initial-text {
+       font-family: 'Lora', serif;
+       font-size: 50px;
+       color: #3d4e3a;
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       text-align: center;
+       font-weight: 400;
+       animation: fade-out 1s ease-in-out forwards;
+       animation-delay: 1s;
+   }
+
+
+   /* Burger Menu */
+   .burger-bar {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-end;
+       cursor: pointer;
+       border-radius: 5px;
+       position: absolute;
+       top: 20px;
+       left: 0;
+       z-index: 1001;
+   }
+
+   .burger-bar span {
+       display: block;
+       width: 30px;
+       height: 2px;
+       background-color: #000;
+       margin-bottom: 5px;
+       transition: transform 0.3s ease-in-out;
+       border-radius: 2px;
+   }
+
+   /* Active state transforms to an “X” */
+   .burger-bar.active span {
+       background-color: white;
+   }
+
+   .burger-bar.active span:nth-child(1) {
+       transform: rotate(45deg) translate(5px, 5px);
+   }
+
+   .burger-bar.active span:nth-child(2) {
+       opacity: 0;
+   }
+
+   .burger-bar.active span:nth-child(3) {
+       transform: rotate(-45deg) translate(5px, -5px);
+   }
+
+
+   /* Language Switch */
+   .language-switch {
+       position: absolute;
+       top: 20px;
+       right: 0;
+   }
+
+   .language-bar {
+       color: #000000;
+   }
+
+
+   .language-link {
+       font-family: 'Lora', serif;
+       font-size: 18px;
+       color: black;
+       /* Adjust as needed */
+       text-decoration: none;
+   }
+
+   .language-link:hover {
+       color: #485a43;
+       /* Adjust as needed */
+   }
+
+   .language-link.active {
+       font-weight: bold;
+       text-decoration: underline;
+   }
+
+
+   /* Menu Overlay for Mobile/Fullscreen Menu */
+   .menu-overlay {
+       display: none;
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-color: #435B41;
+       z-index: 1000;
+       opacity: 0;
+       animation: none;
+   }
+
+   .menu-content {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       /* Space between top links, logo, and bottom links */
+       align-items: center;
+       /* Center align horizontally */
+       height: 100%;
+       /* Full height of the menu */
+       padding: 20px;
+       /* Add padding if needed */
+   }
+
+   .content {
+       display: flex;
+       flex-direction: column;
+       /* Stack children vertically */
+       height: 100%;
+       /* Full height of the overlay */
+       justify-content: space-between;
+       /* Space between top and bottom links */
+       padding: 20px;
+       /* Add some padding */
+   }
+
+   .menu-overlay.active {
+       animation: fade-in 0.5s forwards;
+       /* 0.5s duration */
+       opacity: 1;
+       display: block;
+       /* Ensure the menu is visible */
+   }
+
+   .menu-overlay.closing {
+       animation: fade-out 0.5s forwards !important;
+       opacity: 0;
+   }
+
+   /* Menu Content */
+   .menu-content {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: center;
+       height: 100%;
+       padding: 20px;
+   }
+
+   .top-links {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       /* Center align horizontally */
+       align-items: center;
+       font-size: 14px;
+       color: white;
+       margin-top: 55px;
+       /* Add space above the top links */
+       padding-top: 10px;
+       /* Spacing inside the border */
+       border-top: 1px solid rgb(255, 255, 255);
+       width: 95%;
+       margin-left: 5%;
+       margin-right: 5%;
+   }
+
+   .bottom-links {
+       display: flex;
+       justify-content: space-between;
+       /* Center align horizontally */
+       align-items: center;
+       font-size: 14px;
+       color: white;
+       margin-bottom: 50px;
+       /* Add space below the bottom links */
+       padding-top: 10px;
+       /* Spacing inside the border */
+       border-top: 1px solid rgb(255, 255, 255);
+       width: 95%;
+       margin-left: 5%;
+       margin-right: 5%;
+   }
+
+
+
+
+   /* White logo in the overlay */
+   .white {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-grow: 1;
+   }
+
+   .white-logo {
+       height: 75%;
+       width: auto;
+       max-height: 120px;
+       margin: 20px 0;
+   }
+
+   /* Close Button */
+   .close-button {
+       position: absolute;
+       top: 20px;
+       right: 20px;
+       background: transparent;
+       border: none;
+       cursor: pointer;
+   }
+
+   .close-icon {
+       width: 24px;
+       height: 24px;
+       transition: transform 0.3s;
+       cursor: pointer;
+   }
+
+   .close-icon:hover {
+       transform: scale(1.2);
+   }
+
+   a {
+       font-family: 'Lora', serif;
+       text-decoration: none;
+       /* Removes the underline */
+       color: inherit;
+   }
+
+
+   /* Responsive Header Adjustments */
+   @media (max-width: 768px) {
+       .initial-text {
+           font-size: 35px;
+       }
+
+       .top-links a {
+           margin-bottom: 7%;
+           text-align: left;
+           /* Ensure text is aligned to the left */
+           text-decoration: none;
+           /* Remove underline from links */
+           font-size: 1rem;
+           /* Adjust font size if necessary */
+           color: white;
+           /* Keep or change the text color */
+       }
+
+       .top-links,
+       .bottom-links {
+
+           font-size: 14px;
+           /* Adjust font size for smaller screens */
+           gap: 20px;
+           /* Adjust gap for smaller screens */
+       }
+
+       .white {
+           margin-top: -50%;
+       }
+
+       .top-links {
+           flex-direction: column;
+           align-items: start;
+       }
+
+       .menu-content {
+           padding: 30px 15px;
+       }
+
+       nav {
+           width: 100%;
+       }
+
+       .burger-bar {
+           left: 0;
+       }
+
+       .language-switch {
+           right: 0;
+       }
+   }
+
+
+   .link {
+    font-size: 13px;
+    display: inline-block;
+    max-width: 97.5%;
+  }
+  
+  
+  /* ============================================
+     Footer
+   ============================================ */
+  footer {
+    width: 100%;
+    border-top: 1px solid black;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .text-rights-reserved {
+    background-color: rgb(245, 245, 245);
+    font-size: 10px;
+  }
+  
+  .footer-section {
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-link {
+    line-height: 1.5;
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    color: inherit;
+  }
+  body{
+   padding: 0px 5%;
+  }
+  h1 {
+   margin-top: 20px;
+   font-size: 24px;
+   font-weight: 400;
+   font-size: 40px;
+   margin-bottom: 40px;
+   font-family: 'Lora', serif;
+ }
+ p {
+   line-height: 1.5;
+   margin-bottom: 20px;
+   font-family: 'Lora', serif;
+}
+
+text {
+   font-family: 'Lora', serif;
+   margin-top: 10px;
+}
+
+.footer-p {
+ line-height: 1.5;
+ font-family: 'Lora', serif;
+}
+ 
+  .footer p {
+    flex: 1;
+    margin: 0;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    footer {
+      width: 100%;
+    }
+  }
+  

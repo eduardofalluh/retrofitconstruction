@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retrofit Construction</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/NavFooter.css">
     <link rel="icon" href="./img/favicon.png" type="image/png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 
@@ -48,6 +49,9 @@
             </div>
             <script>
                 function toggleMenu() {
+            let carousel=document.getElementById('carousel');
+            
+            
             const menuOverlay = document.querySelector('.menu-overlay');
             const burgerBar = document.querySelector('.burger-bar');
             const body = document.body; // Select the body element
@@ -57,6 +61,7 @@
                 menuOverlay.classList.add('closing');
                 burgerBar.classList.remove('active');
                 body.classList.remove('no-scroll'); // Enable scrolling
+                carousel.style.zIndex = '2';
 
                 // Wait for fade-out animation to finish before hiding
                 setTimeout(() => {
@@ -64,9 +69,12 @@
                 }, 500); // Match the fade-out duration
             } else {
                 // Show menu with fade-in animation
+                carousel.style.zIndex = '-1';
+
                 menuOverlay.classList.add('active');
                 burgerBar.classList.add('active');
                 body.classList.add('no-scroll'); // Disable scrolling
+                
             }
         }
 
@@ -90,7 +98,6 @@
             </div>
             <div id="google_translate_element" style="display: none;"></div>
         </nav>
-        <hr class="nav-hr" style="border-color: black;border-width: 1px; margin: 0px 17px;">
     </header>
 
 
@@ -102,7 +109,7 @@
             <h1 data-fr="spécialiste de l’étanchéité de l’enveloppe" data-en="envelope sealing specialist">envelope sealing specialist</h1>
         </div>
 
-        <div class="rest-of-page" style="display: none;">
+        <div class="rest-of-page" id="carousel"  style="display: none;">
             <div class="tagline">
                 <span id="typed-text" 
                       data-en="where sustainability meets wellbeing and the past meets the future" 
@@ -110,7 +117,7 @@
                 </span>
                 <!-- <span class="cursor">|</span> -->
             </div>
-            <div class="carousel">
+            <div class="carousel"  >
                 <div class="carousel-container">
                     <a class="carousel-item active" href="./charon.html">
                         <video class="carousel-video" autoplay muted loop playsinline>
@@ -153,7 +160,7 @@
 
             </div>
 
-            <div class="button-container">
+            <div class="button-container" >
                 <a href="./contactus.html" class="appointment-button" data-fr="planifier une consultation" data-en="book a consultation">book a consultation</a>
             </div>
 
