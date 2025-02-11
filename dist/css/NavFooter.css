@@ -410,5 +410,16 @@ text {
     footer {
       width: 100%;
     }
+    .footer-section{
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    .footer-link{
+        font-size: 0.9rem !important;
+        
+        font-weight: normal;
+    }
   }
   
