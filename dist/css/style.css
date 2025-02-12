@@ -501,6 +501,36 @@ body{
     cursor: pointer !important; /* Ensure the normal cursor is shown */
 
 }
+.carousel-item {
+    position: relative;
+}
+
+.carousel-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.video-loaded .carousel-video {
+    opacity: 1;
+}
+
+.carousel-image {
+    position: relative;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.video-loaded .carousel-image {
+    opacity: 0;
+    pointer-events: none;
+}
 
 .carousel-item.active {
     display: flex;
