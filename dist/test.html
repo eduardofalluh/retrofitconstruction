@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloaded Video Carousel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Hide everything until the videos are loaded */
+        body {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel">
+        <a class="carousel-item active" href="./charon.html">
+            <video class="carousel-video" autoplay muted loop playsinline>
+                <source src="./img/charonintrocaroussel.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="carousel-item" href="./sucrerie.html">
+            <video class="carousel-video" autoplay muted loop playsinline>
+                <source src="./img/carousselmashupsucreriewithdrone.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const videos = document.querySelectorAll("video");
+            let loadedVideos = 0;
+
+            videos.forEach(video => {
+                video.oncanplaythrough = () => {
+                    loadedVideos++;
+                    if (loadedVideos === videos.length) {
+                        document.body.style.visibility = "visible";
+                        document.body.style.opacity = "1";
+                    }
+                };
+            });
+        });
+    </script>
+
+</body>
+</html>

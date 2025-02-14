@@ -11,6 +11,11 @@
         opacity: 1;
     }
 }
+body {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 @media (min-width: 1600px) {
     .container {
       max-width: 100%;
@@ -100,7 +105,11 @@ main {
     display: flex;
     flex-direction: column;
 }
-
+@media (max-width: 385px) {
+    .carousel-controls{
+        top: 655px !important;
+    }
+}
 
 @media (max-width: 768px) {
     .circle {
@@ -501,36 +510,6 @@ body{
     cursor: pointer !important; /* Ensure the normal cursor is shown */
 
 }
-.carousel-item {
-    position: relative;
-}
-
-.carousel-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    z-index: 1;
-}
-
-.video-loaded .carousel-video {
-    opacity: 1;
-}
-
-.carousel-image {
-    position: relative;
-    transition: opacity 0.5s ease;
-    z-index: 2;
-}
-
-.video-loaded .carousel-image {
-    opacity: 0;
-    pointer-events: none;
-}
 
 .carousel-item.active {
     display: flex;
@@ -821,11 +800,8 @@ margin-bottom: 30px;
         margin-top: 0px !important;
 
     }
-
     .service-btn{
         margin-top: 80px !important;
     }
-
 }
-
 
