@@ -301,29 +301,16 @@
 
                 window.addEventListener('DOMContentLoaded', updateText);
 
-                document.addEventListener("DOMContentLoaded", () => {
-            const videos = document.querySelectorAll("video");
-            let loadedVideos = 0;
-
-            videos.forEach(video => {
-                video.oncanplaythrough = () => {
-                    loadedVideos++;
-                    if (loadedVideos === videos.length) {
-                        document.body.style.visibility = "visible";
-                        document.body.style.opacity = "1";
-
-                        // Wait for 3 seconds before showing the rest of the page
-                        setTimeout(() => {
-                            const elementsToShow = document.querySelectorAll('.rest-of-page, header, footer');
-                            elementsToShow.forEach(el => {
-                                el.style.display = 'block';
-                                el.classList.add('fade-in');
-                            });
-                        }, 3000);
-                    }
-                };
-            });
-        });
+                document.addEventListener('DOMContentLoaded', () => {
+                    setTimeout(() => {
+                        document.querySelector('.rest-of-page').style.display = 'block';
+                        document.querySelector('.rest-of-page').classList.add('fade-in');
+                        document.querySelector('header').style.display = 'block';
+                        document.querySelector('header').classList.add('fade-in');
+                        document.querySelector('footer').style.display = 'block';
+                        document.querySelector('footer').classList.add('fade-in');
+                    }, 3000); // Display rest of the page after 6 seconds
+                });
 
               
 
