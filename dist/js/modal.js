@@ -13,6 +13,8 @@ function openModal() {
         const modalHTML = `
             <div id="myModal" class="modal">
                 <div class="modal-content" onclick="event.stopPropagation()">
+                            <span class="close" onclick="closeModal()">&times;</span>
+
                     <img id="modalImage" src="" alt="" style="display: none;">
                     <video id="modalVideo" autoplay loop muted playsinline style="display: none;"></video>
                 </div>

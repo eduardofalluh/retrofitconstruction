@@ -637,19 +637,15 @@ section {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 24px;
-    color: black;
+    font-size: 3rem;
+    color: red;
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.3);
     padding: 10px;
     border-radius: 50%;
     transition: background 0.3s ease;
 }
 
-.close:hover {
-    background: red;
-    color: white;
-}
+
 
 /* Image & Video Styling */
 .modal-content img,
