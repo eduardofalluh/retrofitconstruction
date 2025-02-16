@@ -162,7 +162,9 @@ main {
     margin-left: 0px;
     margin-top: 30px;
 }
-
+.content{
+    flex-direction: row !important;
+}
 section {
     margin-bottom: 5px;
     margin: auto;
@@ -540,7 +542,7 @@ section {
 
 .content-body {
     flex: 0 0 auto; /* Prevent resizing of the image */
-    width: 100%; /* Adjust the width of the image */
+    width: 50%; /* Adjust the width of the image */
 }
 
 .text-section {
