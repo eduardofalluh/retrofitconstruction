@@ -301,16 +301,14 @@
 
                 window.addEventListener('DOMContentLoaded', updateText);
 
-                document.addEventListener('DOMContentLoaded', () => {
-                    setTimeout(() => {
-                        document.querySelector('.rest-of-page').style.display = 'block';
-                        document.querySelector('.rest-of-page').classList.add('fade-in');
-                        document.querySelector('header').style.display = 'block';
-                        document.querySelector('header').classList.add('fade-in');
-                        document.querySelector('footer').style.display = 'block';
-                        document.querySelector('footer').classList.add('fade-in');
-                    }, 3000); // Display rest of the page after 6 seconds
-                });
+                window.addEventListener('load', () => {
+            document.querySelector('.rest-of-page').style.display = 'block';
+            document.querySelector('.rest-of-page').classList.add('fade-in');
+            document.querySelector('header').style.display = 'block';
+            document.querySelector('header').classList.add('fade-in');
+            document.querySelector('footer').style.display = 'block';
+            document.querySelector('footer').classList.add('fade-in');
+        });
 
               
 
