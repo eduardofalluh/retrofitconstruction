@@ -302,12 +302,14 @@
                 window.addEventListener('DOMContentLoaded', updateText);
 
                 window.addEventListener('load', () => {
-            document.querySelector('.rest-of-page').style.display = 'block';
-            document.querySelector('.rest-of-page').classList.add('fade-in');
-            document.querySelector('header').style.display = 'block';
-            document.querySelector('header').classList.add('fade-in');
-            document.querySelector('footer').style.display = 'block';
-            document.querySelector('footer').classList.add('fade-in');
+                    setTimeout(()=>{
+                        document.querySelector('.rest-of-page').style.display = 'block';
+                        document.querySelector('.rest-of-page').classList.add('fade-in');
+                        document.querySelector('header').style.display = 'block';
+                        document.querySelector('header').classList.add('fade-in');
+                        document.querySelector('footer').style.display = 'block';
+                        document.querySelector('footer').classList.add('fade-in');
+                    },2000)
         });
 
               
