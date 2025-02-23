@@ -395,10 +395,5 @@ h1.services {
 @media (max-width: 675px) {
   * {
     max-width: 100%;
-    box-sizing: border-box;
   }
-
-  
-
-
 }
