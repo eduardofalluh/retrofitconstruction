@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.retrofitconstruction.com/</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.retrofitconstruction.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.retrofitconstruction.com/"/>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://www.retrofitconstruction.com/aboutpage.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.retrofitconstruction.com/aboutpage.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.retrofitconstruction.com/aboutpage.html"/>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://www.retrofitconstruction.com/servicepage.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.retrofitconstruction.com/servicepage.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.retrofitconstruction.com/servicepage.html"/>
+  </url>
+
+  <!-- Projects Page -->
+  <url>
+    <loc>https://www.retrofitconstruction.com/projects.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.retrofitconstruction.com/projects.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.retrofitconstruction.com/projects.html"/>
+  </url>
+
+  <!-- Resources Page -->
+  <url>
+    <loc>https://www.retrofitconstruction.com/ressources.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.retrofitconstruction.com/ressources.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.retrofitconstruction.com/ressources.html"/>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.retrofitconstruction.com/contactus.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.retrofitconstruction.com/contactus.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.retrofitconstruction.com/contactus.html"/>
+  </url>
+
+  <!-- FAQ Page -->
+  <url>
+    <loc>https://www.retrofitconstruction.com/FAQ.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.retrofitconstruction.com/FAQ.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.retrofitconstruction.com/FAQ.html"/>
+  </url>
+
+  <!-- Project Pages -->
+  <url>
+    <loc>https://www.retrofitconstruction.com/charon.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.retrofitconstruction.com/sucrerie.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.retrofitconstruction.com/beausejour.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.retrofitconstruction.com/deom.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.retrofitconstruction.com/st_michel.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.retrofitconstruction.com/windows_project.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

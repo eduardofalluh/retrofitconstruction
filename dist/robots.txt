@@ -1,0 +1,10 @@
+# robots.txt for Retrofit Construction
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.retrofitconstruction.com/sitemap.xml
+
+# Block access to specific paths if needed
+Disallow: /api/
+Disallow: /private/
