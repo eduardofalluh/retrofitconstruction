@@ -1,3 +1,22 @@
 [build]
-    publish="dist"
+    publish = "dist"
     functions = "functions"
+
+# Node.js version - Using Node 22 for better performance with Agent Runners
+[build.environment]
+    NODE_VERSION = "22"
+
+# Modern processing settings (legacy prerendering disabled by default)
+[build.processing]
+    skip_processing = false
+
+[build.processing.css]
+    bundle = true
+    minify = true
+
+[build.processing.js]
+    bundle = true
+    minify = true
+
+[build.processing.images]
+    compress = true
